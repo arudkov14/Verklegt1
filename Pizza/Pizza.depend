@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1512053073 source:c:\users\andrey\documents\c++\pizza\main.cpp
+	<iostream>
+	<UI.h>
+	<Controller.h>
+	<Data.h>
+
+1512052757 c:\users\andrey\documents\c++\pizza\include\ui.h
+
+1512052757 c:\users\andrey\documents\c++\pizza\include\controller.h
+
+1512054310 c:\users\andrey\documents\c++\pizza\include\data.h
+	<string>
+
+1512051596 source:c:\users\andrey\documents\c++\pizza\src\controller.cpp
+	"Controller.h"
+
+1512051612 source:c:\users\andrey\documents\c++\pizza\src\data.cpp
+	"Data.h"
+
+1512052842 source:c:\users\andrey\documents\c++\pizza\src\ui.cpp
+	"UI.h"
+	<iostream>
+
