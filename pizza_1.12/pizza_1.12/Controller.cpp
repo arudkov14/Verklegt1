@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "Controller.hpp"
+#include "Controller.h"
 
 Controller::Controller() {
     //ctor

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "Topping.hpp"
+#include "Topping.h"
 
 Topping::Topping(){
     //ctor
@@ -14,4 +14,11 @@ Topping::Topping(){
 
 Topping::~Topping(){
     //dtor
+}
+
+istream& operator >> (istream& in, Topping& topping) {
+    
+    //
+    
+    return in;
 }

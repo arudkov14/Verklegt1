@@ -7,9 +7,9 @@
 //
 
 #include <iostream>
-#include "UI.hpp"
-#include "Controller.hpp"
-#include "Data.hpp"
+#include "UI.h"
+#include "Controller.h"
+#include "Data.h"
 
 using namespace std;
 
