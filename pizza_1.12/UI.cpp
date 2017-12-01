@@ -6,10 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "UI.hpp"
-#include "Manager.hpp"
-#include "Sales.hpp"
-#include "Order.hpp"
+#include "UI.h"
 #include <iostream>
 
 using namespace std;

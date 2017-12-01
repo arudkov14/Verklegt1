@@ -1,23 +1,26 @@
 //
-//  Data.hpp
+//  UI.hpp
 //  pizza_1.12
 //
 //  Created by Kristófer Gudmundsson on 1.12.2017.
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#ifndef Data_hpp
-#define Data_hpp
+#ifndef UI_h
+#define UI_h
 
 #include <stdio.h>
-#include <string>
-#endif /* Data_hpp */
 
-using namespace std;
+#endif /* UI_hpp */
 
-class Data{
+#include "Manager.h"
+#include "Sales.h"
+#include "Order.h"
+
+
+class UI {
 public:
-    Data();
-    ~Data();
+    UI();
+    void choiceOfCommand();
 private:
 };

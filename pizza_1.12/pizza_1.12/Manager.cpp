@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "Manager.hpp"
+#include "Manager.h"
 
 Manager::Manager(){
     

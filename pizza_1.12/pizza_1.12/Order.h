@@ -6,12 +6,13 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#ifndef Order_hpp
-#define Order_hpp
+#ifndef Order_h
+#define Order_h
 
 #include <stdio.h>
 
 #endif /* Order_hpp */
+#include "Pizza.h"
 
 class Order {
 public:

@@ -16,6 +16,7 @@
 		10C18BA81FD1812E00FCF2C3 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA61FD1812E00FCF2C3 /* Manager.cpp */; };
 		10C18BAB1FD182D500FCF2C3 /* Sales.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA91FD182D500FCF2C3 /* Sales.cpp */; };
 		10C18BAE1FD1862900FCF2C3 /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BAC1FD1862900FCF2C3 /* Order.cpp */; };
+		10C18BB11FD18D9000FCF2C3 /* Pizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BAF1FD18D9000FCF2C3 /* Pizza.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,21 +35,23 @@
 		10C18B8D1FD16CE900FCF2C3 /* pizza_1.12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pizza_1.12; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C18B901FD16CE900FCF2C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		10C18B971FD16D4A00FCF2C3 /* UI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UI.cpp; sourceTree = SOURCE_ROOT; };
-		10C18B981FD16D4A00FCF2C3 /* UI.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UI.hpp; sourceTree = SOURCE_ROOT; };
+		10C18B981FD16D4A00FCF2C3 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = SOURCE_ROOT; };
 		10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BasicPizza.cpp; sourceTree = "<group>"; };
-		10C18B9B1FD16E2200FCF2C3 /* BasicPizza.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BasicPizza.hpp; sourceTree = "<group>"; };
+		10C18B9B1FD16E2200FCF2C3 /* BasicPizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPizza.h; sourceTree = "<group>"; };
 		10C18B9D1FD16EFB00FCF2C3 /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
-		10C18B9E1FD16EFB00FCF2C3 /* Data.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Data.hpp; sourceTree = "<group>"; };
+		10C18B9E1FD16EFB00FCF2C3 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		10C18BA01FD16F4400FCF2C3 /* Topping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Topping.cpp; sourceTree = "<group>"; };
-		10C18BA11FD16F4400FCF2C3 /* Topping.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Topping.hpp; sourceTree = "<group>"; };
+		10C18BA11FD16F4400FCF2C3 /* Topping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topping.h; sourceTree = "<group>"; };
 		10C18BA31FD170B600FCF2C3 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
-		10C18BA41FD170B600FCF2C3 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
+		10C18BA41FD170B600FCF2C3 /* Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		10C18BA61FD1812E00FCF2C3 /* Manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
-		10C18BA71FD1812E00FCF2C3 /* Manager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Manager.hpp; sourceTree = "<group>"; };
+		10C18BA71FD1812E00FCF2C3 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		10C18BA91FD182D500FCF2C3 /* Sales.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sales.cpp; sourceTree = "<group>"; };
-		10C18BAA1FD182D500FCF2C3 /* Sales.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sales.hpp; sourceTree = "<group>"; };
+		10C18BAA1FD182D500FCF2C3 /* Sales.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sales.h; sourceTree = "<group>"; };
 		10C18BAC1FD1862900FCF2C3 /* Order.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Order.cpp; sourceTree = "<group>"; };
-		10C18BAD1FD1862900FCF2C3 /* Order.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Order.hpp; sourceTree = "<group>"; };
+		10C18BAD1FD1862900FCF2C3 /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		10C18BAF1FD18D9000FCF2C3 /* Pizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pizza.cpp; sourceTree = "<group>"; };
+		10C18BB01FD18D9000FCF2C3 /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,21 +85,23 @@
 			isa = PBXGroup;
 			children = (
 				10C18B901FD16CE900FCF2C3 /* main.cpp */,
-				10C18B981FD16D4A00FCF2C3 /* UI.hpp */,
+				10C18B981FD16D4A00FCF2C3 /* UI.h */,
 				10C18B971FD16D4A00FCF2C3 /* UI.cpp */,
-				10C18BA71FD1812E00FCF2C3 /* Manager.hpp */,
+				10C18BA71FD1812E00FCF2C3 /* Manager.h */,
 				10C18BA61FD1812E00FCF2C3 /* Manager.cpp */,
-				10C18BAA1FD182D500FCF2C3 /* Sales.hpp */,
+				10C18BAA1FD182D500FCF2C3 /* Sales.h */,
 				10C18BA91FD182D500FCF2C3 /* Sales.cpp */,
-				10C18BAD1FD1862900FCF2C3 /* Order.hpp */,
+				10C18BAD1FD1862900FCF2C3 /* Order.h */,
 				10C18BAC1FD1862900FCF2C3 /* Order.cpp */,
-				10C18B9B1FD16E2200FCF2C3 /* BasicPizza.hpp */,
+				10C18BB01FD18D9000FCF2C3 /* Pizza.h */,
+				10C18BAF1FD18D9000FCF2C3 /* Pizza.cpp */,
+				10C18B9B1FD16E2200FCF2C3 /* BasicPizza.h */,
 				10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */,
-				10C18B9E1FD16EFB00FCF2C3 /* Data.hpp */,
+				10C18B9E1FD16EFB00FCF2C3 /* Data.h */,
 				10C18B9D1FD16EFB00FCF2C3 /* Data.cpp */,
-				10C18BA11FD16F4400FCF2C3 /* Topping.hpp */,
+				10C18BA11FD16F4400FCF2C3 /* Topping.h */,
 				10C18BA01FD16F4400FCF2C3 /* Topping.cpp */,
-				10C18BA41FD170B600FCF2C3 /* Controller.hpp */,
+				10C18BA41FD170B600FCF2C3 /* Controller.h */,
 				10C18BA31FD170B600FCF2C3 /* Controller.cpp */,
 			);
 			path = pizza_1.12;
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C18BB11FD18D9000FCF2C3 /* Pizza.cpp in Sources */,
 				10C18BA81FD1812E00FCF2C3 /* Manager.cpp in Sources */,
 				10C18B911FD16CE900FCF2C3 /* main.cpp in Sources */,
 				10C18BAB1FD182D500FCF2C3 /* Sales.cpp in Sources */,

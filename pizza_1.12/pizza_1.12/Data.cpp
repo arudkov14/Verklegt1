@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "Data.hpp"
+#include "Data.h"
 
 Data::Data(){
     //ctor

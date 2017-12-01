@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "BasicPizza.hpp"
+#include "BasicPizza.h"
 
 BasicPizza::BasicPizza()
 {

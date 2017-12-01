@@ -6,12 +6,12 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#ifndef Controller_hpp
-#define Controller_hpp
+#ifndef Controller_h
+#define Controller_h
 
 #include <stdio.h>
 using namespace std;
-#endif /* Controller_hpp */
+#endif /* Controller_h */
 
 class Controller {
 public:

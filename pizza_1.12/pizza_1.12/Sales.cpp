@@ -6,8 +6,8 @@
 //  Copyright © 2017 Kristófer Alex Gudmundsson. All rights reserved.
 //
 
-#include "Sales.hpp"
-#include "Order.hpp"
+#include "Sales.h"
+
 using namespace std;
 #include <iostream>
 
