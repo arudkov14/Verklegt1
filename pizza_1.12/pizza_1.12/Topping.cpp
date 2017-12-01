@@ -8,6 +8,7 @@
 
 #include "Topping.h"
 
+
 Topping::Topping(){
     //ctor
 }
@@ -16,9 +17,28 @@ Topping::~Topping(){
     //dtor
 }
 
+Topping::Topping(char *name, int price) {
+    strcpy(this->topping_name, name);
+    topping_price = price;
+}
+
 istream& operator >> (istream& in, Topping& topping) {
     
-    //
+    cout << "Topping: ";
+    in >> topping.topping_name;
     
+    cout << "Price: ";
+    in >> topping.topping_price;
     return in;
+}
+
+ostream& operator << (ostream& out, const Topping& topping) {
+
+    out << topping.topping_name;
+    
+    cout << " ";
+
+    out << topping.topping_price;
+    
+    return out;
 }

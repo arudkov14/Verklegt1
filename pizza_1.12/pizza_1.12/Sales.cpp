@@ -22,10 +22,13 @@ char Sales::sales_UI(){
     cout << endl;
     cout << "----------------" << endl;
     cout << "SALES MAIN MENU" << endl;
+    cout << "----------------" << endl;
     cout << endl;
     cout << "Select action: " << endl;
     cout << endl;
     cout << "o: Register order." << endl;
+    cout << "m: Display menu." << endl;
+    cout << "d: Display deals." << endl;
     cout << endl;
     //cout << "x: FLEIRI AÐGERÐIR" << endl;
     

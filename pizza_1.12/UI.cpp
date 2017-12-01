@@ -19,8 +19,12 @@ void UI::choiceOfCommand() {
     
     char selection;
     
-    cout << "LOG IN" << endl << endl;
+    cout << "----------------" << endl;
+    cout << "LOG IN" << endl;
+    cout << "----------------" << endl;
+    cout << endl;
     cout << "Choose a profile: " << endl;
+    cout << endl;
     cout << "m: Manager" <<  endl;
     cout << "s: Sales" <<  endl;
     cout << "b: Baker" << endl;
@@ -29,16 +33,24 @@ void UI::choiceOfCommand() {
     
     cin >> selection;
     
+    if (selection == 'm' || selection == 's' || selection == 'b' || selection == 'd') {
+        Password password;
+        password.access(selection);
+    }
+    
     if (selection == 'm') {
         Manager manager;
         manager.manager_UI();
     }
     if (selection == 's') {
+        
         Sales sales;
         
         if (sales.sales_UI() == 'o') {
             Order order;
             order.order_UI();
+            cout << endl;
+            order.pay();
         }
     }
     if (selection == 'b') {

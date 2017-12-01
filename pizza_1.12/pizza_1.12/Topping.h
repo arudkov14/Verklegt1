@@ -11,15 +11,20 @@
 
 #include <stdio.h>
 #include <string>
+#include <fstream>
+#include <iostream>
 using namespace std;
 #endif /* Topping_h */
 
 class Topping {
 public:
     Topping();
+    Topping(char *name, int price);
     ~Topping();
+    
     friend istream& operator >> (istream& in, Topping& topping);
+    friend ostream& operator << (ostream& out, const Topping& topping);
 private:
     char topping_name[32];
-    int topping_price;
+    double topping_price;
 };

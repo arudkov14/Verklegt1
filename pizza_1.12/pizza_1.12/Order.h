@@ -12,11 +12,14 @@
 #include <stdio.h>
 
 #endif /* Order_hpp */
-#include "Pizza.h"
+//#include "Pizza.h"            
+#include "PizzaRepository.h"
 
 class Order {
 public:
     Order();
     void order_UI();
+    bool pay();
 private:
+    PizzaRepository PizzaRepo;
 };

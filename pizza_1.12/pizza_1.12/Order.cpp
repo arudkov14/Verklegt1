@@ -14,12 +14,36 @@ Order::Order(){
     
 }
 
+void Order::order_UI() {
+    
+    cout << endl;
+    cout << "Number of toppings: " << endl;
+    int topping_count;
+    cin >> topping_count;
+    
+    Pizza pizza(topping_count);
+    
+    for (int i = 0; i < topping_count; i++) {
+        Topping topping;
+        cin >> topping;
+        pizza.add_topping(topping);
+    }
+    cout << endl;
+    cout << pizza << endl;
+    
+    PizzaRepo.store_pizza(pizza);
+    PizzaRepo.retrieve_pizza();
+    
+    pizza.pay();
+}
+
+/*
 void Order::order_UI(){
     
     int number_of_pizzas;
-    
     int number_of_toppings;
     
+    cout << endl;
     cout << "Number of pizzas: " << endl;
     cin >> number_of_pizzas;
     
@@ -35,23 +59,21 @@ void Order::order_UI(){
             cin >> topping;
             //pizza.add_topping(number_of_toppings);
         }
-        
+        cout << pizza;
     }
-    
-    /*
-    for (int i = 0; i < number_of_pizzas; i++) {
-        Pizza pizza;
-        cout << "Number of toppings on pizza no. " << i+1 << ": ";
-        cin >> number_of_toppings;
-        
-        for (int j = 0; j < number_of_toppings; j++) {
-            cout << "Topping no. " << j+1 << ": ";
-            string topping  = pizza.get_topping();
-            cin >> topping;
-            cout << "Price of " << topping << ": ";
-            int price = pizza.get_price();
-            cin >> price;
-        }
-    }
-     */
 }
+
+bool Order::pay(){
+    bool pay = false;
+    
+    cout << "Pay now? (y/n) " << endl;
+    
+    char selection;
+    cin >> selection;
+    
+    if (selection == 'y') {
+        pay = true;
+    }
+    return pay;
+}
+*/

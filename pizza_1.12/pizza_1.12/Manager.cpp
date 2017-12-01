@@ -13,5 +13,5 @@ Manager::Manager(){
 }
 
 void Manager::manager_UI() {
-    
+    cout << "jeij manager" << endl;
 }
