@@ -19,7 +19,6 @@ class Order {
 public:
     Order();
     void order_UI();
-    bool pay();
 private:
     PizzaRepository PizzaRepo;
 };

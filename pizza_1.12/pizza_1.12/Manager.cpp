@@ -12,6 +12,22 @@ Manager::Manager(){
     
 }
 
-void Manager::manager_UI() {
-    cout << "jeij manager" << endl;
+char Manager::manager_UI() {
+    cout << endl;
+    cout << "-----------------" << endl;
+    cout << "MANAGER MAIN MENU" << endl;
+    cout << "-----------------" << endl;
+    cout << endl;
+    cout << "Select action: " << endl;
+    cout << endl;
+    cout << "m: Create menu." << endl;
+    cout << endl;
+    //cout << "x: FLEIRI AÐGERÐIR" << endl;
+    char manager_UI_selection;
+    cin >> manager_UI_selection;
+    return manager_UI_selection;
+}
+
+void Manager::create_menu() {
+    // create_pizza() úr Pizza klasanum.
 }

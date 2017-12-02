@@ -29,12 +29,15 @@ void Order::order_UI() {
         pizza.add_topping(topping);
     }
     cout << endl;
-    cout << pizza << endl;
     
+    pizza.payment();
+    
+    pizza.process();
+    
+    cout << endl;
+    cout << pizza << endl;
     PizzaRepo.store_pizza(pizza);
     PizzaRepo.retrieve_pizza();
-    
-    pizza.pay();
 }
 
 /*

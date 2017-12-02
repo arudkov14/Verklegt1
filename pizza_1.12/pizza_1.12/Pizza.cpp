@@ -45,8 +45,8 @@ ostream& operator << (ostream& out, const Pizza& pizza) {
     for (int i = 0; i < pizza.topping_count; i++) {
         out << pizza.toppings[i] << endl;
     }
-    
-    
+    out << pizza.pay << endl;;
+    out << pizza.stage << endl;
     
     return out;
 }
@@ -67,17 +67,37 @@ istream& operator >> (istream& in, Pizza& pizza) {
     return in;
 }
 
-bool Pizza::pay(){
-    bool pay = false;
+void Pizza::payment(){
+    bool payment_status = false;
     char selection;
-    
     cout << "Pay now? (y/n)" << endl;
     cin >> selection;
-    
     if (selection == 'y') {
-        return true;
+        payment_status =  true;
     }
-    return pay;
+    pay = payment_status;
+}
+
+void Pizza::process(){
+    char selection;
+    cout << "Stage: " << endl;
+    cin >> selection;
+    stage = selection;
+}
+
+Pizza Pizza::create_pizza(){
+    Pizza pizza;
+    string name_of_pizza;
+    
+    cout << "Name:" << endl;
+    cin >> name_of_pizza;
+    
+    cout << "Toppings:" << endl;
+    cin >> *toppings;
+    
+    name = name_of_pizza;
+    
+    return pizza;
 }
 
 /*

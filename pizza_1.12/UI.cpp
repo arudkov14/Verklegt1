@@ -32,12 +32,12 @@ void UI::choiceOfCommand() {
     cout << endl;
     
     cin >> selection;
-    
+    /*
     if (selection == 'm' || selection == 's' || selection == 'b' || selection == 'd') {
         Password password;
         password.access(selection);
     }
-    
+    */
     if (selection == 'm') {
         Manager manager;
         manager.manager_UI();
@@ -50,11 +50,14 @@ void UI::choiceOfCommand() {
             Order order;
             order.order_UI();
             cout << endl;
-            order.pay();
         }
     }
     if (selection == 'b') {
+        Baker baker;
         
+        if (baker.baker_UI() == 'd') {
+            baker.display_orders();
+        }
     }
     if (selection == 'd') {
         

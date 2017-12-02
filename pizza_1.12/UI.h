@@ -15,6 +15,7 @@
 
 #include "Manager.h"
 #include "Sales.h"
+#include "Baker.h"
 #include "Order.h"
 #include "Password.h"
 

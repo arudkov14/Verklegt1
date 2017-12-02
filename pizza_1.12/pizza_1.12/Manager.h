@@ -17,7 +17,8 @@ using namespace std;
 class Manager {
 public:
     Manager();
-    void manager_UI();
+    char manager_UI();
+    void create_menu();
 private:
     
 };

@@ -23,7 +23,9 @@ public:
     void add_topping(Topping topping);
     void initialize(int number_of_toppings);
     void clean();
-    bool pay();
+    void payment();
+    void process();
+    Pizza create_pizza();
     
     friend ostream& operator << (ostream& out, const Pizza& pizza);
     friend istream& operator >> (istream& in, Pizza& pizza);
@@ -40,6 +42,9 @@ private:
     int topping_count;
     Topping *toppings;
     int current_topping_count;
+    bool pay;
+    char stage;
+    string name;
     /*
     int number_of_toppings;
     Topping *toppings;

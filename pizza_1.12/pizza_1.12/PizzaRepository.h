@@ -19,8 +19,7 @@
 #include "Pizza.h"
 
 
-class PizzaRepository
-{
+class PizzaRepository {
 private:
     
 public:

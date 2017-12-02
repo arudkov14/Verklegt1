@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		109361591FD1B2F700C7408D /* PizzaRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 109361571FD1B2F700C7408D /* PizzaRepository.cpp */; };
 		1093615C1FD1EC2400C7408D /* Password.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1093615A1FD1EC2400C7408D /* Password.cpp */; };
+		1093615F1FD21A7800C7408D /* Baker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1093615D1FD21A7800C7408D /* Baker.cpp */; };
 		10C18B911FD16CE900FCF2C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B901FD16CE900FCF2C3 /* main.cpp */; };
 		10C18B991FD16D4A00FCF2C3 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B971FD16D4A00FCF2C3 /* UI.cpp */; };
 		10C18B9C1FD16E2200FCF2C3 /* BasicPizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */; };
@@ -38,6 +39,8 @@
 		109361581FD1B2F700C7408D /* PizzaRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaRepository.h; sourceTree = "<group>"; };
 		1093615A1FD1EC2400C7408D /* Password.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Password.cpp; sourceTree = "<group>"; };
 		1093615B1FD1EC2400C7408D /* Password.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
+		1093615D1FD21A7800C7408D /* Baker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Baker.cpp; sourceTree = "<group>"; };
+		1093615E1FD21A7800C7408D /* Baker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Baker.h; sourceTree = "<group>"; };
 		10C18B8D1FD16CE900FCF2C3 /* pizza_1.12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pizza_1.12; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C18B901FD16CE900FCF2C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		10C18B971FD16D4A00FCF2C3 /* UI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UI.cpp; sourceTree = SOURCE_ROOT; };
@@ -107,6 +110,8 @@
 				109361571FD1B2F700C7408D /* PizzaRepository.cpp */,
 				1093615B1FD1EC2400C7408D /* Password.h */,
 				1093615A1FD1EC2400C7408D /* Password.cpp */,
+				1093615E1FD21A7800C7408D /* Baker.h */,
+				1093615D1FD21A7800C7408D /* Baker.cpp */,
 				10C18BA41FD170B600FCF2C3 /* Controller.h */,
 				10C18BA31FD170B600FCF2C3 /* Controller.cpp */,
 				10C18B9B1FD16E2200FCF2C3 /* BasicPizza.h */,
@@ -181,6 +186,7 @@
 				10C18BAB1FD182D500FCF2C3 /* Sales.cpp in Sources */,
 				10C18BA51FD170B600FCF2C3 /* Controller.cpp in Sources */,
 				10C18B9C1FD16E2200FCF2C3 /* BasicPizza.cpp in Sources */,
+				1093615F1FD21A7800C7408D /* Baker.cpp in Sources */,
 				10C18BAE1FD1862900FCF2C3 /* Order.cpp in Sources */,
 				1093615C1FD1EC2400C7408D /* Password.cpp in Sources */,
 				10C18BA21FD16F4400FCF2C3 /* Topping.cpp in Sources */,
