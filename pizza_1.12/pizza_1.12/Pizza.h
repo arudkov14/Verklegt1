@@ -29,14 +29,6 @@ public:
     
     friend ostream& operator << (ostream& out, const Pizza& pizza);
     friend istream& operator >> (istream& in, Pizza& pizza);
-    /*
-    Pizza(int topping_count);
-    void add_topping(Topping topping);
-    
-    int get_number_of_toppings();
-    
-    friend ostream& operator << (ostream& out, const Pizza& pizza);
-    */
     
 private:
     int topping_count;
@@ -45,9 +37,4 @@ private:
     bool pay;
     char stage;
     string name;
-    /*
-    int number_of_toppings;
-    Topping *toppings;
-    int current_number_of_toppings;
-     */
 };
