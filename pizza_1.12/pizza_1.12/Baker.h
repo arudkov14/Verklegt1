@@ -10,7 +10,7 @@
 #define Baker_h
 
 #include <stdio.h>
-//#include "Pizza.h"        ATH
+#include "PizzaRepository.h"
 #endif /* Baker_h */
 
 class Baker {
@@ -19,5 +19,5 @@ public:
     char baker_UI();
     void display_orders();
 private:
-    
+    PizzaRepository PizzaRepo;
 };

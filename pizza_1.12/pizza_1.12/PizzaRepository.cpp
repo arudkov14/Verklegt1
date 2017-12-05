@@ -12,23 +12,23 @@ using namespace std;
 void PizzaRepository::store_pizza(const Pizza& pizza)
 {
     ofstream fout;
-    fout.open("/Users/kristofergudmundsson/Documents/GitHub/Verklegt1/pizza_1.12/pizza_1.12/pizza_file.txt");
+    fout.open("/Users/kristofergudmundsson/Documents/GitHub/Verklegt1/pizza_1.12/pizza_1.12/pizza_file.txt", ios::app);
     
     fout << pizza;
     
     fout.close();
 }
 
-Pizza PizzaRepository::retrieve_pizza()
+void PizzaRepository::retrieve_pizza()
 {
     ifstream fin;
     fin.open("/Users/kristofergudmundsson/Documents/GitHub/Verklegt1/pizza_1.12/pizza_1.12/pizza_file.txt");
     
     Pizza pizza;
     fin >> pizza;
-    
+    cout << pizza;
     fin.close();
     
-    return pizza;
+    //return pizza;
 }
 

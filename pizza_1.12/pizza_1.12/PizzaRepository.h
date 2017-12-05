@@ -24,7 +24,7 @@ private:
     
 public:
     void store_pizza(const Pizza& pizza);
-    Pizza retrieve_pizza();
+    void retrieve_pizza();
 };
 
 #endif // PIZZAREPOSITORY_H

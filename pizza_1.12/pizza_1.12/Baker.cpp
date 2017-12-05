@@ -32,9 +32,6 @@ char Baker::baker_UI(){
 }
 
 void Baker::display_orders() {
-    ifstream fin;
-    fin.open("/Users/kristofergudmundsson/Documents/GitHub/Verklegt1/pizza_1.12/pizza_1.12/pizza_file.txt");
-    //Pizza pizza;
-    //fin >> pizza;
-    fin.close();
+    PizzaRepo.retrieve_pizza();
+    cout << endl;
 }

@@ -29,5 +29,6 @@ char Manager::manager_UI() {
 }
 
 void Manager::create_menu() {
-    // create_pizza() úr Pizza klasanum.
+    Pizza pizza;
+    pizza.create_menu_pizza();
 }

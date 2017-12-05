@@ -40,16 +40,21 @@ void UI::choiceOfCommand() {
     */
     if (selection == 'm') {
         Manager manager;
-        manager.manager_UI();
+        
+        if (manager.manager_UI() == 'm') {
+            manager.create_menu();
+        }
     }
     if (selection == 's') {
         
         Sales sales;
         
         if (sales.sales_UI() == 'o') {
+            
             Order order;
             order.order_UI();
             cout << endl;
+         
         }
     }
     if (selection == 'b') {

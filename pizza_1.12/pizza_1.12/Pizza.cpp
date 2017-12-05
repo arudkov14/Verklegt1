@@ -46,7 +46,7 @@ ostream& operator << (ostream& out, const Pizza& pizza) {
         out << pizza.toppings[i] << endl;
     }
     out << pizza.pay << endl;;
-    out << pizza.stage << endl;
+    out << pizza.status << endl;
     
     return out;
 }
@@ -78,16 +78,22 @@ void Pizza::payment(){
     pay = payment_status;
 }
 
-void Pizza::process(){
-    char selection;
-    cout << "Stage: " << endl;
+int Pizza::process(){
+    int selection;
+    cout << "Stage: " << endl << "1: Ordered | 2: Preparation | 3: Delivered" << endl;
     cin >> selection;
-    stage = selection;
+    return selection;
 }
 
-Pizza Pizza::create_pizza(){
+void Pizza::set_status(int selection){
+    status = selection;
+}
+
+
+Pizza Pizza::create_menu_pizza(){
     Pizza pizza;
     string name_of_pizza;
+    // LAGA
     
     cout << "Name:" << endl;
     cin >> name_of_pizza;
@@ -100,28 +106,3 @@ Pizza Pizza::create_pizza(){
     return pizza;
 }
 
-/*
-Pizza::Pizza(int topping_count) {
-    current_number_of_toppings = 0;
-    toppings = new Topping[topping_count];
-}
-
-void Pizza::add_topping(Topping topping) {
-    toppings[current_number_of_toppings++] = topping;
-}
-
-int Pizza::get_number_of_toppings(){
-    return number_of_toppings;
-}
-
-ostream& operator << (ostream& out, const Pizza& pizza) {
-    
-    out << pizza.number_of_toppings << endl;
-    out << pizza.current_number_of_toppings << endl;
-    for (int i = 0; i < pizza.number_of_toppings; i++) {
-        out << pizza.toppings[i] << endl;
-    }*/
-    /*
-    return out;
-}
-*/

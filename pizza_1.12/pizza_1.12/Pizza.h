@@ -24,8 +24,10 @@ public:
     void initialize(int number_of_toppings);
     void clean();
     void payment();
-    void process();
-    Pizza create_pizza();
+    int process();
+    void set_status(int selection);
+    Pizza create_menu_pizza();
+    int total_topping_price();
     
     friend ostream& operator << (ostream& out, const Pizza& pizza);
     friend istream& operator >> (istream& in, Pizza& pizza);
@@ -35,6 +37,6 @@ private:
     Topping *toppings;
     int current_topping_count;
     bool pay;
-    char stage;
+    int status;
     string name;
 };

@@ -12,10 +12,7 @@
 		1093615F1FD21A7800C7408D /* Baker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1093615D1FD21A7800C7408D /* Baker.cpp */; };
 		10C18B911FD16CE900FCF2C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B901FD16CE900FCF2C3 /* main.cpp */; };
 		10C18B991FD16D4A00FCF2C3 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B971FD16D4A00FCF2C3 /* UI.cpp */; };
-		10C18B9C1FD16E2200FCF2C3 /* BasicPizza.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */; };
-		10C18B9F1FD16EFB00FCF2C3 /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18B9D1FD16EFB00FCF2C3 /* Data.cpp */; };
 		10C18BA21FD16F4400FCF2C3 /* Topping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA01FD16F4400FCF2C3 /* Topping.cpp */; };
-		10C18BA51FD170B600FCF2C3 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA31FD170B600FCF2C3 /* Controller.cpp */; };
 		10C18BA81FD1812E00FCF2C3 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA61FD1812E00FCF2C3 /* Manager.cpp */; };
 		10C18BAB1FD182D500FCF2C3 /* Sales.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BA91FD182D500FCF2C3 /* Sales.cpp */; };
 		10C18BAE1FD1862900FCF2C3 /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10C18BAC1FD1862900FCF2C3 /* Order.cpp */; };
@@ -45,14 +42,8 @@
 		10C18B901FD16CE900FCF2C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		10C18B971FD16D4A00FCF2C3 /* UI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UI.cpp; sourceTree = SOURCE_ROOT; };
 		10C18B981FD16D4A00FCF2C3 /* UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = SOURCE_ROOT; };
-		10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BasicPizza.cpp; sourceTree = "<group>"; };
-		10C18B9B1FD16E2200FCF2C3 /* BasicPizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicPizza.h; sourceTree = "<group>"; };
-		10C18B9D1FD16EFB00FCF2C3 /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
-		10C18B9E1FD16EFB00FCF2C3 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		10C18BA01FD16F4400FCF2C3 /* Topping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Topping.cpp; sourceTree = "<group>"; };
 		10C18BA11FD16F4400FCF2C3 /* Topping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topping.h; sourceTree = "<group>"; };
-		10C18BA31FD170B600FCF2C3 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
-		10C18BA41FD170B600FCF2C3 /* Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		10C18BA61FD1812E00FCF2C3 /* Manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
 		10C18BA71FD1812E00FCF2C3 /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		10C18BA91FD182D500FCF2C3 /* Sales.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sales.cpp; sourceTree = "<group>"; };
@@ -112,12 +103,6 @@
 				1093615A1FD1EC2400C7408D /* Password.cpp */,
 				1093615E1FD21A7800C7408D /* Baker.h */,
 				1093615D1FD21A7800C7408D /* Baker.cpp */,
-				10C18BA41FD170B600FCF2C3 /* Controller.h */,
-				10C18BA31FD170B600FCF2C3 /* Controller.cpp */,
-				10C18B9B1FD16E2200FCF2C3 /* BasicPizza.h */,
-				10C18B9A1FD16E2200FCF2C3 /* BasicPizza.cpp */,
-				10C18B9E1FD16EFB00FCF2C3 /* Data.h */,
-				10C18B9D1FD16EFB00FCF2C3 /* Data.cpp */,
 			);
 			path = pizza_1.12;
 			sourceTree = "<group>";
@@ -184,14 +169,11 @@
 				109361591FD1B2F700C7408D /* PizzaRepository.cpp in Sources */,
 				10C18B911FD16CE900FCF2C3 /* main.cpp in Sources */,
 				10C18BAB1FD182D500FCF2C3 /* Sales.cpp in Sources */,
-				10C18BA51FD170B600FCF2C3 /* Controller.cpp in Sources */,
-				10C18B9C1FD16E2200FCF2C3 /* BasicPizza.cpp in Sources */,
 				1093615F1FD21A7800C7408D /* Baker.cpp in Sources */,
 				10C18BAE1FD1862900FCF2C3 /* Order.cpp in Sources */,
 				1093615C1FD1EC2400C7408D /* Password.cpp in Sources */,
 				10C18BA21FD16F4400FCF2C3 /* Topping.cpp in Sources */,
 				10C18B991FD16D4A00FCF2C3 /* UI.cpp in Sources */,
-				10C18B9F1FD16EFB00FCF2C3 /* Data.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@ public:
     
     friend istream& operator >> (istream& in, Topping& topping);
     friend ostream& operator << (ostream& out, const Topping& topping);
+    
 private:
     char topping_name[32];
     double topping_price;

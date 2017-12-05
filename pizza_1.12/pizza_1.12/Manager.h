@@ -13,6 +13,7 @@
 #include <iostream>
 using namespace std;
 #endif /* Manager_hpp */
+#include "PizzaRepository.h"
 
 class Manager {
 public:

@@ -17,7 +17,7 @@ Order::Order(){
 void Order::order_UI() {
     
     cout << endl;
-    cout << "Number of toppings: " << endl;
+    cout << "Number of toppings: ";
     int topping_count;
     cin >> topping_count;
     
@@ -32,10 +32,11 @@ void Order::order_UI() {
     
     pizza.payment();
     
-    pizza.process();
+    pizza.set_status(1);
     
     cout << endl;
+    cout << "Order:" << endl;
     cout << pizza << endl;
     PizzaRepo.store_pizza(pizza);
-    PizzaRepo.retrieve_pizza();
+    //PizzaRepo.retrieve_pizza();
 }
