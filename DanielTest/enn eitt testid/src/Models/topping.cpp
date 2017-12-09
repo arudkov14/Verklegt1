@@ -18,7 +18,6 @@ Topping::Topping(string name, double price)
 istream& operator >> (istream& in, Topping& topping)
 {
 
-
     cout << "Topping name: ";
     in >> ws;
     getline(in, topping.name);

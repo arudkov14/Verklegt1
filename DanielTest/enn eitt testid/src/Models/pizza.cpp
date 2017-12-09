@@ -6,10 +6,7 @@ Pizza::Pizza()
     OrderNumber = 0;
 }
 
-Pizza::~Pizza()
-{
 
-}
 
 void Pizza::addTopping(Topping topping)
 {
@@ -49,8 +46,8 @@ void Pizza::read(ifstream& fin)
 istream& operator >> (istream& in, Pizza& pizza)
 {
 
-    int toppingCount;
-    in >> toppingCount;
+    //int toppingCount;
+    //in >> toppingCount;
 
     Topping topping;
 

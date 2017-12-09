@@ -11,7 +11,7 @@ class Pizza
 public:
     Pizza();
     Pizza(int numberOfToppings);
-    virtual ~Pizza();
+
 
     void addTopping(Topping topping);
 
@@ -25,7 +25,7 @@ protected:
 
 private:
     vector<Topping> toppings;
-    unsigned int OrderNumber;
+    int OrderNumber;
 
 };
 

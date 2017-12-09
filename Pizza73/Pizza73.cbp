@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Pizza73" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Pizza73" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/UI" />
+					<Add directory="include/Model" />
+					<Add directory="include/Repository" />
+					<Add directory="include/Service" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Pizza73" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/UI" />
+					<Add directory="include/Model" />
+					<Add directory="include/Repository" />
+					<Add directory="include/Service" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Model/Pizza.h" />
+		<Unit filename="include/Model/Topping.h" />
+		<Unit filename="include/Repository/PizzaRepository.h" />
+		<Unit filename="include/Repository/ToppingRepository.h" />
+		<Unit filename="include/Service/pizzaService.h" />
+		<Unit filename="include/Service/toppingService.h" />
+		<Unit filename="include/UI/MainUI.h" />
+		<Unit filename="include/UI/SecondaryUI.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Model/Pizza.cpp" />
+		<Unit filename="src/Model/Topping.cpp" />
+		<Unit filename="src/Repository/PizzaRepository.cpp" />
+		<Unit filename="src/Repository/ToppingRepository.cpp" />
+		<Unit filename="src/Service/pizzaService.cpp" />
+		<Unit filename="src/Service/toppingService.cpp" />
+		<Unit filename="src/UI/MainUI.cpp" />
+		<Unit filename="src/UI/SecondaryUI.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

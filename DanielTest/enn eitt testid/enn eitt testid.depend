@@ -233,3 +233,100 @@
 	"../../include/UI/mainui.h"
 	<cstdio>
 
+1512651030 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\main.cpp
+	<iostream>
+	<vector>
+	<stddef.h>
+	"mainui.h"
+	"salesui.h"
+	"PasswordUI.h"
+
+1512513194 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\ui\mainui.h
+	<iostream>
+	<vector>
+	<stddef.h>
+	"salesui.h"
+	<cstdlib>
+
+1512569896 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\ui\salesui.h
+	<iostream>
+	<vector>
+	<stddef.h>
+	"mainui.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+
+1512655732 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\repository\pizzarepository.h
+	"../Models/pizza.h"
+
+1512655741 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\models\pizza.h
+	<stddef.h>
+	<fstream>
+	"../../include/Models/topping.h"
+	<vector>
+	<iostream>
+
+1512513194 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\models\topping.h
+	<iostream>
+	<vector>
+	<stddef.h>
+	<fstream>
+
+1512655746 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\repository\toppingrepository.h
+	"../Models/topping.h"
+
+1512570002 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\ui\passwordui.h
+	<string>
+	<iostream>
+	<stdlib.h>
+
+1512655769 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\models\pizza.cpp
+	"../../include/Models/pizza.h"
+
+1512658153 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\models\topping.cpp
+	"../../include/Models/topping.h"
+
+1512655652 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\repository\pizzarepository.cpp
+	"PizzaRepository.h"
+
+1512649835 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\repository\toppingrepository.cpp
+	"ToppingRepository.h"
+	<vector>
+	<fstream>
+	<iostream>
+
+1512428256 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\services\manager.cpp
+	"../../include/Services/manager.h"
+
+1512570002 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\services\manager.h
+	"../../include/Models/topping.h"
+	"../../include/Models/pizza.h"
+	<cstdlib>
+
+1512655732 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\ui\mainui.cpp
+	"../../include/UI/mainui.h"
+	"../../include/UI/salesui.h"
+	"../../include/UI/managerui.h"
+	<cstdlib>
+
+1512513194 c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\include\ui\managerui.h
+	<iostream>
+	<vector>
+	<stddef.h>
+	"mainui.h"
+
+1512582328 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\ui\managerui.cpp
+	"../../include/UI/managerui.h"
+
+1512570054 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\ui\passwordui.cpp
+	"PasswordUI.h"
+	"managerui.h"
+	"mainui.h"
+	"salesui.h"
+
+1512655732 source:c:\danni\gitlocal\verklegt1\danieltest\enn eitt testid\src\ui\salesui.cpp
+	"../../include/UI/salesui.h"
+	"../../include/UI/managerui.h"
+	"../../include/UI/mainui.h"
+	<cstdio>
+
