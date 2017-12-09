@@ -1,0 +1,6 @@
+sveppir, 150
+pepperoni, 250
+paprika, 150
+skinka, 250
+litid pepperoni, 200
+Topping: prometheusPrice: 100Topping: epliPrice: 100Topping: appelsinaPrice: 200Topping: epliPrice: 100Topping: eplaskifaPrice: 200Topping: eplaskifaPrice: 340Topping: pepperoniPrice: 140Topping: sveppirPrice: 150Topping: ruccolaPrice: 100Topping: bananiPrice: 300Topping: epliPrice: 230Topping: broccoliPrice: 300Topping: rusinaPrice: 200Topping: kameltaPrice: 200Topping: epliPrice: 100Topping: sveppirPrice: 250Topping: pepperoniPrice: 250
