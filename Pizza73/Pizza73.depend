@@ -1,0 +1,226 @@
+# depslib dependency file v1.0
+1512650351 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512775768 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\mainui.h
+	"SecondaryUI.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+
+1512821113 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\pizza.cpp
+	"Pizza.h"
+
+1512744304 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\pizza.h
+	<vector>
+	"Topping.h"
+	"pizzaService.h"
+	<fstream>
+
+1512821311 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\topping.cpp
+	"Topping.h"
+
+1512758956 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\topping.h
+	<iostream>
+	<vector>
+
+1512659686 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\pizzarepository.cpp
+	"PizzaRepository.h"
+
+1512659624 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+	<iostream>
+
+1512824068 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\toppingrepository.cpp
+	"ToppingRepository.h"
+
+1512823922 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\toppingrepository.h
+	"Topping.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1512821113 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\mainui.cpp
+	"MainUI.h"
+
+1512824303 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\secondaryui.cpp
+	"SecondaryUI.h"
+
+1512783960 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\secondaryui.h
+	"MainUI.h"
+	<cstdlib>
+	"Pizza.h"
+	"toppingService.h"
+	<iostream>
+	<conio.h>
+
+1512682897 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\pizzaservice.cpp
+	"pizzaService.h"
+
+1512682922 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\pizzaservice.h
+
+1512824162 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\toppingservice.cpp
+	"toppingService.h"
+
+1512771555 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\toppingservice.h
+	"Topping.h"
+	<iostream>
+	<vector>
+	"ToppingRepository.h"
+
+1512650351 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512775768 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\mainui.h
+	"SecondaryUI.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+
+1512783960 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\secondaryui.h
+	"MainUI.h"
+	<cstdlib>
+	"Pizza.h"
+	"toppingService.h"
+	<iostream>
+	<conio.h>
+
+1512686381 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\pizza.cpp
+	"Pizza.h"
+
+1512744304 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\pizza.h
+	<vector>
+	"Topping.h"
+	"pizzaService.h"
+	<fstream>
+
+1512758956 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\topping.h
+	<iostream>
+	<vector>
+
+1512774868 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\topping.cpp
+	"Topping.h"
+
+1512659686 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\pizzarepository.cpp
+	"PizzaRepository.h"
+
+1512659624 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+	<iostream>
+
+1512775417 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\toppingrepository.cpp
+	"ToppingRepository.h"
+
+1512775552 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\toppingrepository.h
+	"Topping.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1512682897 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\pizzaservice.cpp
+	"pizzaService.h"
+
+1512682922 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\pizzaservice.h
+
+1512770621 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\toppingservice.cpp
+	"toppingService.h"
+
+1512771555 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\toppingservice.h
+	"Topping.h"
+	<iostream>
+	<vector>
+	"ToppingRepository.h"
+
+1512784541 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\secondaryui.cpp
+	"SecondaryUI.h"
+
+1512779628 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\mainui.cpp
+	"MainUI.h"
+
+1512821119 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\exceptions\invalidmenuexception.cpp
+	"InvalidMenuException.h"
+
+1512821113 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\exceptions\invalidmenuexception.h
+
+1512796286 source:c:\users\andrey\desktop\i am groot\pizza73\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512796286 c:\users\andrey\desktop\i am groot\pizza73\include\ui\mainui.h
+	"SecondaryUI.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+
+1512845922 c:\users\andrey\desktop\i am groot\pizza73\include\ui\secondaryui.h
+	"MainUI.h"
+	<cstdlib>
+	"Pizza.h"
+	"toppingService.h"
+	"pizzaService.h"
+	<iostream>
+	<conio.h>
+
+1512845892 c:\users\andrey\desktop\i am groot\pizza73\include\model\pizza.h
+	<vector>
+	"Topping.h"
+	<fstream>
+
+1512796286 c:\users\andrey\desktop\i am groot\pizza73\include\model\topping.h
+	<iostream>
+	<vector>
+
+1512849269 c:\users\andrey\desktop\i am groot\pizza73\include\service\pizzaservice.h
+	"Pizza.h"
+	"PizzaRepository.h"
+	<iostream>
+
+1512796286 c:\users\andrey\desktop\i am groot\pizza73\include\service\toppingservice.h
+	"Topping.h"
+	<iostream>
+	<vector>
+	"ToppingRepository.h"
+
+1512845278 c:\users\andrey\desktop\i am groot\pizza73\include\repository\toppingrepository.h
+	"Topping.h"
+	<fstream>
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1512846740 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\pizza.cpp
+	"Pizza.h"
+
+1512843224 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\topping.cpp
+	"Topping.h"
+
+1512849000 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\pizzarepository.cpp
+	"PizzaRepository.h"
+
+1512848949 c:\users\andrey\desktop\i am groot\pizza73\include\repository\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+	<iostream>
+	<ostream>
+
+1512849525 source:c:\users\andrey\desktop\i am groot\pizza73\src\service\pizzaservice.cpp
+	"pizzaService.h"
+
+1512796286 source:c:\users\andrey\desktop\i am groot\pizza73\src\ui\mainui.cpp
+	"MainUI.h"
+
+1512845061 source:c:\users\andrey\desktop\i am groot\pizza73\src\ui\secondaryui.cpp
+	"SecondaryUI.h"
+
+1512829854 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\toppingrepository.cpp
+	"ToppingRepository.h"
+
+1512829213 source:c:\users\andrey\desktop\i am groot\pizza73\src\service\toppingservice.cpp
+	"toppingService.h"
+
