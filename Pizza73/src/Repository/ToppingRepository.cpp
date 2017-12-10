@@ -27,10 +27,14 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
     vector<Topping> toppingvector;
     Topping topping;
 
+<<<<<<< HEAD
     ifstream fin;
 
     fin.open("ToppingList.txt");
 
+=======
+    ifstream fin("ToppingList.txt", ios::app);
+>>>>>>> master
     if (fin.is_open()) {
         while (fin >> topping) {
             toppingvector.push_back(topping);
@@ -38,6 +42,10 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
         fin.close();
     }
     return toppingvector;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 }
 
 

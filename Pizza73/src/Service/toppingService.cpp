@@ -14,8 +14,14 @@ void toppingService::add_topping(Topping& topping) {
 
 vector<Topping> toppingService::retrieve_all_toppings() {
 
+<<<<<<< HEAD
    vector<Topping> topping_list = topping_repo.retrieve_all_toppings();
 
    return topping_list;
 }
 
+=======
+   return topping_repo.retrieve_all_toppings();
+
+}
+>>>>>>> master

@@ -3,14 +3,18 @@
 #include "Pizza.h"
 #include <fstream>
 #include <iostream>
+<<<<<<< HEAD
 #include <ostream>
 #include <stdlib.h>
+=======
+>>>>>>> master
 using namespace std;
 
 
 class PizzaRepository
 {
     public:
+<<<<<<< HEAD
 
 
         void add_pizza(Pizza& pizza);
@@ -18,6 +22,15 @@ class PizzaRepository
         Pizza parse_string(string line);
 private:
 
+=======
+        PizzaRepository();
+
+        void pizzaToTextFile(Pizza& pizza);
+        Pizza retrievePizza();
+
+
+    private:
+>>>>>>> master
 };
 
 #endif // PIZZAREPOSITORY_H
