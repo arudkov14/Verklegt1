@@ -9,19 +9,19 @@
 	<iostream>
 	<stdlib.h>
 
-1512821113 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\pizza.cpp
+1512908152 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\pizza.cpp
 	"Pizza.h"
 
-1512744304 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\pizza.h
+1512908170 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\pizza.h
 	<vector>
 	"Topping.h"
 	"pizzaService.h"
 	<fstream>
 
-1512821311 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\topping.cpp
+1512865478 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\model\topping.cpp
 	"Topping.h"
 
-1512758956 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\topping.h
+1512915391 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\topping.h
 	<iostream>
 	<vector>
 
@@ -33,10 +33,10 @@
 	<fstream>
 	<iostream>
 
-1512824068 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\toppingrepository.cpp
+1512929642 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\repository\toppingrepository.cpp
 	"ToppingRepository.h"
 
-1512823922 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\toppingrepository.h
+1512929642 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\repository\toppingrepository.h
 	"Topping.h"
 	<fstream>
 	<iostream>
@@ -46,10 +46,10 @@
 1512821113 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\mainui.cpp
 	"MainUI.h"
 
-1512824303 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\secondaryui.cpp
+1512930419 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\ui\secondaryui.cpp
 	"SecondaryUI.h"
 
-1512783960 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\secondaryui.h
+1512929834 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\ui\secondaryui.h
 	"MainUI.h"
 	<cstdlib>
 	"Pizza.h"
@@ -62,10 +62,10 @@
 
 1512682922 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\pizzaservice.h
 
-1512824162 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\toppingservice.cpp
+1512929653 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\src\service\toppingservice.cpp
 	"toppingService.h"
 
-1512771555 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\toppingservice.h
+1512929642 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\service\toppingservice.h
 	"Topping.h"
 	<iostream>
 	<vector>

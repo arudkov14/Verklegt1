@@ -13,6 +13,11 @@ class toppingService
         toppingService();
         void add_topping(Topping& topping);
         vector<Topping> retrieve_all_toppings();
+        vector<Topping> NewList(int deltop);
+        void deliverNewVectorToFile(vector<Topping>& newlist);
+
+
+
 
     private:
         ToppingRepository topping_repo;

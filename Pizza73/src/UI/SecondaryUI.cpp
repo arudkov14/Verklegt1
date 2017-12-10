@@ -138,7 +138,7 @@ void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
         case 'q':
             exit(0);
         }
-       // default  - bæta við exception
+        // default  - bæta við exception
 
     } while (input != 'q');
 }
@@ -195,6 +195,35 @@ void printtoppingui()
     cout << "============================================" << endl;
 }
 
+/// topping - menu choice 1
+void SecondaryUI::toppingMenuOne()
+{
+    vector<Topping> toppings = topping_service.retrieve_all_toppings();
+    for(unsigned int i = 0; i < toppings.size(); i++) {
+        cout << "Topping[" << i+1 << "]: " << toppings[i].get_name() << "\t";
+        cout << "price: " << toppings[i].get_price() << "kr." << endl;
+    }
+    cout << endl;
+}
+
+/// topping - menu choice 3 - delete
+void SecondaryUI::toppingMenuTwo()
+{
+    int toppingToDelete;
+    vector<Topping> toppings = topping_service.retrieve_all_toppings();
+        for(unsigned int i = 0; i < toppings.size(); i++) {
+            cout << "Topping[" << i+1 << "]: " << toppings[i].get_name() << "\t";
+            cout << "price: " << toppings[i].get_price() << "kr." << endl;
+        }
+    cin >> toppingToDelete;
+    vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
+    topping_service.deliverNewVectorToFile(NewToppingList);
+    cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
+    cout << "enter topping to delete: " << endl;
+}
+
+
+
 /// TOPPING -  MAIN
 void SecondaryUI::toppingui()
 {
@@ -218,40 +247,13 @@ void SecondaryUI::toppingui()
         cout << "============================================"  << endl;
         cin >> input;
 
-/*       switch(input) {
-
-       case '0':
-           mainui.startmainUI();
-           break;
-       case '1':
-           /// Read topping list
-           break;
-       case '2':
-           /// Add topping to menu
-           break;
-
-       case '3':
-           /// delete topping from menu
-           break;
-       case '4':
-           /// change topping price
-           break;
-       case 'q':
-           exit (0);
-           break;
-       }*/
 
         if(input == '0') {
             mainui.startmainUI();
-
-
-        }
-        else if (input == '1'){
-
-
-
-        }
-        else if(input == '2') {
+        } else if (input == '1') {
+            toppingMenuOne();
+            getch();
+        } else if(input == '2') {
             char choice = 'y';
             while(continueAddTopping == true) {
                 system("CLS");
@@ -271,7 +273,13 @@ void SecondaryUI::toppingui()
                     break;
                 }
             }
-        } else if (input == 'q') {
+        } else if (input == '3') {
+            toppingMenuTwo();
+            getch();
+        }
+
+
+        else if (input == 'q') {
             exit(0);
         }
     } while(continueSales == true);
@@ -296,28 +304,33 @@ void SecondaryUI::startsalesUI()
         cout << "============================================"  << endl;
         cin >> input;
 
-        switch (input) {
-        case '0':
-            mainui.startmainUI();
-            break;
-        case '1':
 
-            break;
-        case '2':
 
-            break;
+        if(input == '1') {
 
-        case '3':
 
-            break;
-        case '4':
 
-            break;
-        case 'q':
+        } else if (input == '2') {
+
+
+
+        } else if (input == '3') {
+
+
+
+        } else if (input == '4') {
+
+
+
+        } else if (input == 'q') {
             exit(0);
+
         }
-    } while(input != 'q');
+    } while (continueSales == true);
+
 }
+
+
 /// DELIVERY - MAIN
 void SecondaryUI::startdeliveryUI()
 {

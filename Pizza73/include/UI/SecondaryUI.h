@@ -21,6 +21,9 @@ class SecondaryUI
         void startmanagerUI();
         void toppingui();
 
+        /// toppingui
+        void toppingMenuOne();
+        void toppingMenuTwo();
 
         /// baker
         void startbakerUI();
@@ -31,11 +34,13 @@ class SecondaryUI
         void validate_input(char& input);
 
     private:
-        Topping topping;
+
+        Topping topping_help;
         bool continueSales;
         bool continueManager;
         bool continueAddTopping;
         toppingService topping_service;
+
       //  Topping addToppings();      /// á þetta að vera hér?
 };
 
