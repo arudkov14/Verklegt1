@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="Pizza" />
+		<Option execution_dir="C:/Users/Andrey/Documents/C++/Pizza/" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -34,13 +35,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Controller.h" />
-		<Unit filename="include/Data.h" />
-		<Unit filename="include/UI.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="src/Controller.cpp" />
-		<Unit filename="src/Data.cpp" />
-		<Unit filename="src/UI.cpp" />
+		<Unit filename="../include/BasicPizza.h" />
+		<Unit filename="../include/Controller.h" />
+		<Unit filename="../include/Data.h" />
+		<Unit filename="../include/Manager.h" />
+		<Unit filename="../include/Order.h" />
+		<Unit filename="../include/Pizza.h" />
+		<Unit filename="../include/PizzaRepository.h" />
+		<Unit filename="../include/Sales.h" />
+		<Unit filename="../include/Topping.h" />
+		<Unit filename="../include/UI.h" />
+		<Unit filename="../main.cpp" />
+		<Unit filename="../src/BasicPizza.cpp" />
+		<Unit filename="../src/Controller.cpp" />
+		<Unit filename="../src/Data.cpp" />
+		<Unit filename="../src/Manager.cpp" />
+		<Unit filename="../src/Order.cpp" />
+		<Unit filename="../src/Pizza.cpp" />
+		<Unit filename="../src/PizzaRepository.cpp" />
+		<Unit filename="../src/Sales.cpp" />
+		<Unit filename="../src/Topping.cpp" />
+		<Unit filename="../src/UI.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

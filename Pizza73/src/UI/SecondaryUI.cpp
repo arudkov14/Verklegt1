@@ -5,10 +5,16 @@ SecondaryUI::SecondaryUI()
     continueSales = true;
     continueManager = true;
     continueAddTopping = true;
+<<<<<<< HEAD
+    continue_add_pizza = true;
+=======
+>>>>>>> master
 }
 
 /// MANAGER UI ///
 
+<<<<<<< HEAD
+=======
 /*vector<Topping>SecondaryUI::addToToppings(vector<Topping> toppings)
 {
     Topping topping;
@@ -18,6 +24,7 @@ SecondaryUI::SecondaryUI()
     return toppings;
 }*/
 
+>>>>>>> master
 /// BAKER MAIN
 void SecondaryUI::startbakerUI()
 {
@@ -156,9 +163,16 @@ void SecondaryUI::startmanagerUI()
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
+<<<<<<< HEAD
+        cout << "1; Pizzas" << endl;
+        cout << "2: Toppings" << endl;
+        cout << "3: Add other products" << endl;                  /// vantar UI
+        cout << "4: Add locations" << endl;                       /// vantar UI
+=======
         cout << "1: Toppings" << endl;
         cout << "2: Add other products" << endl;                  /// vantar UI
         cout << "3: Add locations" << endl;                       /// vantar UI
+>>>>>>> master
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
 
@@ -170,6 +184,15 @@ void SecondaryUI::startmanagerUI()
             mainui.startmainUI();
             break;
         case '1':
+<<<<<<< HEAD
+            secondaryui.add_pizza();
+            break;
+        case '2':
+            secondaryui.toppingui();
+            break;
+        case '3':
+           secondaryui.show_all_pizzas();
+=======
             secondaryui.toppingui();
             break;
         case '2':
@@ -177,6 +200,7 @@ void SecondaryUI::startmanagerUI()
             break;
         case '3':
             /// add locations
+>>>>>>> master
             break;
         case 'q':
             exit (0);
@@ -195,6 +219,55 @@ void printtoppingui()
     cout << "============================================" << endl;
 }
 
+<<<<<<< HEAD
+void SecondaryUI::add_pizza()
+{
+    MainUI mainui;
+    SecondaryUI secondaryui;
+
+        char choice = 'y';
+            while(continue_add_pizza == true)
+                {
+                system("CLS");
+                cout << "Add another Pizza (y/n)? ";
+                cin >> choice;
+                if (choice == 'y')
+                {
+                    Pizza pizza;
+                    cin >> pizza;
+                    pizza_service.add_pizza(pizza);
+                    cout << "Pizza has been saved";   /// færa staðfestingu í validate
+                    getch();
+                    system("CLS");
+                    cout << endl;
+
+                }
+                else if (choice == 'n')
+                {
+                    choice = 'n';
+                    break;
+                }
+                }
+}
+
+void SecondaryUI::show_all_pizzas()
+{
+         vector<Pizza> all_pizzas = pizza_service.retrive_all_pizza();
+
+                    for(unsigned int i = 0; i < all_pizzas.size(); i++)
+                    {
+                        cout << "Pizza[" << i+1 << "]: " << all_pizzas[i].get_pizza_name() << " ";
+                        cout << "Number of Toppings: " << all_pizzas[i].get_topping_count() << " ";
+                        cout << "Size (in inches): " << all_pizzas[i].get_pizza_size() << " ";
+                        cout << "Price: " << all_pizzas[i].get_base_pizza_price();
+                        cout << endl;
+                    }
+                    getch();
+
+}
+
+=======
+>>>>>>> master
 /// TOPPING -  MAIN
 void SecondaryUI::toppingui()
 {
@@ -218,6 +291,8 @@ void SecondaryUI::toppingui()
         cout << "============================================"  << endl;
         cin >> input;
 
+<<<<<<< HEAD
+=======
 /*       switch(input) {
 
        case '0':
@@ -241,6 +316,7 @@ void SecondaryUI::toppingui()
            break;
        }*/
 
+>>>>>>> master
         if(input == '0') {
             mainui.startmainUI();
 
@@ -251,7 +327,12 @@ void SecondaryUI::toppingui()
 
 
         }
+<<<<<<< HEAD
+        else if(input == '2')
+            {
+=======
         else if(input == '2') {
+>>>>>>> master
             char choice = 'y';
             while(continueAddTopping == true) {
                 system("CLS");
@@ -296,6 +377,27 @@ void SecondaryUI::startsalesUI()
         cout << "============================================"  << endl;
         cin >> input;
 
+<<<<<<< HEAD
+        if(input == '0')
+        {
+            mainui.startmainUI();
+
+
+        }
+        else if (input == '1')
+        {
+
+        }
+        else if(input == '2')
+        {
+
+        }
+        else if (input == 'q')
+        {
+            exit(0);
+        }
+    } while(continueSales == true);
+=======
         switch (input) {
         case '0':
             mainui.startmainUI();
@@ -317,6 +419,7 @@ void SecondaryUI::startsalesUI()
             exit(0);
         }
     } while(input != 'q');
+>>>>>>> master
 }
 /// DELIVERY - MAIN
 void SecondaryUI::startdeliveryUI()
@@ -363,6 +466,8 @@ void SecondaryUI::startdeliveryUI()
     } while(input != 'q');
 }
 
+<<<<<<< HEAD
+=======
 /*
 if (input == '1') {
 
@@ -425,3 +530,4 @@ void SecondaryUI::validate_input(char& input)
 }
 */
 
+>>>>>>> master
