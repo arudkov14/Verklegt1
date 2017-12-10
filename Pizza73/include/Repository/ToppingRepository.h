@@ -21,16 +21,6 @@ class ToppingRepository
         Topping parseString(string line);
         void deliverNewVectorToFile(vector<Topping>& newlist);
 
-
-
-
-
-
-    private:
-
-
-
-
 };
 
 #endif // TOPPINGREPOSITORY_H

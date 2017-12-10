@@ -2,9 +2,7 @@
 #define PIZZA_H
 #include <vector>
 #include "Topping.h"
-#include "pizzaService.h"
-
-
+#include <cstdlib>
 #include <fstream>
 using namespace std;
 
@@ -12,24 +10,21 @@ class Pizza
 {
     public:
         Pizza();
-        Pizza(vector<Topping> toppings, int pizzaSize, int orderNumber);
+        Pizza(string pizza_name, int base_pizza_price, int topping_count,int  pizza_size);
+        int get_base_pizza_price();
+        int get_topping_count();
+        int get_pizza_size();
+        string get_pizza_name();
 
-        friend istream& operator >> (istream& in, Pizza& pizza);
-        friend ostream& operator << (ostream& out,  Pizza& pizza);
-        void addToppings(Topping topping);
-        void write(ofstream& fout);
-
-        /// get functions
-        vector<Topping> get_toppings();
-        int get_size();
-        int get_orderNumber();
+        friend ostream& operator <<(ostream& out, Pizza& pizza);
+        friend istream& operator >>(istream& in, Pizza& pizza);
 
 
     private:
-        vector<Topping> toppings;
-        int pizzaSize;
-        int orderNumber;
-
+        int base_pizza_price;
+        int topping_count;
+        int pizza_size;
+        string pizza_name;
 
 };
 

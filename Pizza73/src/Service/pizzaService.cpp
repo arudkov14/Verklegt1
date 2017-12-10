@@ -1,7 +1,14 @@
-#include "pizzaService.h"
+#include "PizzaService.h"
 
-pizzaService::pizzaService()
+
+
+void PizzaService::add_pizza(Pizza& pizza)
 {
-    //ctor
+    pizza_repo.add_pizza(pizza);
+}
+
+vector<Pizza> PizzaService::retrive_all_pizza()
+{
+    return pizza_repo.retrieve_all_pizza();
 }
 

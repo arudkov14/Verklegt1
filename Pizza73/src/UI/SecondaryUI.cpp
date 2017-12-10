@@ -5,6 +5,8 @@ SecondaryUI::SecondaryUI()
     continueSales = true;
     continueManager = true;
     continueAddTopping = true;
+    continueDrink = true;
+    continueAddDrink = true;
 }
 
 /// MANAGER UI ///
@@ -32,7 +34,7 @@ void SecondaryUI::startbakerUI()
         cout << "============================================" << endl;
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Choose location" << endl;
-        cout << "2: Orders " << endl;       /// filtera pantanir út frá staðsetningu
+        cout << "2: Orders " << endl;       /// filtera pantanir Ãºt frÃ¡ staÃ°setningu
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
@@ -99,7 +101,7 @@ void SecondaryUI::locationui()
 }
 
 /// BAKER - orders
-void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
+void SecondaryUI::ordersui() /// skoÃ°a betur upprÃ¶Ã°un Ã¡ undirflokkum
 
 {
     MainUI mainui;
@@ -114,8 +116,8 @@ void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Orders for Skeifan" << endl;
         cout << "2: Orders for Laugavegur" << endl;
-        cout << "3: List of all orders" << endl;                    /// merkja pantanir í vinnslu eða tilbúnar
-        cout << "4: Search for order number" << endl;               /// bæta við í pizza class
+        cout << "3: List of all orders" << endl;                    /// merkja pantanir Ã­ vinnslu eÃ°a tilbÃºnar
+        cout << "4: Search for order number" << endl;               /// bÃ¦ta viÃ° Ã­ pizza class
         cout << "============================================" << endl;
         cin >> input;
 
@@ -130,15 +132,15 @@ void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
             /// vantar UI fyrir Laugavegur.
             break;
         case '3':
-            /// List of all orders -> möguleiki á að breyta status
+            /// List of all orders -> mÃ¶guleiki Ã¡ aÃ° breyta status
             break;
         case '4':
-            /// search for order number -> möguleiki á að breyta status
+            /// search for order number -> mÃ¶guleiki Ã¡ aÃ° breyta status
             break;
         case 'q':
             exit(0);
         }
-        // default  - bæta við exception
+        // default  - bÃ¦ta viÃ° exception
 
     } while (input != 'q');
 }
@@ -157,7 +159,7 @@ void SecondaryUI::startmanagerUI()
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Toppings" << endl;
-        cout << "2: Add other products" << endl;                  /// vantar UI
+        cout << "2: Drinks" << endl;
         cout << "3: Add locations" << endl;                       /// vantar UI
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
@@ -173,7 +175,7 @@ void SecondaryUI::startmanagerUI()
             secondaryui.toppingui();
             break;
         case '2':
-            /// add other products
+            secondaryui.drinkui();
             break;
         case '3':
             /// add locations
@@ -248,6 +250,7 @@ void SecondaryUI::toppingui()
         cin >> input;
 
 
+
         if(input == '0') {
             mainui.startmainUI();
         } else if (input == '1') {
@@ -264,7 +267,7 @@ void SecondaryUI::toppingui()
                     Topping toppings;
                     cin >> toppings;
                     topping_service.add_topping(toppings);
-                    cout << "Topping has been saved";   /// færa staðfestingu í validate
+                    cout << "Topping has been saved";   /// fÃ¦ra staÃ°festingu Ã­ validate
                     getch();
                     system("CLS");
                     cout << endl;
@@ -273,6 +276,7 @@ void SecondaryUI::toppingui()
                     break;
                 }
             }
+
         } else if (input == '3') {
             toppingMenuTwo();
             getch();
@@ -282,10 +286,91 @@ void SecondaryUI::toppingui()
         else if (input == 'q') {
             exit(0);
         }
+
     } while(continueSales == true);
 }
 
-/// SALESS - MAIN
+/// DRINK - TEXT ONLY
+void printdrinkui()
+{
+    cout << "============================================" << endl;
+    cout << "\t \t Manager UI \t" << endl;
+    cout << "============================================" << endl;
+    cout << "\t \t drinks \t" << endl;
+    cout << "============================================" << endl;
+}
+
+/// DRINK - MAIN
+void SecondaryUI::drinkui()
+{
+    MainUI mainui;
+    SecondaryUI secondaryui;
+    char input;
+    do {
+        system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Manager UI \t" << endl;
+        cout << "============================================" << endl;
+        cout << "\t \t drinks \t" << endl;
+        cout << "============================================" << endl;
+        cout << "Enter a choice" << endl;
+        cout << "0: Back to Main Menu" << endl;
+        cout << "1: Read drink list" << endl;
+        cout << "2: Add drinks to menu" << endl;
+        cout << "3: Delete drink from menu" << endl;
+        cout << "4: Change drink price" << endl;
+        cout << "q: Quit" << endl;
+        cout << "============================================"  << endl;
+        cin >> input;
+
+        if(input == '0') {
+            mainui.startmainUI();
+        }
+
+        else if (input == '1'){
+
+            vector<Drink> drinks_from_menu = drink_service.retrieve_all_drinks();
+
+            for (unsigned int i = 0; i < drinks_from_menu.size(); i++) {
+                cout << "Brand: ";
+                cout << drinks_from_menu[i].get_brand() << endl;
+                cout << "Size: ";
+                cout << drinks_from_menu[i].get_size() << endl;
+                cout << "Price: ";
+                cout << drinks_from_menu[i].get_price() << endl;
+                cout << endl;
+            }
+            getch();
+        }
+
+        else if(input == '2') {
+            char choice = 'y';
+            while(continueAddDrink == true) {
+                system("CLS");
+                printdrinkui();
+                cout << "Add another drink (y/n)? ";
+                cin >> choice;
+                if (choice == 'y') {
+                    Drink drinks;
+                    cin >> drinks;
+                    drink_service.add_drink(drinks);
+                    cout << "Drink has been saved";   /// fÃ¦ra staÃ°festingu Ã­ validate
+                    getch();
+                    system("CLS");
+                    cout << endl;
+                } else if (choice == 'n') {
+                    choice = 'n';
+                    break;
+                }
+            }
+        } else if (input == 'q') {
+            exit(0);
+        }
+
+    } while(continueDrink == true);
+}
+
+/// SALES - MAIN
 void SecondaryUI::startsalesUI()
 {
     MainUI mainui;
@@ -303,6 +388,7 @@ void SecondaryUI::startsalesUI()
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
+
 
 
 
@@ -329,8 +415,6 @@ void SecondaryUI::startsalesUI()
     } while (continueSales == true);
 
 }
-
-
 /// DELIVERY - MAIN
 void SecondaryUI::startdeliveryUI()
 {
@@ -425,7 +509,7 @@ void SecondaryUI::validate_input(char& input)
             }
         }
         cout << "kemur ad mer?" << endl;
-//        topping_service.add_topping(toppings); /// veldur óendanlegri loopu. Skrifar á fullt inn í texta skjal núllstilltar toppings
+//        topping_service.add_topping(toppings); /// veldur Ã³endanlegri loopu. Skrifar Ã¡ fullt inn Ã­ texta skjal nÃºllstilltar toppings
     }
     else if (input == '3') {
         MainUI mainui;

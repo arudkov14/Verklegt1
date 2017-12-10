@@ -61,7 +61,6 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
     vector<Topping> toppingsFromFile;
 
     ifstream fin("ToppingList.txt");
-
     if (fin.is_open()) {
         string line;
         while (getline(fin, line)) {
@@ -108,7 +107,7 @@ void ToppingRepository::deleteFromFile(int deltop)
 */
 
 
-/// notum part af þessu fyrir delete
+/// notum part af ï¿½essu fyrir delete
 /*
 void ToppingRepository::deleteFromFile()
 {

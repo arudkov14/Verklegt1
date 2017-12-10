@@ -45,20 +45,26 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Exceptions/InvalidMenuException.h" />
+		<Unit filename="include/Model/Drink.h" />
 		<Unit filename="include/Model/Pizza.h" />
 		<Unit filename="include/Model/Topping.h" />
+		<Unit filename="include/Repository/DrinkRepository.h" />
 		<Unit filename="include/Repository/PizzaRepository.h" />
 		<Unit filename="include/Repository/ToppingRepository.h" />
+		<Unit filename="include/Service/DrinkService.h" />
 		<Unit filename="include/Service/pizzaService.h" />
 		<Unit filename="include/Service/toppingService.h" />
 		<Unit filename="include/UI/MainUI.h" />
 		<Unit filename="include/UI/SecondaryUI.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Exceptions/InvalidMenuException.cpp" />
+		<Unit filename="src/Model/Drink.cpp" />
 		<Unit filename="src/Model/Pizza.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
+		<Unit filename="src/Repository/DrinkRepository.cpp" />
 		<Unit filename="src/Repository/PizzaRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepository.cpp" />
+		<Unit filename="src/Service/DrinkService.cpp" />
 		<Unit filename="src/Service/pizzaService.cpp" />
 		<Unit filename="src/Service/toppingService.cpp" />
 		<Unit filename="src/UI/MainUI.cpp" />
