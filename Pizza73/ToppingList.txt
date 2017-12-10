@@ -1,3 +1,5 @@
-Topping: Pineapple Price: 140 
-Topping: pepp Price: 
-555 Topping: svepp Price: 333 
+
+ananas,100,
+epli,100,
+andrey,1,
+
