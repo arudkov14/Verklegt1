@@ -9,18 +9,18 @@ class Topping
 {
     public:
         Topping();
-        Topping(string name, double price, bool verbose);
+        Topping(string name, double price);
 
         string get_name();
         double get_price();
-        bool get_verbose();
-
+        void set_verbose(bool v);
 
         friend istream& operator >> (istream& in, Topping& topping);
         friend ostream& operator << (ostream& out, Topping& topping);
-        void set_verbose(bool& v); //
+
 
         vector<Topping> toppings;
+
 
     private:
         bool verbose;

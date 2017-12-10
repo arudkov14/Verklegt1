@@ -10,6 +10,7 @@
 
 
 
+
 class ToppingRepository
 {
     public:
@@ -17,8 +18,8 @@ class ToppingRepository
         void add_topping(Topping& topping);
        // vector<Topping> toppings;
         vector<Topping> retrieve_all_toppings();
-
-    private:
+        Topping parseString(string line);
+        void deliverNewVectorToFile(vector<Topping>& newlist);
 
 };
 
