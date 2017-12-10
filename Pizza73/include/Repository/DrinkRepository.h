@@ -7,7 +7,7 @@
 #include <stdlib.h>
 //#include "DrinkService.h"
 //#include <cstdlib>
-//#include <string>
+#include <string>
 #include <iostream>
 
 class DrinkRepository
