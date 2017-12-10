@@ -20,13 +20,6 @@ class ToppingRepository
 
     private:
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> master
 };
 
 #endif // TOPPINGREPOSITORY_H
