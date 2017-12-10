@@ -2,7 +2,7 @@
 #define PIZZA_H
 #include <vector>
 #include "Topping.h"
-
+#include <cstdlib>
 #include <fstream>
 using namespace std;
 
@@ -10,7 +10,7 @@ class Pizza
 {
     public:
         Pizza();
-        Pizza(int base_pizza_price, int topping_count,int  pizza_size, string pizza_name);
+        Pizza(string pizza_name, int base_pizza_price, int topping_count,int  pizza_size);
         int get_base_pizza_price();
         int get_topping_count();
         int get_pizza_size();

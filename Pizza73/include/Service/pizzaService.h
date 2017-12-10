@@ -6,10 +6,10 @@
 
 
 
-class pizzaService
+class PizzaService
 {
     public:
-        pizzaService();
+
        void add_pizza(Pizza& pizza);
        vector<Pizza> retrive_all_pizza();
 

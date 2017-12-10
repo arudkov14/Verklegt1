@@ -10,15 +10,6 @@ SecondaryUI::SecondaryUI()
 
 /// MANAGER UI ///
 
-/*vector<Topping>SecondaryUI::addToToppings(vector<Topping> toppings)
-{
-    Topping topping;
-    cin >> topping;
-    toppings.push_back(topping);
-
-    return toppings;
-}*/
-
 /// BAKER MAIN
 void SecondaryUI::startbakerUI()
 {
@@ -157,7 +148,7 @@ void SecondaryUI::startmanagerUI()
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
-        cout << "1; Add Pizza" << endl;
+        cout << "1; Pizzas" << endl;
         cout << "2: Toppings" << endl;
         cout << "3: Add other products" << endl;                  /// vantar UI
         cout << "4: Add locations" << endl;                       /// vantar UI
@@ -178,7 +169,7 @@ void SecondaryUI::startmanagerUI()
             secondaryui.toppingui();
             break;
         case '3':
-            /// add locations
+           secondaryui.show_all_pizzas();
             break;
         case 'q':
             exit (0);
@@ -217,13 +208,6 @@ void SecondaryUI::add_pizza()
                     getch();
                     system("CLS");
                     cout << endl;
-                    vector<Pizza> all_pizzas = pizza_service.retrive_all_pizza();
-
-                    for(unsigned int i = 0; i < all_pizzas.size(); i++)
-                    {
-                        cout << all_pizzas[i];
-                    }
-                    getch();
 
                 }
                 else if (choice == 'n')
@@ -234,6 +218,21 @@ void SecondaryUI::add_pizza()
                 }
 }
 
+void SecondaryUI::show_all_pizzas()
+{
+         vector<Pizza> all_pizzas = pizza_service.retrive_all_pizza();
+
+                    for(unsigned int i = 0; i < all_pizzas.size(); i++)
+                    {
+                        cout << "Pizza[" << i+1 << "]: " << all_pizzas[i].get_pizza_name() << " ";
+                        cout << "Number of Toppings: " << all_pizzas[i].get_topping_count() << " ";
+                        cout << "Size (in inches): " << all_pizzas[i].get_pizza_size() << " ";
+                        cout << "Price: " << all_pizzas[i].get_base_pizza_price();
+                        cout << endl;
+                    }
+                    getch();
+
+}
 
 /// TOPPING -  MAIN
 void SecondaryUI::toppingui()
@@ -378,66 +377,4 @@ void SecondaryUI::startdeliveryUI()
 
     } while(input != 'q');
 }
-
-/*
-if (input == '1') {
-
-    vector<Topping> toppings = topping_service.retrieve_all_toppings();
-
-    cout << toppings[0];
-
-
-
-}
-else if (input == '2') {
-    Topping toppings;
-    cin >> toppings;
-    topping_service.add_topping(toppings);
-}
-else if (input == 'q') {
-    exit (0);
-
-
-}
-//validate_input(input);
-
-
-} while(continueManager == true);
-*/
-
-/*
-void SecondaryUI::validate_input(char& input)
-{
-
-    if(input == '1') {
-
-    }
-
-    else if (input == '2') {
-        char input = 'y';
-        vector<Topping> toppings;
-        while (input == 'y') {
-            cout << endl;
-            cout << "Enter new topping (y/n)?";
-            cin >> input;
-            if(input == 'y') {
-            //    addToToppings(toppings);
-            }
-            else {
-                break;
-            }
-        }
-        cout << "kemur ad mer?" << endl;
-//        topping_service.add_topping(toppings); /// veldur óendanlegri loopu. Skrifar á fullt inn í texta skjal núllstilltar toppings
-    }
-    else if (input == '3') {
-        MainUI mainui;
-        mainui.startmainUI();
-    }
-    else if (input == 'q') {
-        exit (0);
-    }
-
-}
-*/
 

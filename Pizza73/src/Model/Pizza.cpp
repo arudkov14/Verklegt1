@@ -6,7 +6,7 @@ Pizza::Pizza()
 }
 
 
-Pizza::Pizza(int base_pizza_price, int topping_count, int pizza_size, string pizza_name)
+Pizza::Pizza(string pizza_name,int topping_count,int pizza_size, int base_pizza_price)
 {
     this->base_pizza_price = base_pizza_price;
     this->topping_count = topping_count;
@@ -39,12 +39,12 @@ ostream& operator <<(ostream& out, Pizza& pizza)
     out << pizza.pizza_name << ",";
     out << pizza.topping_count<< ",";
     out << pizza.pizza_size<< ",";
-    out << pizza.base_pizza_price << endl;
+    out << pizza.base_pizza_price <<","<< endl;
 
         return out;
 }
 
-istream& operator >>(istream& in, Pizza& pizza)
+istream& operator >>(istream& in,Pizza& pizza)
 {
     cout << "Name of the pizza: ";
     in >> pizza.pizza_name;
