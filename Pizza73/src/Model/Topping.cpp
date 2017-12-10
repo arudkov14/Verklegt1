@@ -31,11 +31,7 @@ double Topping::get_price() {
 
 istream& operator >> (istream& in, Topping& topping) {
 
-<<<<<<< HEAD
     cout << "Topping name:  ";
-=======
-    cout << "Topping name: ";
->>>>>>> master
 
     in >> ws;
     getline(in, topping.name);
@@ -49,17 +45,10 @@ istream& operator >> (istream& in, Topping& topping) {
 ostream& operator << (ostream& out, Topping& topping) {
 
         out << "Topping: ";
-<<<<<<< HEAD
         out << topping.name << " ";
 
         out << "Price: ";
         out << topping.price << " ";
-=======
-        out << topping.name;
-
-        out << "Price: ";
-        out << topping.price;
->>>>>>> master
         cout << endl;
 
 
