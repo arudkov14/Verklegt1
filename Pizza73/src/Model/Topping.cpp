@@ -13,9 +13,6 @@ Topping::Topping(string name, double price) {
 
 }
 
-void Topping::set_verbose(bool v) {
-     verbose = v;
-}
 
 string Topping::get_name() {
     return this-> name;
@@ -25,14 +22,12 @@ double Topping::get_price() {
     return this-> price;
 }
 
-istream& operator >> (istream& in, Topping& topping) {
-
-
+istream& operator >> (istream& in, Topping& topping)
+{
     cout << "Topping name: ";
 
     in >> ws;
     getline(in, topping.name);
-
 
     cout << "Topping price: ";
 
@@ -44,7 +39,6 @@ istream& operator >> (istream& in, Topping& topping) {
 ostream& operator << (ostream& out, Topping& topping) {
 
         out << topping.name << "," << topping.price << ",";
-
 
     return out;
 }

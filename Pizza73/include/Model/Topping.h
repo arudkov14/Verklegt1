@@ -23,7 +23,6 @@ class Topping
 
 
     private:
-        bool verbose;
         string name;
         double price;
 

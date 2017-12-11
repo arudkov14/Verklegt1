@@ -1,152 +1,169 @@
 # depslib dependency file v1.0
-1512650351 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\main.cpp
+1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\main.cpp
 	<iostream>
 	"MainUI.h"
 
-1512775768 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\ui\mainui.h
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\ui\mainui.h
 	"SecondaryUI.h"
 	<fstream>
 	<iostream>
 	<stdlib.h>
 
-1512908152 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\model\pizza.cpp
+1512999907 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\pizza.cpp
 	"Pizza.h"
 
-1512908170 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\model\pizza.h
+1513014883 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\pizza.h
 	<vector>
 	"Topping.h"
-	"pizzaService.h"
+	<cstdlib>
 	<fstream>
 
-1512865478 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\model\topping.cpp
+1512994362 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\topping.cpp
 	"Topping.h"
 
-1512915391 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\model\topping.h
+1512991163 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\topping.h
 	<iostream>
 	<vector>
 
-1512659686 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\repository\pizzarepository.cpp
+1513005370 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\pizzarepository.cpp
 	"PizzaRepository.h"
 
-1512659624 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\repository\pizzarepository.h
+1513005330 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\pizzarepository.h
 	"Pizza.h"
 	<fstream>
 	<iostream>
+	<iostream>
+	<stdlib.h>
 
-1512929642 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\repository\toppingrepository.cpp
+1512993773 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\toppingrepository.cpp
 	"ToppingRepository.h"
 
-1512929642 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\repository\toppingrepository.h
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\toppingrepository.h
 	"Topping.h"
 	<fstream>
 	<iostream>
 	<string.h>
 	<stdlib.h>
 
-1512821113 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\ui\mainui.cpp
+1513002769 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\ui\mainui.cpp
 	"MainUI.h"
 
-1512930419 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\ui\secondaryui.cpp
+1513006163 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\ui\secondaryui.cpp
 	"SecondaryUI.h"
 
-1512929834 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\ui\secondaryui.h
+1513006499 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\ui\secondaryui.h
 	"MainUI.h"
-	<cstdlib>
-	"Pizza.h"
 	"toppingService.h"
 	<iostream>
 	<conio.h>
-
-1512682897 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\service\pizzaservice.cpp
+	<Drink.h>
+	"DrinkService.h"
+	<fstream>
+	"Pizza.h"
 	"pizzaService.h"
+	<iomanip>
 
-1512682922 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\service\pizzaservice.h
+1513002969 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\pizzaservice.cpp
+	"PizzaService.h"
 
-1512929653 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\service\toppingservice.cpp
+1513002914 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\pizzaservice.h
+	"Pizza.h"
+	"PizzaRepository.h"
+	<iostream>
+
+1512998446 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\toppingservice.cpp
 	"toppingService.h"
 
-1512929642 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\service\toppingservice.h
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\toppingservice.h
 	"Topping.h"
 	<iostream>
 	<vector>
 	"ToppingRepository.h"
 
-1512650351 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\main.cpp
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\main.cpp
 	<iostream>
 	"MainUI.h"
 
-1512775768 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\ui\mainui.h
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\ui\mainui.h
 	"SecondaryUI.h"
 	<fstream>
 	<iostream>
 	<stdlib.h>
 
-1512783960 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\ui\secondaryui.h
+1512943374 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\ui\secondaryui.h
 	"MainUI.h"
-	<cstdlib>
-	"Pizza.h"
 	"toppingService.h"
 	<iostream>
 	<conio.h>
+	<Drink.h>
+	"DrinkService.h"
+	<fstream>
+	"Pizza.h"
+	"pizzaService.h"
 
-1512686381 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\model\pizza.cpp
+1512943488 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\pizza.cpp
 	"Pizza.h"
 
-1512744304 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\model\pizza.h
+1512947954 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\pizza.h
 	<vector>
 	"Topping.h"
-	"pizzaService.h"
+	<cstdlib>
 	<fstream>
 
-1512758956 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\model\topping.h
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\topping.h
 	<iostream>
 	<vector>
 
-1512774868 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\model\topping.cpp
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\topping.cpp
 	"Topping.h"
 
-1512659686 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\repository\pizzarepository.cpp
+1512943119 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\pizzarepository.cpp
 	"PizzaRepository.h"
 
-1512659624 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\repository\pizzarepository.h
+1512943475 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\pizzarepository.h
 	"Pizza.h"
 	<fstream>
 	<iostream>
+	<ostream>
+	<stdlib.h>
 
-1512775417 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\repository\toppingrepository.cpp
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\toppingrepository.cpp
 	"ToppingRepository.h"
 
-1512775552 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\repository\toppingrepository.h
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\toppingrepository.h
 	"Topping.h"
 	<fstream>
 	<iostream>
 	<string.h>
 	<stdlib.h>
 
-1512682897 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\service\pizzaservice.cpp
-	"pizzaService.h"
+1512943260 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\pizzaservice.cpp
+	"PizzaService.h"
 
-1512682922 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\service\pizzaservice.h
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\pizzaservice.h
+	"Pizza.h"
+	"PizzaRepository.h"
+	<iostream>
 
-1512770621 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\service\toppingservice.cpp
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\toppingservice.cpp
 	"toppingService.h"
 
-1512771555 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\service\toppingservice.h
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\toppingservice.h
 	"Topping.h"
 	<iostream>
 	<vector>
 	"ToppingRepository.h"
 
-1512784541 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\ui\secondaryui.cpp
+1512943562 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\ui\secondaryui.cpp
 	"SecondaryUI.h"
 
-1512779628 source:c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\ui\mainui.cpp
+1512941647 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\ui\mainui.cpp
 	"MainUI.h"
 
-1512821119 source:c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\src\exceptions\invalidmenuexception.cpp
+1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\exceptions\invalidmenuexception.cpp
 	"InvalidMenuException.h"
 
-1512821113 c:\users\danielm\onedrive - reykjavik university\haustönn 2017\verklegt námskeiğ 1\verkefni\ağalverkefni\pizza73\include\exceptions\invalidmenuexception.h
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\exceptions\invalidmenuexception.h
 
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\main.cpp
 	<iostream>
@@ -374,11 +391,19 @@
 1512904088 source:c:\users\andrey\desktop\verklegt1-master\pizza73\src\ui\secondaryui.cpp
 	"SecondaryUI.h"
 
+
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\drink.h
 1512904768 c:\users\andrey\desktop\i am groot\pizza73\include\model\drink.h
 	<fstream>
 	<string>
 	<iostream>
 
+
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\drinkservice.h
+	"Drink.h"
+	"DrinkRepository.h"
+
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\drinkrepository.h
 1512998650 c:\users\andrey\desktop\i am groot\pizza73\include\service\drinkservice.h
 	<string>
 	"Drink.h"
@@ -395,6 +420,45 @@
 	<string>
 	<iostream>
 
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\exceptions\invalidmenuexception.cpp
+	"InvalidMenuException.h"
+
+1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\exceptions\invalidmenuexception.h
+
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\drink.cpp
+	"Drink.h"
+
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\drinkrepository.cpp
+	"DrinkRepository.h"
+
+1512940669 source:c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\drinkservice.cpp
+	"DrinkService.h"
+
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\drink.h
+	<fstream>
+	<string>
+	<iostream>
+
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\service\drinkservice.h
+	"Drink.h"
+	"DrinkRepository.h"
+
+1512940669 c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\repository\drinkrepository.h
+	"Drink.h"
+	<fstream>
+	<vector>
+	<stdlib.h>
+	<string>
+	<iostream>
+
+1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\model\drink.cpp
+	"Drink.h"
+
+1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\repository\drinkrepository.cpp
+	"DrinkRepository.h"
+
+1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\drinkservice.cpp
+	"DrinkService.h"
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\drink.cpp
 	"Drink.h"
 
