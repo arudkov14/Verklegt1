@@ -9,6 +9,46 @@ SecondaryUI::SecondaryUI()
     continueAddDrink = true;
 }
 
+/// VALIDATION FOR DRINKS
+void SecondaryUI::validateDrinks(Drink& drinks)
+{
+                    if(!drink_service.drink_brand(drinks))
+                    {
+                       cout << "Brand name cant include numbers ";
+                    }
+                    else if(!drink_service.drink_size(drinks))
+                    {
+                        cout << "Size can only be 0.5, 1, 2 and can´t include letters ";
+                    }
+                    else if(!drink_service.drink_price(drinks))
+                    {
+                        cout << "Price should be positive number";
+                    }
+                    else
+                    {
+                        drink_service.add_drink(drinks);
+                        cout << "Drink has been saved";
+                    }
+}
+
+///VALIDATION FOR TOPPINGS
+void SecondaryUI::validateToppings(Topping& toppings)
+{
+     if(!topping_service.topping_name(toppings))
+                    {
+                        cout << "Name supposed to contain only letters";
+                    }
+                    else if(!topping_service.topping_price(toppings))
+                    {
+                        cout << "Price needs to be positive numbers";
+                    }
+                    else
+                    {
+                        topping_service.add_topping(toppings);
+                        cout << "Topping has been saved";
+                    }
+}
+
 /// MANAGER UI ///
 
 /*vector<Topping>SecondaryUI::addToToppings(vector<Topping> toppings)
@@ -217,11 +257,12 @@ void SecondaryUI::toppingMenuTwo()
             cout << "Topping[" << i+1 << "]: " << toppings[i].get_name() << "\t";
             cout << "price: " << toppings[i].get_price() << "kr." << endl;
         }
+    cout << "enter topping to delete: " << endl;
     cin >> toppingToDelete;
     vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
     topping_service.deliverNewVectorToFile(NewToppingList);
     cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
-    cout << "enter topping to delete: " << endl;
+
 }
 
 
@@ -266,8 +307,7 @@ void SecondaryUI::toppingui()
                 if (choice == 'y') {
                     Topping toppings;
                     cin >> toppings;
-                    topping_service.add_topping(toppings);
-                    cout << "Topping has been saved";   /// færa staðfestingu í validate
+                    validateToppings(toppings);
                     getch();
                     system("CLS");
                     cout << endl;
@@ -353,8 +393,7 @@ void SecondaryUI::drinkui()
                 if (choice == 'y') {
                     Drink drinks;
                     cin >> drinks;
-                    drink_service.add_drink(drinks);
-                    cout << "Drink has been saved";   /// færa staðfestingu í validate
+                    validateDrinks(drinks);
                     getch();
                     system("CLS");
                     cout << endl;
@@ -460,65 +499,4 @@ void SecondaryUI::startdeliveryUI()
     } while(input != 'q');
 }
 
-/*
-if (input == '1') {
-
-    vector<Topping> toppings = topping_service.retrieve_all_toppings();
-
-    cout << toppings[0];
-
-
-
-}
-else if (input == '2') {
-    Topping toppings;
-    cin >> toppings;
-    topping_service.add_topping(toppings);
-}
-else if (input == 'q') {
-    exit (0);
-
-
-}
-//validate_input(input);
-
-
-} while(continueManager == true);
-*/
-
-/*
-void SecondaryUI::validate_input(char& input)
-{
-
-    if(input == '1') {
-
-    }
-
-    else if (input == '2') {
-        char input = 'y';
-        vector<Topping> toppings;
-        while (input == 'y') {
-            cout << endl;
-            cout << "Enter new topping (y/n)?";
-            cin >> input;
-            if(input == 'y') {
-            //    addToToppings(toppings);
-            }
-            else {
-                break;
-            }
-        }
-        cout << "kemur ad mer?" << endl;
-//        topping_service.add_topping(toppings); /// veldur óendanlegri loopu. Skrifar á fullt inn í texta skjal núllstilltar toppings
-    }
-    else if (input == '3') {
-        MainUI mainui;
-        mainui.startmainUI();
-    }
-    else if (input == 'q') {
-        exit (0);
-    }
-
-}
-*/
 
