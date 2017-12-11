@@ -1,4 +1,19 @@
+<<<<<<< HEAD
+Pepp,250,
+pep,0,
+Epli,300,
+w,0,
+,0,
+,0,
+,0,
+,0,
+Epli,0,
+,0,
+Andrey,0,
+,0,
+=======
 
 ananas,100,
 epli,100,
 andrey,1,
+>>>>>>> origin/Pizza_model
