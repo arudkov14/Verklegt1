@@ -1,15 +1,12 @@
 #ifndef SECONDARYUI_H
 #define SECONDARYUI_H
 #include "MainUI.h"
+#include <cstdlib>
+#include "Pizza.h" /// taka út líklega
+//#include "Topping.h" /// taka út líklega
 #include "toppingService.h"
 #include <iostream>
 #include <conio.h>
-#include <Drink.h>
-#include "DrinkService.h"
-#include <fstream>
-#include "Pizza.h"
-#include "pizzaService.h"
-#include <iomanip>
 
 class SecondaryUI
 {
@@ -23,15 +20,10 @@ class SecondaryUI
         /// manager
         void startmanagerUI();
         void toppingui();
-        void drinkui();
 
         /// toppingui
         void toppingMenuOne();
-        void toppingMenuThree();
         void toppingMenuTwo();
-
-        /// DRINK UI
-        void drinkMenuOne ();
 
         /// baker
         void startbakerUI();
@@ -43,19 +35,13 @@ class SecondaryUI
 
     private:
 
-        Topping topping_model;
+        Topping topping_help;
         bool continueSales;
         bool continueManager;
         bool continueAddTopping;
         toppingService topping_service;
-        Pizza pizza_model;
-        PizzaService pizza_service;
 
       //  Topping addToppings();      /// á þetta að vera hér?
-        bool continueAddDrink;
-        bool continueDrink;
-        DrinkService drink_service;
-        //DrinkRepository drink_repo;
 };
 
 #endif // SECONDARYUI_H

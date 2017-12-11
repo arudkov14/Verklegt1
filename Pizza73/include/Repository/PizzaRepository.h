@@ -3,7 +3,7 @@
 #include "Pizza.h"
 #include <fstream>
 #include <iostream>
-#include <ostream>
+#include <iostream>
 #include <stdlib.h>
 using namespace std;
 
@@ -11,11 +11,13 @@ using namespace std;
 class PizzaRepository
 {
     public:
-
-
         void add_pizza(Pizza& pizza);
-        vector<Pizza> retrieve_all_pizza();
+        vector<Topping> retrieve_pizza();
         Pizza parse_string(string line);
+        void pizzaToFile(const Pizza& pizza);
+        Topping parseString(string line);
+
+
 private:
 
 };

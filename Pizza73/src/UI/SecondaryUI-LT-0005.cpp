@@ -5,8 +5,6 @@ SecondaryUI::SecondaryUI()
     continueSales = true;
     continueManager = true;
     continueAddTopping = true;
-    continueDrink = true;
-    continueAddDrink = true;
 }
 
 /// MANAGER UI ///
@@ -159,7 +157,7 @@ void SecondaryUI::startmanagerUI()
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Toppings" << endl;
-        cout << "2: Drinks" << endl;
+        cout << "2: Add other products" << endl;                  /// vantar UI
         cout << "3: Add locations" << endl;                       /// vantar UI
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
@@ -175,7 +173,7 @@ void SecondaryUI::startmanagerUI()
             secondaryui.toppingui();
             break;
         case '2':
-            secondaryui.drinkui();
+            /// add other products
             break;
         case '3':
             /// add locations
@@ -202,37 +200,14 @@ void SecondaryUI::toppingMenuOne()
 {
     vector<Topping> toppings = topping_service.retrieve_all_toppings();
     for(unsigned int i = 0; i < toppings.size(); i++) {
-        cout  << "[" << i+1 << "]: " << left  << setw(22) << toppings[i].get_name();
-        cout << right << setw(10) << "price: " << toppings[i].get_price() << "kr." << endl;
+        cout << "Topping[" << i+1 << "]: " << toppings[i].get_name() << "\t";
+        cout << "price: " << toppings[i].get_price() << "kr." << endl;
     }
     cout << endl;
 }
 
-/// topping - menu choice 2
-void SecondaryUI::toppingMenuTwo() {
-    char choice = 'y';
-    while(continueAddTopping == true) {
-        system("CLS");
-        printtoppingui();
-        cout << "Add a topping (y/n)? " << endl;    /// bæta við add ANOTHER topping eftir fyrsta val.
-        cin >> choice;
-        if (choice == 'y') {
-            Topping toppings;
-            cin >> toppings;
-            topping_service.add_topping(toppings);
-            cout << "Topping has been saved";   /// færa staðfestingu í validate
-            getch();
-            system("CLS");
-            cout << endl;
-        } else if (choice == 'n') {
-            choice = 'n';
-            break;
-        }
-    }
-}
-
 /// topping - menu choice 3 - delete
-void SecondaryUI::toppingMenuThree()
+void SecondaryUI::toppingMenuTwo()
 {
     int toppingToDelete;
     vector<Topping> toppings = topping_service.retrieve_all_toppings();
@@ -243,9 +218,11 @@ void SecondaryUI::toppingMenuThree()
     cin >> toppingToDelete;
     vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
     topping_service.deliverNewVectorToFile(NewToppingList);
-    cout << "Topping[" << toppingToDelete << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
+    cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
     cout << "enter topping to delete: " << endl;
 }
+
+
 
 /// TOPPING -  MAIN
 void SecondaryUI::toppingui()
@@ -271,97 +248,23 @@ void SecondaryUI::toppingui()
         cin >> input;
 
 
-
         if(input == '0') {
             mainui.startmainUI();
         } else if (input == '1') {
             toppingMenuOne();
             getch();
         } else if(input == '2') {
-            toppingMenuTwo();
-        } else if (input == '3') {
-            toppingMenuThree();
-            getch();
-        }
-        else if (input == 'q') {
-            exit(0);
-        }
-
-    } while(continueSales == true);
-}
-
-
-/// DRINK - TEXT ONLY
-void printdrinkui()
-{
-    cout << "============================================" << endl;
-    cout << "\t \t Manager UI \t" << endl;
-    cout << "============================================" << endl;
-    cout << "\t \t drinks \t" << endl;
-    cout << "============================================" << endl;
-}
-
-/// DRINK - MENU CHOICE 1
-
-void SecondaryUI::drinkMenuOne () {
-
-    vector<Drink> drinks_from_menu = drink_service.retrieve_all_drinks();
-
-    for (unsigned int i = 0; i < drinks_from_menu.size(); i++) {
-        cout << "Brand: " << drinks_from_menu[i].get_brand() << endl;
-        cout << "Size: " << drinks_from_menu[i].get_size() << "L" << endl;
-        cout << "Price: " << drinks_from_menu[i].get_price() << "Kr" << endl;
-        cout << endl;
-    }
-
-}
-
-
-/// DRINK - MAIN
-void SecondaryUI::drinkui()
-{
-    MainUI mainui;
-    SecondaryUI secondaryui;
-    char input;
-    do {
-        system("CLS");
-        cout << "============================================" << endl;
-        cout << "\t \t Manager UI \t" << endl;
-        cout << "============================================" << endl;
-        cout << "\t \t drinks \t" << endl;
-        cout << "============================================" << endl;
-        cout << "Enter a choice" << endl;
-        cout << "0: Back to Main Menu" << endl;
-        cout << "1: Read drink list" << endl;
-        cout << "2: Add drinks to menu" << endl;
-        cout << "3: Delete drink from menu" << endl;
-        cout << "4: Change drink price" << endl;
-        cout << "q: Quit" << endl;
-        cout << "============================================"  << endl;
-        cin >> input;
-
-        if(input == '0') {
-            mainui.startmainUI();
-        }
-
-        else if (input == '1'){
-            secondaryui.drinkMenuOne();
-
-            getch();
-        }
-
-        else if(input == '2') {
             char choice = 'y';
-            while(continueAddDrink == true) {
+            while(continueAddTopping == true) {
                 system("CLS");
-                printdrinkui();
-                cout << "Add another drink (y/n)? ";
+                printtoppingui();
+                cout << "Add another topping (y/n)? ";
                 cin >> choice;
                 if (choice == 'y') {
-                    Drink drinks;
-                    cin >> drinks;
-                    drink_service.add_drink(drinks);
-                    cout << "Drink has been saved";   /// færa staðfestingu í validate
+                    Topping toppings;
+                    cin >> toppings;
+                    topping_service.add_topping(toppings);
+                    cout << "Topping has been saved";   /// færa staðfestingu í validate
                     getch();
                     system("CLS");
                     cout << endl;
@@ -370,14 +273,19 @@ void SecondaryUI::drinkui()
                     break;
                 }
             }
-        } else if (input == 'q') {
-            exit(0);
+        } else if (input == '3') {
+            toppingMenuTwo();
+            getch();
         }
 
-    } while(continueDrink == true);
+
+        else if (input == 'q') {
+            exit(0);
+        }
+    } while(continueSales == true);
 }
 
-/// SALES - MAIN
+/// SALESS - MAIN
 void SecondaryUI::startsalesUI()
 {
     MainUI mainui;
@@ -396,39 +304,22 @@ void SecondaryUI::startsalesUI()
         cout << "============================================"  << endl;
         cin >> input;
 
-        if(input == '0') {
-            mainui.startmainUI();
-        } else if (input == '1') {
-            vector<Topping> toppingList = topping_service.retrieve_all_toppings();
-            Pizza pizza;
-
-            int toppingSelection = -1;
-            while (toppingSelection != 0) {
-                cout << "Please enter id for toppings (press 0 to quit)" << endl;
-
-                for(unsigned int i = 0; i < toppingList.size(); i++) {
-                    cout << "[" << i+1 << "]: " << toppingList[i].get_name() << endl;
-                }
-                cin >> toppingSelection;
-
-                if(toppingSelection > 0 && toppingSelection <= (int)toppingList.size()) {  /// skoða betur
-                   pizza.add_topping(toppingList[toppingSelection - 1]);
-                }
-            }
-            cout << pizza;
-//          pizza_service.pizzaToFile(pizza);
-
-            getch();
-
-        }
-        else if (input == '2') {
 
 
-        }
-        else if (input == '3') {
+        if(input == '1') {
+
+
+
+        } else if (input == '2') {
+
+
+
+        } else if (input == '3') {
+
 
 
         } else if (input == '4') {
+
 
 
         } else if (input == 'q') {
@@ -438,6 +329,8 @@ void SecondaryUI::startsalesUI()
     } while (continueSales == true);
 
 }
+
+
 /// DELIVERY - MAIN
 void SecondaryUI::startdeliveryUI()
 {
@@ -483,4 +376,65 @@ void SecondaryUI::startdeliveryUI()
     } while(input != 'q');
 }
 
+/*
+if (input == '1') {
+
+    vector<Topping> toppings = topping_service.retrieve_all_toppings();
+
+    cout << toppings[0];
+
+
+
+}
+else if (input == '2') {
+    Topping toppings;
+    cin >> toppings;
+    topping_service.add_topping(toppings);
+}
+else if (input == 'q') {
+    exit (0);
+
+
+}
+//validate_input(input);
+
+
+} while(continueManager == true);
+*/
+
+/*
+void SecondaryUI::validate_input(char& input)
+{
+
+    if(input == '1') {
+
+    }
+
+    else if (input == '2') {
+        char input = 'y';
+        vector<Topping> toppings;
+        while (input == 'y') {
+            cout << endl;
+            cout << "Enter new topping (y/n)?";
+            cin >> input;
+            if(input == 'y') {
+            //    addToToppings(toppings);
+            }
+            else {
+                break;
+            }
+        }
+        cout << "kemur ad mer?" << endl;
+//        topping_service.add_topping(toppings); /// veldur óendanlegri loopu. Skrifar á fullt inn í texta skjal núllstilltar toppings
+    }
+    else if (input == '3') {
+        MainUI mainui;
+        mainui.startmainUI();
+    }
+    else if (input == 'q') {
+        exit (0);
+    }
+
+}
+*/
 

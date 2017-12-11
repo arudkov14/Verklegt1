@@ -10,21 +10,23 @@ class Pizza
 {
     public:
         Pizza();
-        Pizza(string pizza_name, int base_pizza_price, int topping_count,int  pizza_size);
-        int get_base_pizza_price();
-        int get_topping_count();
-        int get_pizza_size();
-        string get_pizza_name();
+       // Pizza (vector<Topping> toppings /*string pizza_size, , int base_pizza_price*/);
+       // int get_base_pizza_price();
+       // vector<Topping> get_toppingvector();
+       // string get_pizza_size();
+       // string get_pizza_name();
 
         friend ostream& operator <<(ostream& out, Pizza& pizza);
         friend istream& operator >>(istream& in, Pizza& pizza);
 
+        void add_topping(Topping toppings);
 
     private:
-        int base_pizza_price;
-        int topping_count;
-        int pizza_size;
-        string pizza_name;
+        vector<Topping> toppings;
+        int size;
+  //      string pizza_size;
+
+
 
 };
 

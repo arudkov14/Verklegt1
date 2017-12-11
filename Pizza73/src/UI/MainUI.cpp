@@ -5,12 +5,10 @@ MainUI::MainUI()
     doContinue = true;
 }
 
-
 void MainUI::startmainUI()
 {
     SecondaryUI secondaryui;
     char input;
-
     do {
         system("CLS");
         cout << "============================================" << endl;

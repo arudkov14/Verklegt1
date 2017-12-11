@@ -1,5 +1,26 @@
 #include "PizzaRepository.h"
 
+/// má taka út
+
+
+Topping  PizzaRepository::parseString(string line) {
+    string property;
+    vector<string> properties;
+    for(unsigned int i = 0; i < line.length(); i++) {
+        if(line[i] == ',') {
+            properties.push_back(property);
+            property = "";
+        }
+        else {
+            property += line[i];
+        }
+    }
+    Topping t(properties[0], atof(properties[1].c_str()));
+    return t;
+}
+
+
+/*
 
 void PizzaRepository::add_pizza(Pizza& pizza)
 {
@@ -8,13 +29,14 @@ void PizzaRepository::add_pizza(Pizza& pizza)
 
         if(fout.is_open()){
             fout << pizza;
-            fout.close();
         }
+        fout.close();
         else {
-            /// throw error
+            cout << "File is not open";
         }
 }
-
+*/
+/*
 Pizza PizzaRepository::parse_string(string line)
 {
     string property;
@@ -35,25 +57,18 @@ Pizza PizzaRepository::parse_string(string line)
     Pizza p(properties[0], atoi(properties[1].c_str()), atoi(properties[2].c_str()), atoi(properties[3].c_str()));
     return p;
 }
-
-vector<Pizza> PizzaRepository::retrieve_all_pizza()
+*/
+/*
+void PizzaRepository::pizzaToFile(vector<Topping>& toppings)
 {
-    vector<Pizza> pizzavector;
+    ofstream fout;
+    fout.open("PizzaList.txt", ios::app);
 
-
-    ifstream fin;
-
-    fin.open("PizzaList.txt");
-
-    if (fin.is_open())
-        {
-        string line;
-        while (getline(fin, line))
-        {
-            Pizza pizza = parse_string(line);
-            pizzavector.push_back(pizza);
+    if (fout.is_open()) {
+        for(unsigned int i = 0; i < toppings.size(); i++) {
+            fout << toppings[i] << endl;
         }
-        fin.close();
+    fout.close();
     }
-    return pizzavector;
 }
+*/
