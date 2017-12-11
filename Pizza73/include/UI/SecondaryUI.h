@@ -29,6 +29,7 @@ class SecondaryUI
         void toppingMenuOne();
         void toppingMenuThree();
         void toppingMenuTwo();
+        void validateToppings(Topping& toppings);
 
         /// DRINK UI
         void drinkMenuOne ();
@@ -38,10 +39,13 @@ class SecondaryUI
         /// delivery
         void startdeliveryUI();
 
-        //vector<Topping> addToToppings(vector<Topping>& toppings); /// skoða þetta betur
+        void validateDrinks(Drink& drinks);
+
+        //vector<Topping> addToToppings(vector<Topping>& toppings); /// skoÃ°a Ã¾etta betur
         void validate_input(char& input);
 
     private:
+
 
         Topping topping_model;
         bool continueSales;
@@ -51,11 +55,12 @@ class SecondaryUI
         Pizza pizza_model;
         PizzaService pizza_service;
 
-      //  Topping addToppings();      /// á þetta að vera hér?
+      //  Topping addToppings();      /// Ã¡ Ã¾etta aÃ° vera hÃ©r?
+
         bool continueAddDrink;
         bool continueDrink;
         DrinkService drink_service;
-        //DrinkRepository drink_repo;
+        toppingService topping_service;
 };
 
 #endif // SECONDARYUI_H
