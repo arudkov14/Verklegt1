@@ -1,0 +1,6 @@
+Pepso,2,206,
+Pepsi,2,350,
+PEpso,2,350,
+Peso,2,233,
+peso,2,33,
+Pepso9,2,233,

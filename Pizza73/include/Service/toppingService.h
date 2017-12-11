@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include "ToppingRepository.h"
+#include "InvalidToppingName.h"
+#include "InvalidToppingPrice.h"
 
 using namespace std;
 
@@ -15,6 +17,8 @@ class toppingService
         vector<Topping> retrieve_all_toppings();
         vector<Topping> NewList(int deltop);
         void deliverNewVectorToFile(vector<Topping>& newlist);
+        bool topping_name(Topping topping);
+        bool topping_price(Topping topping);
 
 
 

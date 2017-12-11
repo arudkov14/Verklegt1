@@ -7,7 +7,7 @@ toppingService::toppingService()
 
 void toppingService::add_topping(Topping& topping) {
     topping_repo.add_topping(topping);
-   // cout << topping << endl;
+
 }
 
 
@@ -38,3 +38,40 @@ void toppingService::deliverNewVectorToFile(vector<Topping>& newlist) {
 
 }
 
+bool toppingService::topping_name(Topping topping)
+{
+    try
+    {
+        string name_of_topping = topping.get_name();
+        for(int i = 0; i < name_of_topping.length(); i++)
+        {
+            if(!isalpha(name_of_topping[i]))
+                throw InvalidToppingName();
+        }
+    }
+
+    catch(InvalidToppingName e)
+    {
+        return false;
+    }
+    return true;
+}
+
+bool toppingService::topping_price(Topping topping)
+{
+    try
+    {
+        double topping_price = topping.get_price();
+        if(topping_price < 0 || !isalnum(topping_price))
+        {
+            throw InvalidToppingPrice();
+        }
+    }
+
+        catch(InvalidToppingPrice e)
+        {
+            return false;
+        }
+
+    return true;
+}

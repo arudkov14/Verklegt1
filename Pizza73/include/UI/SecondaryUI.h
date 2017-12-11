@@ -29,28 +29,27 @@ class SecondaryUI
         /// toppingui
         void toppingMenuOne();
         void toppingMenuTwo();
+        void validateToppings(Topping& toppings);
 
         /// baker
         void startbakerUI();
         /// delivery
         void startdeliveryUI();
 
+        void validateDrinks(Drink& drinks);
+
         //vector<Topping> addToToppings(vector<Topping>& toppings); /// skoða þetta betur
         void validate_input(char& input);
 
     private:
 
-        Topping topping_help;
         bool continueSales;
         bool continueManager;
         bool continueAddTopping;
-        toppingService topping_service;
-
-      //  Topping addToppings();      /// á þetta að vera hér?
         bool continueAddDrink;
         bool continueDrink;
         DrinkService drink_service;
-        //DrinkRepository drink_repo;
+        toppingService topping_service;
 };
 
 #endif // SECONDARYUI_H
