@@ -5,12 +5,12 @@ MainUI::MainUI()
     doContinue = true;
 }
 
-
 void MainUI::startmainUI()
 {
-    SecondaryUI secondaryui;
-    char input;
+    SalesUI salesui;
+    ManagerUI managerui;
 
+    char input;
     do {
         system("CLS");
         cout << "============================================" << endl;
@@ -27,17 +27,16 @@ void MainUI::startmainUI()
         switch (input)
         {
         case '1':
-            secondaryui.startsalesUI();
+            salesui.main_menu();
             break;
         case '2':
-            secondaryui.startmanagerUI();
+            managerui.main_menu();
             break;
-
         case '3':
-            secondaryui.startbakerUI();
+
             break;
         case '4':
-            secondaryui.startdeliveryUI();
+            //secondaryui.startdeliveryUI();
             break;
         case 'q':
             exit(0);

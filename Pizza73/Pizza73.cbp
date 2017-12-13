@@ -18,6 +18,7 @@
 					<Add directory="include/Model" />
 					<Add directory="include/Repository" />
 					<Add directory="include/Service" />
+					<Add directory="include/Exceptions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -32,6 +33,7 @@
 					<Add directory="include/Model" />
 					<Add directory="include/Repository" />
 					<Add directory="include/Service" />
+					<Add directory="include/Exceptions" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -42,23 +44,45 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Exceptions/InvalidBrandName.h" />
+		<Unit filename="include/Exceptions/InvalidDrinkPrice.h" />
+		<Unit filename="include/Exceptions/InvalidDrinkSize.h" />
+		<Unit filename="include/Exceptions/InvalidMenuException.h" />
+		<Unit filename="include/Exceptions/InvalidToppingName.h" />
+		<Unit filename="include/Exceptions/InvalidToppingPrice.h" />
+		<Unit filename="include/Model/Drink.h" />
 		<Unit filename="include/Model/Pizza.h" />
 		<Unit filename="include/Model/Topping.h" />
+		<Unit filename="include/Repository/DrinkRepository.h" />
 		<Unit filename="include/Repository/PizzaRepository.h" />
 		<Unit filename="include/Repository/ToppingRepository.h" />
+		<Unit filename="include/Service/DrinkService.h" />
 		<Unit filename="include/Service/pizzaService.h" />
 		<Unit filename="include/Service/toppingService.h" />
+		<Unit filename="include/UI/BakerUI.h" />
 		<Unit filename="include/UI/MainUI.h" />
-		<Unit filename="include/UI/SecondaryUI.h" />
+		<Unit filename="include/UI/ManagerUI.h" />
+		<Unit filename="include/UI/SalesUI.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Exceptions/InvalidBrandName.cpp" />
+		<Unit filename="src/Exceptions/InvalidDrinkPrice.cpp" />
+		<Unit filename="src/Exceptions/InvalidDrinkSize.cpp" />
+		<Unit filename="src/Exceptions/InvalidMenuException.cpp" />
+		<Unit filename="src/Exceptions/InvalidToppingName.cpp" />
+		<Unit filename="src/Exceptions/InvalidToppingPrice.cpp" />
+		<Unit filename="src/Model/Drink.cpp" />
 		<Unit filename="src/Model/Pizza.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
+		<Unit filename="src/Repository/DrinkRepository.cpp" />
 		<Unit filename="src/Repository/PizzaRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepository.cpp" />
+		<Unit filename="src/Service/DrinkService.cpp" />
 		<Unit filename="src/Service/pizzaService.cpp" />
 		<Unit filename="src/Service/toppingService.cpp" />
+		<Unit filename="src/UI/BakerUI.cpp" />
 		<Unit filename="src/UI/MainUI.cpp" />
-		<Unit filename="src/UI/SecondaryUI.cpp" />
+		<Unit filename="src/UI/ManagerUI.cpp" />
+		<Unit filename="src/UI/SalesUI.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -4,7 +4,10 @@
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
+
 using namespace std;
+#include "SalesUI.h"
+#include "ManagerUI.h"
 
 class MainUI
 {
