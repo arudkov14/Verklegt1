@@ -75,27 +75,13 @@ void ManagerUI::drink_ui()
         }
 
         else if(input == '2') {
-            char choice = 'y';
-            while(continueAddDrink == true) {
-                system("CLS");
-                print_drink_ui();
-                cout << "Add another drink (y/n)? ";
-                cin >> choice;
-                if (choice == 'y') {
-                    Drink drinks;
-                    cin >> drinks;
+          add_drinks();
 
-                    validate_drinks(drinks);
+        } else if(input == '3'){
 
-                    getch();
-                    system("CLS");
-                    cout << endl;
-                } else if (choice == 'n') {
-                    choice = 'n';
-                    break;
-                }
-            }
-        } else if (input == 'q') {
+        delete_drink();
+
+        }else if(input == 'q') {
             exit(0);
         }
 
@@ -111,10 +97,57 @@ void ManagerUI::read_drinks() {
 
     for (unsigned int i = 0; i < drinks_from_menu.size(); i++) {
         cout << "Brand: " << drinks_from_menu[i].get_brand() << endl;
-        cout << "Size: " << drinks_from_menu[i].get_size() << "L" << endl;
+        cout << "Size: " << drinks_from_menu[i].get_size() << "L " << endl;
         cout << "Price: " << drinks_from_menu[i].get_price() << "Kr" << endl;
         cout << endl;
     }
+}
+
+/// DRINK - 2: Add drinks
+void ManagerUI::add_drinks()
+{
+      bool continueAddDrink = true;
+
+      char choice = 'y';
+            while(continueAddDrink == true) {
+                system("CLS");
+                print_drink_ui();
+                cout << "Add another drink (y/n)? ";
+                cin >> choice;
+                if (choice == 'y') {
+                    Drink drinks;
+                    cin >> drinks;
+                    validate_drinks(drinks);
+                    getch();
+                    system("CLS");
+                    cout << endl;
+                } else if (choice == 'n') {
+                    choice = 'n';
+                    break;
+                }
+            }
+}
+
+///DRINK - 3: Delete drink
+void ManagerUI::delete_drink()
+{
+    DrinkService drink_service;
+
+    int drink_to_delete;
+
+    vector<Drink> drinks = drink_service.retrieve_all_drinks();
+        for(unsigned int i = 0; i < drinks.size(); i++) {
+            cout << "Drink[" << i+1 << "]: " << drinks[i].get_brand() << "\t";
+            cout << "Size: " << drinks[i].get_size() << "L";
+            cout << "price: " << drinks[i].get_price() << "kr." << endl;
+        }
+    cout << "enter drink to delete: " << endl;
+    cin >> drink_to_delete;
+    vector<Drink> new_drink_list = drink_service.new_list(drink_to_delete);
+    drink_service.deliverNewVectorToFile(new_drink_list);
+
+    cout << "Drink[" << drink_to_delete << "]: " << drinks[drink_to_delete-1].get_brand() << ", has been deleted" << endl;
+        getch();
 }
 
 /// DRINK - UI TEXT ONLY
@@ -188,7 +221,7 @@ void ManagerUI::topping_ui()
 
         } else if (input == '3') {
 
-            add_toppings();
+            delete_topping();
         } else if (input == '3') {
             delete_topping();
             getch();
@@ -255,9 +288,9 @@ void ManagerUI::delete_topping()
     vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
     topping_service.deliverNewVectorToFile(NewToppingList);
 
-    cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
+    cout << "Topping[" << toppingToDelete << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
 
-
+    getch();
 }
 
 /// TOPPING - TEXT ONLY
