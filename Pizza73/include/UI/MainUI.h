@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
+#include "SalesUI.h"
 using namespace std;
 
 class MainUI
