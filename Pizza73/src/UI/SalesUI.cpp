@@ -1,10 +1,16 @@
 #include "SalesUI.h"
 
-SalesUI::main_menu()
+
+SalesUI::SalesUI()
+{
+    continueSales = true;
+    continuePizzaOrder = true;
+}
+void SalesUI::startsalesUI()
 {
     MainUI mainui;
-    toppingService topping_service;
-    bool continueSales = true;
+    SalesUI salesui;
+
     char input;
     do {
         system("CLS");
@@ -13,7 +19,9 @@ SalesUI::main_menu()
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
-        cout << "1: Order pizza" << endl;
+
+        cout << "1: Create Order" << endl;
+
         cout << "2: Read pizza" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
@@ -23,25 +31,14 @@ SalesUI::main_menu()
             mainui.startmainUI();
 
         } else if (input == '1') {
-            vector<Topping> toppingList = topping_service.retrieve_all_toppings();
-            Pizza pizza;
-            int toppingSelection = -1;
-            while (toppingSelection != 0) {
-                cout << "Please enter id for toppings (press 0 to quit)" << endl;
+            salesui.startorderUI();
 
-                for(unsigned int i = 0; i < toppingList.size(); i++) {
-                    cout << "[" << i+1 << "]: " << toppingList[i].get_name() << endl;
-                }
-                cin >> toppingSelection;
 
-                if(toppingSelection > 0 && toppingSelection <= (int)toppingList.size()) {  /// sko�a betur
-                   pizza.add_topping(toppingList[toppingSelection - 1]);
-                }
-            }
-            cout << pizza;
-//          pizza_service.pizzaToFile(pizza);
 
-            getch();
+
+
+
+
 
         }
         else if (input == '2') {
@@ -59,4 +56,73 @@ SalesUI::main_menu()
 
         }
     } while (continueSales == true);
+
+
+}
+
+void SalesUI::startorderUI() {
+    char input;
+    do {
+        system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Order UI \t" << endl;
+        cout << "============================================" << endl;
+        cout << "Enter a choice" << endl;
+        cout << "0: Order Pizza" << endl;
+        cout << "1: Create Order" << endl;
+        cout << "2: Read pizza" << endl;
+        cout << "q: Exit program" << endl;
+        cout << "============================================"  << endl;
+        cin >> input;
+
+        if(input == '0') {
+            mainui.startmainUI();
+        } else if (input == '1') {
+            salesui.startorderUI();
+            string name;
+            string payment_status;
+            string comment;
+            string order_status;
+            string delivery_status;
+            int total_price;
+            vector<Topping> pizzatoppings;
+            PizzaSize psize;
+            pizzatoppings = get_pizzatoppings();
+
+
+
+
+        }
+        else if (input == '2') {
+
+
+        }
+        else if (input == '3') {
+
+
+        }
+         else if (input == 'q') {
+            exit(0);
+
+        }
+    } while (continueSales == true);
+
+
+
+
+}
+
+
+vector<Topping> SalesUI::get_pizzatoppings() {
+    int selectTopping;
+    vector <Topping> toppings = topping_service.retrieve_all_toppings();
+    vector <Topping> usertoppings;
+    int toppingCount = toppings.size();
+
+
+
+    cout << "you chose";
+
+    return usertoppings;
+
 }

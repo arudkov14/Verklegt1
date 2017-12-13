@@ -60,10 +60,11 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
     ifstream fin("ToppingList.txt");
     if (fin.is_open()) {
         string line;
-        Topping top;
-        while (fin >> top){//getline(fin, line)) {
-//            Topping topp = parseString(line);
-            toppingsFromFile.push_back(top);
+
+        while (getline(fin, line)) {
+            Topping topp = parseString(line);
+            toppingsFromFile.push_back(topp);
+
         }
         fin.close();
     }
