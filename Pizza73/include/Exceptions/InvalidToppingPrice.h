@@ -2,15 +2,6 @@
 #define INVALIDTOPPINGPRICE_H
 
 
-class InvalidToppingPrice
-{
-    public:
-        InvalidToppingPrice();
-        virtual ~InvalidToppingPrice();
-
-    protected:
-
-    private:
-};
+class InvalidToppingPrice{};
 
 #endif // INVALIDTOPPINGPRICE_H

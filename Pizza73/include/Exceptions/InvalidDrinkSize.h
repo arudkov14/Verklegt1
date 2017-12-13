@@ -2,15 +2,5 @@
 #define INVALIDDRINKSIZE_H
 
 
-class InvalidDrinkSize
-{
-    public:
-        InvalidDrinkSize();
-        virtual ~InvalidDrinkSize();
-
-    protected:
-
-    private:
-};
-
+class InvalidDrinkSize{};
 #endif // INVALIDDRINKSIZE_H
