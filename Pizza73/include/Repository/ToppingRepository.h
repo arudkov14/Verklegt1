@@ -20,6 +20,7 @@ class ToppingRepository
         vector<Topping> retrieve_all_toppings();
         Topping parseString(string line);
         void deliverNewVectorToFile(vector<Topping>& newlist);
+    private:
 
 };
 
