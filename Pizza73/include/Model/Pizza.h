@@ -14,10 +14,12 @@ class Pizza
 {
     public:
         Pizza();
+
         Pizza(vector<Topping> toppings, int price, PizzaSize pizzasize);
         vector<Topping> get_toppings();
         int get_price();
         PizzaSize get_size();
+
 
 
         friend ostream& operator <<(ostream& out, Pizza& pizza);
@@ -29,6 +31,7 @@ class Pizza
         vector<Topping> toppings;
         int price;
         PizzaSize pizzasize;
+
 
 
 

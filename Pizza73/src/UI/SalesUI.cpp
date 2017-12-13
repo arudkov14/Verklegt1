@@ -1,5 +1,6 @@
 #include "SalesUI.h"
 
+
 SalesUI::SalesUI()
 {
     continueSales = true;
@@ -18,7 +19,9 @@ void SalesUI::startsalesUI()
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
+
         cout << "1: Create Order" << endl;
+
         cout << "2: Read pizza" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
@@ -26,8 +29,10 @@ void SalesUI::startsalesUI()
 
         if(input == '0') {
             mainui.startmainUI();
+
         } else if (input == '1') {
             salesui.startorderUI();
+
 
 
 
@@ -51,6 +56,7 @@ void SalesUI::startsalesUI()
 
         }
     } while (continueSales == true);
+
 
 }
 
@@ -118,4 +124,5 @@ vector<Topping> SalesUI::get_pizzatoppings() {
     cout << "you chose";
 
     return usertoppings;
+
 }
