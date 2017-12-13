@@ -8,6 +8,7 @@ MainUI::MainUI()
 void MainUI::startmainUI()
 {
     SecondaryUI secondaryui;
+    SalesUI salesui;
     char input;
     do {
         system("CLS");
@@ -25,7 +26,7 @@ void MainUI::startmainUI()
         switch (input)
         {
         case '1':
-            secondaryui.startsalesUI();
+            salesui.startsalesUI();
             break;
         case '2':
             secondaryui.startmanagerUI();
