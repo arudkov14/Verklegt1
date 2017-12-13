@@ -8,7 +8,7 @@ MainUI::MainUI()
 void MainUI::startmainUI()
 {
 
-    SecondaryUI secondaryui;
+    //SecondaryUI secondaryui;
     SalesUI salesui;
 
     char input;
@@ -24,7 +24,7 @@ void MainUI::startmainUI()
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
-
+            ManagerUI managerui;
         switch (input)
         {
         case '1':

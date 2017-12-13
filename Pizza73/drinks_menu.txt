@@ -1,2 +1,1 @@
-pepsi,1,100,
-sprite,2,100,
+Vodka,1,500,

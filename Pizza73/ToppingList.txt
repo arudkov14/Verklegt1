@@ -1,15 +1,11 @@
-
 beikon,250,
 pepperoni,250,
-skinka,250,
 hakk,250,
 steikarpylsa,250,
 paprika,150,
-sveppir,150,
 ananas,150,
 jalapeno,150,
 rjomaostur,200,
 piparostur,200,
 camembert,200,
 epli,100,
-
