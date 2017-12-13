@@ -1,12 +1,15 @@
 #ifndef SALESUI_H
 #define SALESUI_H
+
 #include "MainUI.h"
 #include "toppingService.h"
+
 
 
 class SalesUI
 {
     public:
+
         SalesUI();
 
         void startsalesUI();
@@ -19,6 +22,7 @@ class SalesUI
         bool continueSales;
         bool continuePizzaOrder;
         toppingService topping_service;
+
 
 };
 

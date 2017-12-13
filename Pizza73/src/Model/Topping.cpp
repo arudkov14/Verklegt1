@@ -7,28 +7,25 @@ Topping::Topping()
 }
 
 
-Topping::Topping(string name, double price) {
+Topping::Topping(string name, int price) {
     this->name = name;
     this->price = price;
 
 }
 
-void Topping::set_verbose(bool v) {
-     verbose = v;
-}
 
 string Topping::get_name() {
     return this-> name;
 }
 
-double Topping::get_price() {
+int Topping::get_price() {
     return this-> price;
 }
 
-istream& operator >> (istream& in, Topping& topping) {
-
-
+istream& operator >> (istream& in, Topping& topping)
+{
     cout << "Topping name: ";
+
 
     in >> ws;
     getline(in, topping.name);
@@ -42,6 +39,7 @@ istream& operator >> (istream& in, Topping& topping) {
 }
 
 ostream& operator << (ostream& out, Topping& topping) {
+
 
         out << topping.name << "," << topping.price << ",";
 

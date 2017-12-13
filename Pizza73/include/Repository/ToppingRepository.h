@@ -21,6 +21,7 @@ class ToppingRepository
         Topping parseString(string line);
         void deliverNewVectorToFile(vector<Topping>& newlist);
 
+
 };
 
 #endif // TOPPINGREPOSITORY_H

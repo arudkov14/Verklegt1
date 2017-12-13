@@ -1,4 +1,4 @@
-    #include "toppingService.h"
+#include "toppingService.h"
 
 toppingService::toppingService()
 {
@@ -21,7 +21,9 @@ vector<Topping> toppingService::NewList(int deltop)
     vector<Topping> currentToppingList = topping_repo.retrieve_all_toppings();
     vector<Topping> newToppingList;
 
+
     for(unsigned int i = 0; i < currentToppingList.size(); i++) {
+
         if(i == deltop -1) {
             continue;
         }
@@ -37,6 +39,7 @@ void toppingService::deliverNewVectorToFile(vector<Topping>& newlist) {
     topping_repo.deliverNewVectorToFile(newlist);
 
 }
+
 
 bool toppingService::topping_name(Topping topping)
 {
@@ -61,8 +64,8 @@ bool toppingService::topping_price(Topping topping)
 {
     try
     {
-        double topping_price = topping.get_price();
-        if(topping_price < 0 || !isalnum(topping_price))
+        int topping_price = topping.get_price();
+        if(topping_price < 0)
         {
             throw InvalidToppingPrice();
         }
@@ -75,3 +78,4 @@ bool toppingService::topping_price(Topping topping)
 
     return true;
 }
+

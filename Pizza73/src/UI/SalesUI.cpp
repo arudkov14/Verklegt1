@@ -1,5 +1,6 @@
 #include "SalesUI.h"
 
+
 SalesUI::SalesUI()
 {
     continueSales = true;
@@ -26,14 +27,9 @@ void SalesUI::startsalesUI()
 
         if(input == '0') {
             mainui.startmainUI();
+
         } else if (input == '1') {
             salesui.startorderUI();
-
-
-
-
-
-
 
         }
         else if (input == '2') {
@@ -52,9 +48,11 @@ void SalesUI::startsalesUI()
         }
     } while (continueSales == true);
 
+
 }
 
 void SalesUI::startorderUI() {
+    MainUI mainui;
     char input;
     do {
         system("CLS");
@@ -62,33 +60,19 @@ void SalesUI::startorderUI() {
         cout << "\t \t Order UI \t" << endl;
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
-        cout << "0: Order Pizza" << endl;
-        cout << "1: Create Order" << endl;
+        cout << "0: Back to main menu" << endl;
+        cout << "1: Order pizza" << endl;
         cout << "2: Read pizza" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
 
-
         if(input == '0') {
-            MainUI mainui;
-            mainui.startmainUI();
+                mainui.startmainUI();
         } else if (input == '1') {
-            SalesUI salesui;
-            salesui.startorderUI();
-            string name;
-            string payment_status;
-            string comment;
-            string order_status;
-            string delivery_status;
-            int total_price;
-            vector<Topping> pizzatoppings;
-            PizzaSize psize;
-            pizzatoppings = get_pizzatoppings();
 
-
-
-
+            cout << "Hello World";
+            getch();
         }
         else if (input == '2') {
 
@@ -121,4 +105,5 @@ vector<Topping> SalesUI::get_pizzatoppings() {
     cout << "you chose";
 
     return usertoppings;
+
 }
