@@ -1,1 +1,7 @@
 Vodka,1,500,
+Pepsi,2,w,
+w,2,2,
+Pepso,2,2,
+P,2,2,
+Pwpsp,0.5,2,
+Pepso,2,499,

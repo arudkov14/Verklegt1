@@ -48,7 +48,7 @@ Topping ToppingRepository::parseString(string line) {
             property += line[i];
         }
     }
-    Topping t(properties[0], atoi(properties[1].c_str()));
+    Topping t(properties[0],properties[1]);
     return t;
 }
 
