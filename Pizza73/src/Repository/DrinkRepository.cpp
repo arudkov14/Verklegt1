@@ -49,7 +49,7 @@ Drink DrinkRepository::parseString(string line){
         }
     }
 
-    Drink d(properties[0], properties[1], properties[2]);
+    Drink d(properties[0], properties[1], atoi(properties[2].c_str()));
     return d;
 }
 

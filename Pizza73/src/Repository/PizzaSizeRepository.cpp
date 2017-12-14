@@ -5,6 +5,20 @@ PizzaSizeRepository::PizzaSizeRepository()
     //ctor
 }
 
+void PizzaSizeRepository::deliverNewVectorToFile(vector<PizzaSize>& newlist) {
+
+    ofstream fout;
+    fout.open("tempSize.txt");
+
+    for(unsigned int i = 0; i < newlist.size(); i++) {
+        fout << newlist[i] << endl;
+        }
+
+    fout.close();
+    remove("PizzaSiza.txt");
+    rename("tempSize.txt","PizzaSize.txt");
+}
+
 void PizzaSizeRepository::PizzaSizeToFile(PizzaSize& pizzasize) {
     ofstream fout("PizzaSize.txt", ios::app);
     if(fout.is_open()) {

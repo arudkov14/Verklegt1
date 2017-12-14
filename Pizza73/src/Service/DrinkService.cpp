@@ -38,7 +38,7 @@ vector<Drink> DrinkService::retrieve_all_drinks()
     return drink_repo.retrieve_all_drinks();
 }
 
-bool DrinkService::drink_brand(Drink drink)
+bool DrinkService::drink_brand(Drink drink) ///validate Drink brand name
 {
     try
     {
@@ -60,7 +60,7 @@ bool DrinkService::drink_brand(Drink drink)
     return true;
 }
 
-bool DrinkService::drink_size(Drink drink)
+bool DrinkService::drink_size(Drink drink) ///validate Drink size
 {
     try
     {
@@ -85,18 +85,11 @@ bool DrinkService::drink_size(Drink drink)
         return true;
 }
 
-bool DrinkService::drink_price(Drink drink)
+bool DrinkService::drink_price(Drink drink) ///validate Drink price
 {
     try
     {
-        string price_0f_drink = drink.get_price();
-       for(int i = 0; i < price_0f_drink.length(); i++)
-       {
-           if(isalpha(price_0f_drink[i]))
-                throw InvalidDrinkPrice();
-       }
-
-        int price_0f_drink_num = atoi(drink.get_price().c_str());
+        int price_0f_drink_num = drink.get_price();
         if(price_0f_drink_num < 0)
         {
             throw InvalidDrinkPrice();
@@ -108,8 +101,6 @@ bool DrinkService::drink_price(Drink drink)
         }
         return true;
 }
-
-
 
 
 

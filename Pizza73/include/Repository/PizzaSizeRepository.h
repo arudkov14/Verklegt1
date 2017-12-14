@@ -14,6 +14,7 @@ class PizzaSizeRepository
     public:
         PizzaSizeRepository();
         void PizzaSizeToFile(PizzaSize& pizzasize);
+        void deliverNewVectorToFile(vector<PizzaSize>& newlist);
         vector<PizzaSize> retrieve_pizza_sizes();
         PizzaSize parseString(string line);
 

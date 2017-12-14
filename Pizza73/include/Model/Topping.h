@@ -9,10 +9,10 @@ class Topping
 {
     public:
         Topping();
-        Topping(string name, string price);
+        Topping(string name, int price);
 
         string get_name();
-        string get_price();
+        int get_price();
         void set_verbose(bool v);
 
         friend istream& operator >> (istream& in, Topping& topping);
@@ -24,7 +24,7 @@ class Topping
 
     private:
         string name;
-        string price;
+        int price;
 
 };
 

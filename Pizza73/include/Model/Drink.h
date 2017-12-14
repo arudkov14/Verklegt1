@@ -8,8 +8,8 @@ class Drink
 {
       public:
         Drink();
-        Drink(string brand, string size, string price);
-        string get_price()const;
+        Drink(string brand, string size, int price);
+        int get_price()const;
         string get_size()const;
         string get_brand()const;
 
@@ -18,7 +18,7 @@ class Drink
 
     private:
         string brand;
-        string price;
+        int price;
         string size;
 };
 
