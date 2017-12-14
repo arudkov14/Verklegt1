@@ -7,7 +7,9 @@ Topping::Topping()
 }
 
 
+
 Topping::Topping(string name, string price) {
+
     this->name = name;
     this->price = price;
 
@@ -18,7 +20,9 @@ string Topping::get_name() {
     return this-> name;
 }
 
+
 string Topping::get_price() {
+
     return this-> price;
 }
 

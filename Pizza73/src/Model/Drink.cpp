@@ -31,11 +31,27 @@ string Drink::get_price() const
     return this->price;
 }
 
+/*
+/// SET FÖLL
 
+void Drink::set_brand(const Drink& drink)
+{
+    cin >> this->brand;
+}
 
+void Drink::set_size(const Drink& drink)
+{
+    cin >> this->size;
+}
+
+void Drink::set_price(const Drink& drink)
+{
+    cin >> this->price;
+}
+*/
 
 ostream& operator <<(ostream& out, Drink& drink) {
-    out << drink.brand << "," << drink.size << "," << drink.price << ",";
+    out << drink.brand << "," << drink.size << "," << drink.price << "," << endl;
     return out;
 }
 

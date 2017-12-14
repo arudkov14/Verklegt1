@@ -51,7 +51,10 @@
 		<Unit filename="include/Exceptions/InvalidToppingName.h" />
 		<Unit filename="include/Exceptions/InvalidToppingPrice.h" />
 		<Unit filename="include/Model/Drink.h" />
+		<Unit filename="include/Exceptions/InvalidMenuException.h" />
+		<Unit filename="include/Model/Drink.h" />
 		<Unit filename="include/Model/Order.h" />
+
 		<Unit filename="include/Model/Pizza.h" />
 		<Unit filename="include/Model/PizzaSize.h" />
 		<Unit filename="include/Model/Topping.h" />
@@ -77,6 +80,11 @@
 		<Unit filename="src/Exceptions/InvalidToppingName.cpp" />
 		<Unit filename="src/Exceptions/InvalidToppingPrice.cpp" />
 		<Unit filename="src/Model/Drink.cpp" />
+		<Unit filename="include/UI/SalesUI.h" />
+		<Unit filename="include/UI/SecondaryUI.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Exceptions/InvalidMenuException.cpp" />
+		<Unit filename="src/Model/Drink.cpp" />
 		<Unit filename="src/Model/Order.cpp" />
 		<Unit filename="src/Model/Pizza.cpp" />
 		<Unit filename="src/Model/PizzaSize.cpp" />
@@ -95,6 +103,8 @@
 		<Unit filename="src/UI/MainUI.cpp" />
 		<Unit filename="src/UI/ManagerUI.cpp" />
 		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/UI/SalesUI.cpp" />
+		<Unit filename="src/UI/SecondaryUI.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

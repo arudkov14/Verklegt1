@@ -17,7 +17,6 @@ class DrinkRepository
         void add_drink(Drink& drink);
         vector<Drink> retrieve_all_drinks();
         Drink parseString(string line);
-        void deliverNewVectorToFile(vector<Drink>& newlist);
     private:
 
 };

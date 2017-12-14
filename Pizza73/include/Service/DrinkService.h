@@ -13,8 +13,6 @@ class DrinkService
         DrinkService();
         void add_drink(Drink& drink);
         vector<Drink> retrieve_all_drinks();
-        vector<Drink> new_list(int deltop);
-        void deliverNewVectorToFile(vector<Drink>& newlist);
         bool drink_brand(Drink drink);
         bool drink_size(Drink drink);
         bool drink_price(Drink drink);
