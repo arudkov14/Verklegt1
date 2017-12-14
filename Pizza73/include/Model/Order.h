@@ -11,7 +11,7 @@ class Order
 {
     public:
         Order();
-        Order(string name, int total_price, string comment, string order_status, string delivery, vector<Pizza> pizzas);
+        Order(string name, int total_price, string comment, string order_status, vector<Pizza> pizzas);
 
         friend ostream& operator << (ostream& out, const Order& order);
         friend istream& operator >> (istream& in, Order& order);
@@ -22,7 +22,7 @@ class Order
         string get_comment();
         string get_paymenstatus();
         string get_orderstatus();
-        string get_deliverystatus();
+
 
 
 
@@ -33,7 +33,8 @@ class Order
         string comment;
         string payment_status;
         string order_status;
-        string delivery_status;
+
+
 
 
 
