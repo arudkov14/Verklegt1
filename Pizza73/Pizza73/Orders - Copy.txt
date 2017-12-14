@@ -1,4 +1,0 @@
-Pepperoni,Sveppir,small.Ananas,Skinka,large;Hraekja a hana sma;Kristofer:2990:Not paid-Ordered:
-Pepperoni,small.Ananas,large;Steikja a grill;Stefan:1990:Not paid-Ordered:
-Hakk,Money,small.Beikon,rjomi,small;Dyfa i bjor;Andrey:9990:Not paid-Ordered:
-Paprika,kal;Eg skammast min;Daniel:990:Not paid-Ordered:
