@@ -93,7 +93,7 @@ void SalesUI::startorderUI() {
         else if (input == '1') {
             pizza = get_pizza();        /// þetta kallar á "UI" sem fyllir í pizza breyturnar. Fullt af auka föllum.
             pizzas.push_back(pizza);
-
+            order_service.add_order(thisorder);
         }
         else if (input == '2') {
             cout << "hvar er ég 2" << endl;

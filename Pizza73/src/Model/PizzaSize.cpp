@@ -28,7 +28,14 @@ ostream& operator << (ostream& out, PizzaSize& pizzasize) {
 }
 
 istream& operator >>(istream& in, PizzaSize& pizzasize) {
+    cout << "Size: ";
 
+    in >> ws;
+    getline(in, pizzasize._size);
+
+    cout << "Price: ";
+
+    in >>  pizzasize.base_price;
     return in;
 
 }

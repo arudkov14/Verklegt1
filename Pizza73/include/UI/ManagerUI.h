@@ -7,6 +7,8 @@ using namespace std;
 #include "MainUI.h"
 #include "DrinkService.h"
 #include "Topping.h"
+#include "PizzaSize.h"
+#include "PizzaSizeService.h"
 
 class ManagerUI
 {
@@ -29,6 +31,13 @@ class ManagerUI
         void add_toppings();
         void delete_topping();
 
+        ///SIZE & PRICE
+        void size_price_ui();
+        void print_size_ui();
+        void add_size();
+        void validate_size(PizzaSize& pizza_size);
+        void read_size();
+        void remove_size();
     private:
 };
 

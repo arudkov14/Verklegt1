@@ -4,10 +4,10 @@ Drink::Drink()
 {
     brand = "";
     size = "";
-    price = "";
+    price = 0;
 }
 
-Drink::Drink(string brand, string size, string price)
+Drink::Drink(string brand, string size, int price)
 {
     this->brand = brand;
     this->size = size;
@@ -26,7 +26,7 @@ string Drink::get_size() const
     return this->size;
 }
 
-string Drink::get_price() const
+int Drink::get_price() const
 {
     return this->price;
 }

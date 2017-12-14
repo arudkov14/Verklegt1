@@ -48,7 +48,7 @@ Topping ToppingRepository::parseString(string line) {
             property += line[i];
         }
     }
-    Topping t(properties[0],properties[1]);
+    Topping t(properties[0],atoi(properties[1].c_str()));
     return t;
 }
 
@@ -77,60 +77,3 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
 
 
 
-
-/*
-void ToppingRepository::deleteFromFile(int deltop)
-{
-    vector<Topping> temp;
-    vector<Topping> currentList = retrieve_all_toppings();
-
-    ifstream fin;
-    fin.open("ToppingList.txt");
-    ofstream fout;
-    fout.open("temp.txt");
-
-    for(unsigned int i = 0; i < currentList.size(); i++) {
-        if((deltop-1)== i) {
-            continue;
-        }
-        else {
-            temp.push_back(currentList[i]);
-            fout << temp[i] << endl;
-        }
-    }
-    fout.close();
-    fin.close();
-    remove("ToppingList.txt");
-    rename("temp.txt","ToppingList.txt");
-}
-*/
-
-
-/// notum part af �essu fyrir delete
-/*
-void ToppingRepository::deleteFromFile()
-{
-    string deleteline;
-    string line;
-
-    ifstream fin;
-    fin.open("ToppingList.txt");
-    ofstream temp;
-    temp.open("temp.txt");
-    cout << "which topping do you want to remove? ";
-    cin >> deleteline;
-
-    while (getline(fin,line))
-    {
-        line.replace(line.find(deleteline),deleteline.length(),"");
-        temp << line << endl;
-    };
-
-    temp.close();
-    fin.close();
-    remove("ToppingList.txt");
-    rename("temp.txt","ToppingList.txt");
-
-
-}
-*/
