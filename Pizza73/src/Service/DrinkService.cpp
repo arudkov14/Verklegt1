@@ -5,29 +5,6 @@ DrinkService::DrinkService()
     //ctor
 }
 
-vector<Drink> DrinkService::new_list(int deltop)
-{
-    vector<Drink> current_drinks = drink_repo.retrieve_all_drinks();
-    vector<Drink> new_drink_list;
-
-
-    for(unsigned int i = 0; i < current_drinks.size(); i++) {
-
-        if(i == deltop -1) {
-            continue;
-        }
-        else {
-            new_drink_list.push_back(current_drinks[i]);
-        }
-    }
-    return new_drink_list;
-}
-
-void DrinkService::deliverNewVectorToFile(vector<Drink>& newlist) {
-    drink_repo.deliverNewVectorToFile(newlist);
-}
-
-
 void DrinkService::add_drink(Drink& drink)
 {
         drink_repo.add_drink(drink);

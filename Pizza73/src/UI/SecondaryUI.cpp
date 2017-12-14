@@ -12,6 +12,15 @@ SecondaryUI::SecondaryUI()
 
 
 
+/*vector<Topping>SecondaryUI::addToToppings(vector<Topping> toppings)
+{
+    Topping topping;
+    cin >> topping;
+    toppings.push_back(topping);
+
+    return toppings;
+}*/
+
 /// BAKER MAIN
 void SecondaryUI::startbakerUI()
 {
@@ -26,7 +35,7 @@ void SecondaryUI::startbakerUI()
         cout << "============================================" << endl;
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Choose location" << endl;
-        cout << "2: Orders " << endl;       /// filtera pantanir út frá staðsetningu
+        cout << "2: Orders " << endl;       /// filtera pantanir Ãºt frÃ¡ staÃ°setningu
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
@@ -93,7 +102,7 @@ void SecondaryUI::locationui()
 }
 
 /// BAKER - orders
-void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
+void SecondaryUI::ordersui() /// skoÃ°a betur upprÃ¶Ã°un Ã¡ undirflokkum
 
 {
     MainUI mainui;
@@ -108,8 +117,8 @@ void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Orders for Skeifan" << endl;
         cout << "2: Orders for Laugavegur" << endl;
-        cout << "3: List of all orders" << endl;                    /// merkja pantanir í vinnslu eða tilbúnar
-        cout << "4: Search for order number" << endl;               /// bæta við í pizza class
+        cout << "3: List of all orders" << endl;                    /// merkja pantanir Ã­ vinnslu eÃ°a tilbÃºnar
+        cout << "4: Search for order number" << endl;               /// bÃ¦ta viÃ° Ã­ pizza class
         cout << "============================================" << endl;
         cin >> input;
 
@@ -124,15 +133,15 @@ void SecondaryUI::ordersui() /// skoða betur uppröðun á undirflokkum
             /// vantar UI fyrir Laugavegur.
             break;
         case '3':
-            /// List of all orders -> möguleiki á að breyta status
+            /// List of all orders -> mÃ¶guleiki Ã¡ aÃ° breyta status
             break;
         case '4':
-            /// search for order number -> möguleiki á að breyta status
+            /// search for order number -> mÃ¶guleiki Ã¡ aÃ° breyta status
             break;
         case 'q':
             exit(0);
         }
-        // default  - bæta við exception
+        // default  - bÃ¦ta viÃ° exception
 
     } while (input != 'q');
 }
@@ -152,8 +161,8 @@ void SecondaryUI::pizzapriceui() {
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Create size" << endl;
         cout << "2: Size list" << endl;
-        cout << "3: List of all orders" << endl;                    /// merkja pantanir í vinnslu eða tilbúnar
-        cout << "4: Search for order number" << endl;               /// bæta við í pizza class
+        cout << "3: List of all orders" << endl;                    /// merkja pantanir Ã­ vinnslu eÃ°a tilbÃºnar
+        cout << "4: Search for order number" << endl;               /// bÃ¦ta viÃ° Ã­ pizza class
         cout << "============================================" << endl;
         cin >> input;
 
@@ -261,13 +270,13 @@ void SecondaryUI::toppingMenuTwo() {
     while(continueAddTopping == true) {
         system("CLS");
         printtoppingui();
-        cout << "Add a topping (y/n)? " << endl;    /// bæta við add ANOTHER topping eftir fyrsta val.
+        cout << "Add a topping (y/n)? " << endl;    /// bÃ¦ta viÃ° add ANOTHER topping eftir fyrsta val.
         cin >> choice;
         if (choice == 'y') {
             Topping toppings;
             cin >> toppings;
             topping_service.add_topping(toppings);
-            cout << "Topping has been saved";   /// færa staðfestingu í validate
+            cout << "Topping has been saved";   /// fÃ¦ra staÃ°festingu Ã­ validate
             getch();
             system("CLS");
             cout << endl;
@@ -408,7 +417,7 @@ void SecondaryUI::drinkui()
                     Drink drinks;
                     cin >> drinks;
                     drink_service.add_drink(drinks);
-                    cout << "Drink has been saved";   /// færa staðfestingu í validate
+                    cout << "Drink has been saved";   /// fÃ¦ra staÃ°festingu Ã­ validate
                     getch();
                     system("CLS");
                     cout << endl;
@@ -425,6 +434,7 @@ void SecondaryUI::drinkui()
 }
 
 /// SALES - MAIN
+
 
 /// DELIVERY - MAIN
 void SecondaryUI::startdeliveryUI()
