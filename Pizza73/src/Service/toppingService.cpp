@@ -64,11 +64,9 @@ bool toppingService::topping_price(Topping topping)
 {
     try
     {
-
         int topping_price_num = atoi(topping.get_price().c_str());
         string topping_price = topping.get_price();
         if(topping_price_num < 0)
-
         {
             throw InvalidToppingPrice();
         }
