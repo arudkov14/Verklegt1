@@ -7,8 +7,9 @@ MainUI::MainUI()
 
 void MainUI::startmainUI()
 {
-    SecondaryUI secondaryui;
+    ManagerUI managerui;
     SalesUI salesui;
+
     char input;
     do {
         system("CLS");
@@ -29,14 +30,13 @@ void MainUI::startmainUI()
             salesui.startsalesUI();
             break;
         case '2':
-            secondaryui.startmanagerUI();
+            managerui.main_menu();
             break;
-
         case '3':
-            secondaryui.startbakerUI();
+
             break;
         case '4':
-            secondaryui.startdeliveryUI();
+            //secondaryui.startdeliveryUI();
             break;
         case 'q':
             exit(0);

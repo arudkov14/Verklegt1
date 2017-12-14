@@ -17,6 +17,7 @@ void SalesUI::startsalesUI()
     char input;
     do {
         system("CLS");
+        continueSales = true;
         cout << "============================================" << endl;
         cout << "\t \t Sales UI \t" << endl;
         cout << "============================================" << endl;
@@ -33,6 +34,7 @@ void SalesUI::startsalesUI()
 
         } else if (input == '1') {
             salesui.startorderUI();
+            continueSales = false;
 
 
         }
@@ -58,9 +60,17 @@ void SalesUI::startorderUI() {
     SalesUI salesui;
 
     Pizza pizza;
-    int pizza_price;
+//    int pizza_price;
     PizzaSize pizzasize;
     vector<Pizza> pizzas;
+
+    string name;
+    string comment;
+    string payment_status;
+    string order_status;
+    string delivery_status;
+    int total_price;
+    Order thisorder;
 
     char input;
     do {
@@ -83,7 +93,6 @@ void SalesUI::startorderUI() {
         else if (input == '1') {
             pizza = get_pizza();        /// þetta kallar á "UI" sem fyllir í pizza breyturnar. Fullt af auka föllum.
             pizzas.push_back(pizza);
-            break;
 
         }
         else if (input == '2') {
@@ -91,8 +100,12 @@ void SalesUI::startorderUI() {
             getch();
         }
         else if (input == '3') {
-
-
+            total_price = get_total_pizza_price(pizzas);
+            name = get_name();
+            payment_status = get_paymenstat();
+            order_status = get_orderstat();
+            comment = get_comment();
+            thisorder = Order(name, total_price, comment, order_status, pizzas);
         }
          else if (input == 'q') {
             exit(0);
@@ -118,7 +131,7 @@ Pizza SalesUI::get_pizza() {
 
     char input;
     do {
-        continueOrder = true;
+
         system("CLS");
         cout << "============================================" << endl;
         cout << "\t \t Pizza Pizza \t" << endl;
@@ -140,7 +153,6 @@ Pizza SalesUI::get_pizza() {
             size_price = get_size_price(pizzasize);
             total_price = topping_price + size_price;
             break;
-
         }
         else if (input == '2') {
 
@@ -157,6 +169,137 @@ Pizza SalesUI::get_pizza() {
     return pizza;
 
 }
+/// FINISH ORDER - GET TOTAL PRICE
+int SalesUI::get_total_pizza_price(vector<Pizza> pizzas) {
+    int TotalPrice;
+
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
+        TotalPrice += pizzas[i].get_price();
+    }
+    return TotalPrice;
+
+}
+
+
+
+
+/// FINISH ORDER - GET NAME
+string SalesUI::get_name() {
+    string nameORnumber;
+    cout << "Enter name or phonenumber" << endl;
+    cin >> nameORnumber;
+
+    return nameORnumber;
+
+}
+
+
+/// FINISH ORDER - GET COMMENT
+string SalesUI::get_comment() {
+    string comment;
+    string temp;
+    char input;
+
+    while(input != '1' || input != '2') {
+        system("CLS");
+        cout << "Do you want to add a comment to your order?" << endl;
+        cout << "[1] yes" << endl;
+        cout << "[2] no" << endl;
+        cin >> input;
+        getline(cin, temp);
+
+        if(input == '1') {
+            cout << "comment: ";
+            getline(cin, comment);
+        }
+        else if(input == '2') {
+            comment = "Standard order";
+        }
+        else if(input != '1' || input != '2') {
+            cout << "Wrong input, please try again." << endl;
+
+
+        }
+    }
+
+return comment;
+}
+
+/// FINISH ORDER - GET ORDER Stat
+string SalesUI::get_orderstat() {
+    string orderstat;
+    char input;
+
+    while(input != '1' || input != '2' || input != '3' || input != '4') {
+        system("CLS");
+        cout << "Order Status" << endl;
+        cout << "[1] Order received" << endl;
+        cout << "[2] Preparing order" << endl;
+        cout << "[3] On the way" << endl;
+        cout << "[4] In the oven" << endl;
+        cout << "[5] Delivered" << endl;
+
+        cin >> input;
+        if(input == '1') {
+            orderstat = "Order received";
+            break;
+        }
+        else if(input == '2') {
+            orderstat = "Preparin order";
+            break;
+        }
+        else if(input == '3') {
+            orderstat = "On the way";
+            break;
+        }
+        else if(input == '4') {
+            orderstat = "In the oven";
+            break;
+        }
+        else if(input == '5') {
+            orderstat = "Delivered";
+            break;
+        }
+        else if(input != '1' || input != '2' || input != '3' || input != '4' || input != '5' ) {
+            cout << "Wrong input, please try agin." << endl;
+            getch();
+        }
+    }
+
+    return orderstat;
+
+}
+
+
+
+/// FINISH ORDER - GET PAYMENT
+string SalesUI::get_paymenstat() {
+    string paystat;
+    char input;
+
+    while(input != '1' && input != '2') {
+        system("CLS");
+        cout << "Payment Options" << endl;
+        cout << "[1] Pay now" << endl;
+        cout << "[2] Pay on pickup" << endl;
+
+        cin >> input;
+
+        if(input == '1') {
+            paystat = "Payment received";
+        }
+        else if(input == '2') {
+            paystat = "Payment pending";
+        }
+        else if(input != '1' || input != '2') {
+            cout << "Wrong input, please try agin." << endl;
+            getch();
+        }
+    }
+
+    return paystat;
+}
+
 
 /// Partur af Pizza ui. Fyllir í vector<toppings> breytuna.
 vector<Topping> SalesUI::get_toppings() {

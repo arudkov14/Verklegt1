@@ -22,10 +22,13 @@ void ToppingRepository::deliverNewVectorToFile(vector<Topping>& newlist) {
 }
 
 
+
+
 void ToppingRepository::add_topping(Topping& topping)
 {
     ofstream fout;
     fout.open("ToppingList.txt", ios::app);
+
         if(fout.is_open()){
             fout << topping << endl;
             fout.close();
@@ -58,13 +61,12 @@ vector<Topping> ToppingRepository::retrieve_all_toppings() {
     vector<Topping> toppingsFromFile;
 
     ifstream fin("ToppingList.txt");
+
     if (fin.is_open()) {
         string line;
-
         while (getline(fin, line)) {
             Topping topp = parseString(line);
             toppingsFromFile.push_back(topp);
-
         }
         fin.close();
     }
@@ -106,7 +108,7 @@ void ToppingRepository::deleteFromFile(int deltop)
 */
 
 
-/// notum part af ï¿½essu fyrir delete
+/// notum part af þessu fyrir delete
 /*
 void ToppingRepository::deleteFromFile()
 {

@@ -26,8 +26,10 @@ istream& operator >> (istream& in, Topping& topping)
 {
     cout << "Topping name: ";
 
+
     in >> ws;
     getline(in, topping.name);
+
 
     cout << "Topping price: ";
 
@@ -38,7 +40,9 @@ istream& operator >> (istream& in, Topping& topping)
 
 ostream& operator << (ostream& out, Topping& topping) {
 
+
         out << topping.name << "," << topping.price << ",";
+
 
     return out;
 }

@@ -5,16 +5,16 @@ Order::Order()
     name = "Customer";
     total_price = 0;
     payment_status = "Payment pending";
-    delivery_status = "Delivery pending";
+
     comment = "No";
 }
 
-Order::Order(string name, int total_price, string comment,string order_status, string delivery, vector<Pizza> pizzas) {
+Order::Order(string name, int total_price, string comment,string order_status, vector<Pizza> pizzas) {
 
     this->name = name;
     this->pizzas = pizzas;
     this->payment_status = payment_status;
-    this->delivery_status = delivery_status;
+
     this->comment = comment;
     this->total_price = total_price;
 }
@@ -43,9 +43,6 @@ string Order::get_orderstatus() {
     return this->order_status;
 }
 
-string Order::get_deliverystatus() {
-    return this->delivery_status;
-}
 
 ostream& operator << (ostream& out, const Order& order)
 {
@@ -53,15 +50,14 @@ ostream& operator << (ostream& out, const Order& order)
 
     for(unsigned int i = 0; i < order.pizzas.size(); i++) {
         Pizza pizza = order.pizzas[i];
-//      out << pizza.get_size(); << ":"; fæ alltaf villu!!!
-        out << pizza.get_price();
+        out << pizza;
         vector<Topping> toppings = pizza.get_toppings();
         for(unsigned int i = 0; i < toppings.size(); i++) {
             Topping topping = toppings[i];
             out << topping.get_name();
         }
         out << order.payment_status << ":" << order.order_status << ":"
-            << order.delivery_status << ":" << order.comment;
+            << ":" << order.comment;
 
     }
     return out;

@@ -3,6 +3,8 @@
 Pizza::Pizza()
 {
 
+
+
 }
 Pizza::Pizza(vector<Topping> toppings, int price, PizzaSize pizzasize) {
     this-> toppings = toppings;
@@ -29,20 +31,27 @@ void Pizza::add_topping(Topping topping) {
 }
 
 
+
 istream& operator >>(istream& in,Pizza& pizza)
 {
+
+
+
     cout << "pizzaistream" << endl;
+
     return in;
 }
 
 ostream& operator <<(ostream& out, Pizza& pizza)
 {
+
     out << pizza.price << ":" << pizza.pizzasize << ":";
 
     for (unsigned int i = 0; i < pizza.toppings.size(); i++) {
         out << pizza.toppings[i] << ",";
     }
     out << endl;
+
 
     return out;
 }
