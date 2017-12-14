@@ -1,7 +1,0 @@
-#ifndef INVALIDMENUEXCEPTION_H
-#define INVALIDMENUEXCEPTION_H
-
-
-class InvalidMenuException{};
-
-#endif // INVALIDMENUEXCEPTION_H
