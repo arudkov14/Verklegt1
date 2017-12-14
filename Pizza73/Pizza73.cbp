@@ -59,10 +59,12 @@
 		<Unit filename="include/Model/PizzaSize.h" />
 		<Unit filename="include/Model/Topping.h" />
 		<Unit filename="include/Repository/DrinkRepository.h" />
+		<Unit filename="include/Repository/OrderRopository.h" />
 		<Unit filename="include/Repository/PizzaRepository.h" />
 		<Unit filename="include/Repository/PizzaSizeRepository.h" />
 		<Unit filename="include/Repository/ToppingRepository.h" />
 		<Unit filename="include/Service/DrinkService.h" />
+		<Unit filename="include/Service/OrderService.h" />
 		<Unit filename="include/Service/PizzaSizeService.h" />
 		<Unit filename="include/Service/pizzaService.h" />
 		<Unit filename="include/Service/toppingService.h" />
@@ -88,10 +90,12 @@
 		<Unit filename="src/Model/PizzaSize.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
 		<Unit filename="src/Repository/DrinkRepository.cpp" />
+		<Unit filename="src/Repository/OrderRopository.cpp" />
 		<Unit filename="src/Repository/PizzaRepository.cpp" />
 		<Unit filename="src/Repository/PizzaSizeRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepository.cpp" />
 		<Unit filename="src/Service/DrinkService.cpp" />
+		<Unit filename="src/Service/OrderService.cpp" />
 		<Unit filename="src/Service/PizzaSizeService.cpp" />
 		<Unit filename="src/Service/pizzaService.cpp" />
 		<Unit filename="src/Service/toppingService.cpp" />

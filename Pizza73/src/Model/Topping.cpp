@@ -3,11 +3,13 @@
 Topping::Topping()
 {
     name = "";
-    price = 0;
+    price = "";
 }
 
 
-Topping::Topping(string name, double price) {
+
+Topping::Topping(string name, string price) {
+
     this->name = name;
     this->price = price;
 
@@ -18,7 +20,9 @@ string Topping::get_name() {
     return this-> name;
 }
 
-double Topping::get_price() {
+
+string Topping::get_price() {
+
     return this-> price;
 }
 

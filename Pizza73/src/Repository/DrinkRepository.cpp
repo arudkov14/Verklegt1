@@ -35,7 +35,7 @@ Drink DrinkRepository::parseString(string line){
         }
     }
 
-    Drink d(properties[0], atof(properties[1].c_str()), atof(properties[2].c_str()));
+    Drink d(properties[0], properties[1], properties[2]);
     return d;
 }
 

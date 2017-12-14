@@ -5,6 +5,30 @@ DrinkService::DrinkService()
     //ctor
 }
 
+
+vector<Drink> DrinkService::new_list(int deltop)
+{
+    vector<Drink> current_drinks = drink_repo.retrieve_all_drinks();
+    vector<Drink> new_drink_list;
+
+
+    for(unsigned int i = 0; i < current_drinks.size(); i++) {
+
+        if(i == deltop -1) {
+            continue;
+        }
+        else {
+            new_drink_list.push_back(current_drinks[i]);
+        }
+    }
+    return new_drink_list;
+}
+
+void DrinkService::deliverNewVectorToFile(vector<Drink>& newlist) {
+    drink_repo.deliverNewVectorToFile(newlist);
+}
+
+
 void DrinkService::add_drink(Drink& drink)
 {
         drink_repo.add_drink(drink);
@@ -42,14 +66,18 @@ bool DrinkService::drink_size(Drink drink)
 {
     try
     {
-    double size_of_drink = drink.get_size();
-        if(size_of_drink !=0.5 && size_of_drink !=1 && size_of_drink !=2)
+        double size_of_drink_num = atof(drink.get_size().c_str());
+        string size_of_drink = drink.get_size();
+        if(size_of_drink_num !=0.5 && size_of_drink_num !=1 && size_of_drink_num !=2)
         {
             throw InvalidDrinkSize();
         }
-        else if(isalpha(size_of_drink))
+        for(int i = 0; i < size_of_drink.length(); i++)
         {
-            throw InvalidDrinkSize();
+            if(isalpha(size_of_drink[i]))
+            {
+                throw InvalidDrinkSize();
+            }
         }
     }
         catch(InvalidDrinkSize e)
@@ -63,8 +91,15 @@ bool DrinkService::drink_price(Drink drink)
 {
     try
     {
-        double price_0f_drink = drink.get_price();
-        if(price_0f_drink < 0)
+        string price_0f_drink = drink.get_price();
+       for(int i = 0; i < price_0f_drink.length(); i++)
+       {
+           if(isalpha(price_0f_drink[i]))
+                throw InvalidDrinkPrice();
+       }
+
+        int price_0f_drink_num = atoi(drink.get_price().c_str());
+        if(price_0f_drink_num < 0)
         {
             throw InvalidDrinkPrice();
         }

@@ -64,10 +64,20 @@ bool toppingService::topping_price(Topping topping)
 {
     try
     {
-        double topping_price = topping.get_price();
-        if(topping_price < 0 || !isalnum(topping_price))
+
+        int topping_price_num = atoi(topping.get_price().c_str());
+        string topping_price = topping.get_price();
+        if(topping_price_num < 0)
+
         {
             throw InvalidToppingPrice();
+        }
+        for(int i = 0; i < topping_price.length(); i ++)
+        {
+            if(isalpha(topping_price[i]))
+            {
+                throw InvalidToppingPrice();
+            }
         }
     }
 

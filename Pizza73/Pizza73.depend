@@ -310,7 +310,11 @@
 	<cstdlib>
 	<fstream>
 
+
+1513254917 c:\users\andrey\desktop\i am groot\pizza73\include\model\topping.h
+
 1512904768 c:\users\andrey\desktop\i am groot\pizza73\include\model\topping.h
+
 	<iostream>
 	<vector>
 
@@ -337,10 +341,17 @@
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\pizza.cpp
 	"Pizza.h"
 
+
+1513254917 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\topping.cpp
+	"Topping.h"
+
+1513254967 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\pizzarepository.cpp
+
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\topping.cpp
 	"Topping.h"
 
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\pizzarepository.cpp
+
 	"PizzaRepository.h"
 
 1512904768 c:\users\andrey\desktop\i am groot\pizza73\include\repository\pizzarepository.h
@@ -359,7 +370,11 @@
 1513001105 source:c:\users\andrey\desktop\i am groot\pizza73\src\ui\secondaryui.cpp
 	"SecondaryUI.h"
 
+
+1513254917 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\toppingrepository.cpp
+
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\toppingrepository.cpp
+
 	"ToppingRepository.h"
 
 1513000933 source:c:\users\andrey\desktop\i am groot\pizza73\src\service\toppingservice.cpp
@@ -512,7 +527,14 @@
 
 1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\include\model\drink.h
 
+
+1513254466 c:\users\andrey\desktop\i am groot\pizza73\include\model\drink.h
+	<fstream>
+	<string>
+	<iostream>
+
 1512904768 c:\users\andrey\desktop\i am groot\pizza73\include\model\drink.h
+
 
 1512940669 c:\users\daniel monzon\onedrive - reykjavik university\haustönn 2017\verklegt námskeið 1\verkefni\aðalverkefni\pizza73\include\model\drink.h
 	<fstream>
@@ -609,6 +631,25 @@
 1512940669 source:c:\users\danielm\onedrive - reykjavik university\haustÃ¶nn 2017\verklegt nÃ¡mskeiÃ° 1\verkefni\aÃ°alverkefni\pizza73\src\service\drinkservice.cpp
 	"DrinkService.h"
 
+
+1513254482 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\drink.cpp
+	"Drink.h"
+
+1513254466 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\drinkrepository.cpp
+	"DrinkRepository.h"
+
+1513254917 source:c:\users\andrey\desktop\i am groot\pizza73\src\service\drinkservice.cpp
+	"DrinkService.h"
+
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidmenuexception.cpp
+	"InvalidMenuException.h"
+
+1513186821 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invalidmenuexception.h
+
+1513186820 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invalidbrandname.h
+
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidbrandname.cpp
+
 1512904768 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\drink.cpp
 	"Drink.h"
 
@@ -630,6 +671,7 @@
 
 
 1512994718 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidbrandname.cpp
+
 	"InvalidBrandName.h"
 
 
@@ -638,10 +680,17 @@
 1513186821 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invaliddrinksize.h
 
 
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invaliddrinksize.cpp
+	"InvalidDrinkSize.h"
+
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invaliddrinkprice.cpp
+
+
 1512996026 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invaliddrinksize.cpp
 	"InvalidDrinkSize.h"
 
 1512996986 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invaliddrinkprice.cpp
+
 	"InvalidDrinkPrice.h"
 
 
@@ -654,13 +703,20 @@
 1513186820 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invalidtoppingname.h
 
 
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidtoppingname.cpp
+
+
 1512999787 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidtoppingname.cpp
+
 	"InvalidToppingName.h"
 
 
 1513000581 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invalidtoppingprice.h
 
 1513186820 c:\users\andrey\desktop\i am groot\pizza73\include\exceptions\invalidtoppingprice.h
+
+
+1513186821 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidtoppingprice.cpp
 
 
 1513000581 source:c:\users\andrey\desktop\i am groot\pizza73\src\exceptions\invalidtoppingprice.cpp
@@ -1205,6 +1261,9 @@
 	"DrinkService.h"
 	"Topping.h"
 
+
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\model\order.cpp
+
 1513173146 source:c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\src\exceptions\invalidbrandname.cpp
 	"InvalidBrandName.h"
 
@@ -1229,6 +1288,7 @@
 	"Drink.h"
 
 1513175917 source:c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\src\model\order.cpp
+
 	"Order.h"
 
 1513173145 c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\include\model\order.h
@@ -1279,6 +1339,25 @@
 1513180611 source:c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\src\ui\mainui.cpp
 	"MainUI.h"
 
+
+1513186820 source:c:\users\andrey\desktop\i am groot\pizza73\src\ui\managerui.cpp
+	"ManagerUI.h"
+
+1513252959 source:c:\users\andrey\desktop\i am groot\pizza73\src\repository\orderropository.cpp
+	"OrderRopository.h"
+
+1513253037 c:\users\andrey\desktop\i am groot\pizza73\include\repository\orderropository.h
+	<vector>
+	<string>
+	<stdlib.h>
+	"Order.h"
+
+1513253038 source:c:\users\andrey\desktop\i am groot\pizza73\src\service\orderservice.cpp
+	"OrderService.h"
+
+1513200453 c:\users\andrey\desktop\i am groot\pizza73\include\service\orderservice.h
+	"OrderRopository.h"
+
 1513179427 source:c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\src\ui\managerui.cpp
 	"ManagerUI.h"
 
@@ -1287,4 +1366,5 @@
 
 1513193367 source:c:\users\danielm\onedrive - reykjavik university\haust�nn 2017\verklegt n�mskei� 1\git vinnuskj�l\pizza73\src\ui\salesui.cpp
 	"SalesUI.h"
+
 
