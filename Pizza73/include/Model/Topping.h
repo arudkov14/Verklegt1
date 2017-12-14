@@ -2,7 +2,6 @@
 #define TOPPING_H
 #include <iostream>
 #include <vector>
-#include <stdlib.h>
 using namespace std;
 
 
@@ -10,12 +9,10 @@ class Topping
 {
     public:
         Topping();
-
         Topping(string name, string price);
 
         string get_name();
         string get_price();
-
         void set_verbose(bool v);
 
         friend istream& operator >> (istream& in, Topping& topping);
@@ -27,7 +24,6 @@ class Topping
 
     private:
         string name;
-
         string price;
 
 };

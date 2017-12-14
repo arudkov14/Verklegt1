@@ -10,10 +10,8 @@
 #include "Pizza.h"
 #include "pizzaService.h"
 #include <iomanip>
-
 #include "PizzaSizeService.h"
 #include "PizzaSize.h"
-
 class SecondaryUI
 {
     public:
@@ -33,13 +31,6 @@ class SecondaryUI
         void toppingMenuThree();
         void toppingMenuTwo();
 
-
-        /// toppingui
-/*        void toppingMenuOne();
-        void toppingMenuThree();
-        void toppingMenuTwo();
-*/        void validateToppings(Topping& toppings);
-
         /// DRINK UI
         void drinkMenuOne ();
 
@@ -48,28 +39,24 @@ class SecondaryUI
         /// delivery
         void startdeliveryUI();
 
-        void validateDrinks(Drink& drinks);
-
-        //vector<Topping> addToToppings(vector<Topping>& toppings); /// skoÃƒÂ°a ÃƒÂ¾etta betur
+        //vector<Topping> addToToppings(vector<Topping>& toppings); /// skoða þetta betur
         void validate_input(char& input);
 
     private:
-
 
         bool continueSales;
         bool continueManager;
         bool continueAddTopping;
         bool continueBaseEdit;
         toppingService topping_service;
-
         PizzaSizeService size_service;
         PizzaService pizza_service;
 
-      //  Topping addToppings();      /// Ã¡ Ã¾etta aÃ° vera hÃ©r?
-
+      //  Topping addToppings();      /// á þetta að vera hér?
         bool continueAddDrink;
         bool continueDrink;
         DrinkService drink_service;
+        //DrinkRepository drink_repo;
 };
 
 #endif // SECONDARYUI_H

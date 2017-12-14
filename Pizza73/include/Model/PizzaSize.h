@@ -10,7 +10,6 @@ class PizzaSize
         PizzaSize();
         PizzaSize(string _size, int p_size_price);
         string get_size();
-
         int get_price();
         friend ostream& operator << (ostream& out, PizzaSize& pizzasize);
         friend istream& operator >>(istream& in, PizzaSize& pizzasize);
