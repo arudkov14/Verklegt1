@@ -2,15 +2,6 @@
 #define INVALIDTOPPINGNAME_H
 
 
-class InvalidToppingName
-{
-    public:
-        InvalidToppingName();
-        virtual ~InvalidToppingName();
-
-    protected:
-
-    private:
-};
+class InvalidToppingName{};
 
 #endif // INVALIDTOPPINGNAME_H

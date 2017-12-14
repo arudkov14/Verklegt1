@@ -2,15 +2,6 @@
 #define INVALIDBRANDNAME_H
 
 
-class InvalidBrandName
-{
-    public:
-        InvalidBrandName();
-        virtual ~InvalidBrandName();
-
-    protected:
-
-    private:
-};
+class InvalidBrandName{};
 
 #endif // INVALIDBRANDNAME_H

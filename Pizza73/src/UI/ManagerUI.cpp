@@ -60,7 +60,6 @@ void ManagerUI::drink_ui()
         cout << "1: Read drink list" << endl;
         cout << "2: Add drinks to menu" << endl;
         cout << "3: Delete drink from menu" << endl;
-        cout << "4: Change drink price" << endl;
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
         cin >> input;
@@ -170,12 +169,9 @@ void ManagerUI::topping_ui()
         cout << "1: Read topping list" << endl;
         cout << "2: Add topping to menu" << endl;
         cout << "3: delete topping from menu" << endl;
-        cout << "4: change topping price" << endl;
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
         cin >> input;
-
-
 
         if(input == '0') {
             mainui.startmainUI();
@@ -184,11 +180,13 @@ void ManagerUI::topping_ui()
             getch();
         } else if(input == '2') {
 
+
           add_toppings();
 
         } else if (input == '3') {
 
             add_toppings();
+
         } else if (input == '3') {
             delete_topping();
             getch();

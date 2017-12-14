@@ -2,13 +2,6 @@
 #define INVALIDMENUEXCEPTION_H
 
 
-class InvalidMenuException
-{
-    public:
-        InvalidMenuException();
-
-
-    private:
-};
+class InvalidMenuException{};
 
 #endif // INVALIDMENUEXCEPTION_H
