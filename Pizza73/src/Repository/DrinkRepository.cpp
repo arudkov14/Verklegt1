@@ -5,27 +5,13 @@ DrinkRepository::DrinkRepository()
     //ctor
 }
 
-void DrinkRepository::deliverNewVectorToFile(vector<Drink>& newlist) {
-
-    ofstream fout;
-    fout.open("tempDrink.txt");
-
-    for(unsigned int i = 0; i < newlist.size(); i++) {
-        fout << newlist[i] << endl;
-        }
-
-    fout.close();
-    remove("drinks_menu.txt");
-    rename("tempDrink.txt","drinks_menu.txt");
-}
-
 void DrinkRepository::add_drink(Drink& drink)
 {
     ofstream fout;
     fout.open("drinks_menu.txt", ios::app);
 
     if(fout.is_open()) {
-        fout << drink << endl;
+        fout << drink;
         fout.close();
     }
     else {

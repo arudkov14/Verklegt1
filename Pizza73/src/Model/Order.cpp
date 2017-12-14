@@ -53,8 +53,7 @@ ostream& operator << (ostream& out, const Order& order)
 
     for(unsigned int i = 0; i < order.pizzas.size(); i++) {
         Pizza pizza = order.pizzas[i];
-//      out << pizza.get_size(); << ":"; fæ alltaf villu!!!
-        out << pizza.get_price();
+        out << pizza;
         vector<Topping> toppings = pizza.get_toppings();
         for(unsigned int i = 0; i < toppings.size(); i++) {
             Topping topping = toppings[i];
