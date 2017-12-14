@@ -3,6 +3,7 @@
 
 using namespace std;
 #include "MainUI.h"
+#include "BakerService.h"
 
 class BakerUI
 {

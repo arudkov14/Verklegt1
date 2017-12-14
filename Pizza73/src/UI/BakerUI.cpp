@@ -4,6 +4,7 @@
 BakerUI::main_menu()
 {
     MainUI mainui;
+    BakerService baker_service;
     char input;
 
     do {
@@ -12,35 +13,36 @@ BakerUI::main_menu()
         cout << "\t \t Baker UI \t" << endl;
         cout << "============================================" << endl;
         cout << "0: Back to Main Menu" << endl;
-        cout << "1: Choose location" << endl;
-        cout << "2: Orders " << endl;       /// filtera pantanir �t fr� sta�setningu
+        cout << "1: Display next order" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
 
-        switch (input) {
-        case '0':
+        if (input == '0') {
             mainui.startmainUI();
-            break;
-        case '1':
+        }
 
-            break;
-        case '2':
+        else if (input == '1') {
 
-            break;
+            vector<string> bakers_orders = baker_service.retrieve_bakers_orders();
 
-        case '3':
+            for (unsigned int i = 0; i < bakers_orders.size(); i++) {
+                cout << bakers_orders[i] << endl;
+                baker_service.next_order(bakers_orders[i]);
+                baker_service.delete_order(bakers_orders[i]);
+            }
 
-            break;
-        case '4':
+            getch();
+        }
 
-            break;
-        case 'q':
+        else if (input == 'q') {
             exit(0);
         }
     } while(input != 'q');
 }
 
+
+/*
 /// BAKER - LOCATION
 void BakerUI::location_ui()
 {
@@ -120,3 +122,4 @@ void BakerUI::orders_ui() /// sko�a betur uppr��un � undirflokkum
 
     } while (input != 'q');
 }
+*/
