@@ -74,13 +74,27 @@ void ManagerUI::drink_ui()
         }
 
         else if(input == '2') {
-          add_drinks();
+            char choice = 'y';
+            while(continueAddDrink == true) {
+                system("CLS");
+                print_drink_ui();
+                cout << "Add another drink (y/n)? ";
+                cin >> choice;
+                if (choice == 'y') {
+                    Drink drinks;
+                    cin >> drinks;
 
-        } else if(input == '3'){
+                    validate_drinks(drinks);
 
-        delete_drink();
-
-        }else if(input == 'q') {
+                    getch();
+                    system("CLS");
+                    cout << endl;
+                } else if (choice == 'n') {
+                    choice = 'n';
+                    break;
+                }
+            }
+        } else if (input == 'q') {
             exit(0);
         }
 
@@ -96,57 +110,10 @@ void ManagerUI::read_drinks() {
 
     for (unsigned int i = 0; i < drinks_from_menu.size(); i++) {
         cout << "Brand: " << drinks_from_menu[i].get_brand() << endl;
-        cout << "Size: " << drinks_from_menu[i].get_size() << "L " << endl;
+        cout << "Size: " << drinks_from_menu[i].get_size() << "L" << endl;
         cout << "Price: " << drinks_from_menu[i].get_price() << "Kr" << endl;
         cout << endl;
     }
-}
-
-/// DRINK - 2: Add drinks
-void ManagerUI::add_drinks()
-{
-      bool continueAddDrink = true;
-
-      char choice = 'y';
-            while(continueAddDrink == true) {
-                system("CLS");
-                print_drink_ui();
-                cout << "Add another drink (y/n)? ";
-                cin >> choice;
-                if (choice == 'y') {
-                    Drink drinks;
-                    cin >> drinks;
-                    validate_drinks(drinks);
-                    getch();
-                    system("CLS");
-                    cout << endl;
-                } else if (choice == 'n') {
-                    choice = 'n';
-                    break;
-                }
-            }
-}
-
-///DRINK - 3: Delete drink
-void ManagerUI::delete_drink()
-{
-    DrinkService drink_service;
-
-    int drink_to_delete;
-
-    vector<Drink> drinks = drink_service.retrieve_all_drinks();
-        for(unsigned int i = 0; i < drinks.size(); i++) {
-            cout << "Drink[" << i+1 << "]: " << drinks[i].get_brand() << "\t";
-            cout << "Size: " << drinks[i].get_size() << "L";
-            cout << "price: " << drinks[i].get_price() << "kr." << endl;
-        }
-    cout << "enter drink to delete: " << endl;
-    cin >> drink_to_delete;
-    vector<Drink> new_drink_list = drink_service.new_list(drink_to_delete);
-    drink_service.deliverNewVectorToFile(new_drink_list);
-
-    cout << "Drink[" << drink_to_delete << "]: " << drinks[drink_to_delete-1].get_brand() << ", has been deleted" << endl;
-        getch();
 }
 
 /// DRINK - UI TEXT ONLY
@@ -187,6 +154,7 @@ void ManagerUI::validate_drinks(Drink& drinks)
 void ManagerUI::topping_ui()
 {
     MainUI mainui;
+    bool continueAddTopping = true;
     bool continueSales = true;
     char input;
     do {
@@ -211,9 +179,14 @@ void ManagerUI::topping_ui()
             read_toppings();
             getch();
         } else if(input == '2') {
-              add_toppings();
+
+
+          add_toppings();
+
         } else if (input == '3') {
-            delete_topping();
+
+            add_toppings();
+
         } else if (input == '3') {
             delete_topping();
             getch();
@@ -248,12 +221,12 @@ void ManagerUI::add_toppings() {
     while(continueAddTopping == true) {
         system("CLS");
         print_topping_ui();
-        cout << "Add a topping (y/n)? " << endl;    /// b�ta vi� add ANOTHER topping eftir fyrsta val.
+        cout << "Add a topping (y/n)? " << endl;    /// baeta vi add ANOTHER topping eftir fyrsta val.
         cin >> choice;
         if (choice == 'y') {
             Topping toppings;
             cin >> toppings;
-            validate_toppings(toppings);   /// f�ra sta�festingu � validate
+            validate_toppings(toppings);/// fra stadfestingu i validate
             getch();
             system("CLS");
             cout << endl;
@@ -280,9 +253,9 @@ void ManagerUI::delete_topping()
     vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
     topping_service.deliverNewVectorToFile(NewToppingList);
 
-    cout << "Topping[" << toppingToDelete << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
+    cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
 
-    getch();
+
 }
 
 /// TOPPING - TEXT ONLY

@@ -16,8 +16,6 @@ class ManagerUI
         ///DRINKS
         void drink_ui();
         void read_drinks();
-        void add_drinks();
-        void delete_drink();
         void print_drink_ui();
         void validate_drinks(Drink& drink);
 
