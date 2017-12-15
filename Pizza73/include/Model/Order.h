@@ -5,15 +5,16 @@
 using namespace std;
 #include <iostream>
 #include "PizzaSize.h"
+#include "pizza.h"
 
 
 class Order
 {
     public:
         Order();
-        Order(string name, int total_price, string comment, string order_status, vector<Pizza> pizzas);
+        Order(string name, int total_price, string comment, string order_status, vector<Pizza> pizzas, string payment_status);
 
-        friend ostream& operator << (ostream& out, const Order& order);
+        friend ostream& operator << (ostream& out, Order& order);
         friend istream& operator >> (istream& in, Order& order);
 
         string get_name();
@@ -22,8 +23,6 @@ class Order
         string get_comment();
         string get_paymenstatus();
         string get_orderstatus();
-
-
 
 
     private:

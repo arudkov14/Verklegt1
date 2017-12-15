@@ -3,11 +3,11 @@
 Drink::Drink()
 {
     brand = "";
-    size = 0;
+    size = "";
     price = 0;
 }
 
-Drink::Drink(string brand, double size, double price)
+Drink::Drink(string brand, string size, int price)
 {
     this->brand = brand;
     this->size = size;
@@ -21,37 +21,21 @@ string Drink::get_brand() const
     return this->brand;
 }
 
-double Drink::get_size() const
+string Drink::get_size() const
 {
     return this->size;
 }
 
-double Drink::get_price() const
+int Drink::get_price() const
 {
     return this->price;
 }
 
-/*
-/// SET FÖLL
 
-void Drink::set_brand(const Drink& drink)
-{
-    cin >> this->brand;
-}
 
-void Drink::set_size(const Drink& drink)
-{
-    cin >> this->size;
-}
-
-void Drink::set_price(const Drink& drink)
-{
-    cin >> this->price;
-}
-*/
 
 ostream& operator <<(ostream& out, Drink& drink) {
-    out << drink.brand << "," << drink.size << "," << drink.price << "," << endl;
+    out << drink.brand << "," << drink.size << "," << drink.price << ",";
     return out;
 }
 

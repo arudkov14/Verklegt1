@@ -1,2 +1,3 @@
-large.1000.
-small.850.
+XXL.3000.
+medium.1500.
+small.1000.

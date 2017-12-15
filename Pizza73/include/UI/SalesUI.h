@@ -10,7 +10,8 @@
 using namespace std;
 #include "string"
 #include "Order.h"
-
+#include "OrderService.h"
+#include "Topping.h"
 
 
 class SalesUI
@@ -42,6 +43,7 @@ class SalesUI
         bool continuegetSize;
         toppingService topping_service;
         PizzaSizeService size_service;
+        OrderService order_service;
 
 
 };

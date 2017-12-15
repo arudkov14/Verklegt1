@@ -2,15 +2,6 @@
 #define INVALIDDRINKPRICE_H
 
 
-class InvalidDrinkPrice
-{
-    public:
-        InvalidDrinkPrice();
-        virtual ~InvalidDrinkPrice();
-
-    protected:
-
-    private:
-};
+class InvalidDrinkPrice{};
 
 #endif // INVALIDDRINKPRICE_H

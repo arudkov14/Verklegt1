@@ -8,9 +8,9 @@ class Drink
 {
       public:
         Drink();
-        Drink(string brand, double size, double price);
-        double get_price()const;
-        double get_size()const;
+        Drink(string brand, string size, int price);
+        int get_price()const;
+        string get_size()const;
         string get_brand()const;
 
         friend ostream& operator <<(ostream& out, Drink& drink);
@@ -18,8 +18,8 @@ class Drink
 
     private:
         string brand;
-        double price;
-        double size;
+        int price;
+        string size;
 };
 
 #endif // DRINK_H

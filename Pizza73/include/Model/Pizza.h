@@ -19,7 +19,7 @@ class Pizza
         vector<Topping> get_toppings();
         int get_price();
         PizzaSize get_size();
-
+        PizzaSize pizzasize;
 
 
         friend ostream& operator <<(ostream& out, Pizza& pizza);
@@ -30,7 +30,7 @@ class Pizza
     private:
         vector<Topping> toppings;
         int price;
-        PizzaSize pizzasize;
+       // PizzaSize pizzasize;
 
 
 

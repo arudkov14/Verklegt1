@@ -5,13 +5,27 @@ DrinkRepository::DrinkRepository()
     //ctor
 }
 
+void DrinkRepository::deliverNewVectorToFile(vector<Drink>& newlist) {
+
+    ofstream fout;
+    fout.open("tempDrink.txt");
+
+    for(unsigned int i = 0; i < newlist.size(); i++) {
+        fout << newlist[i] << endl;
+        }
+
+    fout.close();
+    remove("drinks_menu.txt");
+    rename("tempDrink.txt","drinks_menu.txt");
+}
+
 void DrinkRepository::add_drink(Drink& drink)
 {
     ofstream fout;
     fout.open("drinks_menu.txt", ios::app);
 
     if(fout.is_open()) {
-        fout << drink;
+        fout << drink << endl;
         fout.close();
     }
     else {
@@ -35,7 +49,7 @@ Drink DrinkRepository::parseString(string line){
         }
     }
 
-    Drink d(properties[0], atof(properties[1].c_str()), atof(properties[2].c_str()));
+    Drink d(properties[0], properties[1], atoi(properties[2].c_str()));
     return d;
 }
 

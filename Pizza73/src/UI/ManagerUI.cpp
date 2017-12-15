@@ -15,7 +15,8 @@ ManagerUI::main_menu()
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Toppings" << endl;
         cout << "2: Drinks" << endl;
-        cout << "3: Add locations" << endl;                       /// vantar UI
+        cout << "3: Size & Price" << endl;
+     //   cout << "3: Add locations" << endl;                       /// vantar UI
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
 
@@ -33,7 +34,7 @@ ManagerUI::main_menu()
             drink_ui();
             break;
         case '3':
-            /// add locations
+            size_price_ui();
             break;
         case 'q':
             exit (0);
@@ -60,7 +61,6 @@ void ManagerUI::drink_ui()
         cout << "1: Read drink list" << endl;
         cout << "2: Add drinks to menu" << endl;
         cout << "3: Delete drink from menu" << endl;
-        cout << "4: Change drink price" << endl;
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
         cin >> input;
@@ -75,27 +75,13 @@ void ManagerUI::drink_ui()
         }
 
         else if(input == '2') {
-            char choice = 'y';
-            while(continueAddDrink == true) {
-                system("CLS");
-                print_drink_ui();
-                cout << "Add another drink (y/n)? ";
-                cin >> choice;
-                if (choice == 'y') {
-                    Drink drinks;
-                    cin >> drinks;
+          add_drinks();
 
-                    validate_drinks(drinks);
+        } else if(input == '3'){
 
-                    getch();
-                    system("CLS");
-                    cout << endl;
-                } else if (choice == 'n') {
-                    choice = 'n';
-                    break;
-                }
-            }
-        } else if (input == 'q') {
+        delete_drink();
+
+        }else if(input == 'q') {
             exit(0);
         }
 
@@ -111,10 +97,57 @@ void ManagerUI::read_drinks() {
 
     for (unsigned int i = 0; i < drinks_from_menu.size(); i++) {
         cout << "Brand: " << drinks_from_menu[i].get_brand() << endl;
-        cout << "Size: " << drinks_from_menu[i].get_size() << "L" << endl;
+        cout << "Size: " << drinks_from_menu[i].get_size() << "L " << endl;
         cout << "Price: " << drinks_from_menu[i].get_price() << "Kr" << endl;
         cout << endl;
     }
+}
+
+/// DRINK - 2: Add drinks
+void ManagerUI::add_drinks()
+{
+      bool continueAddDrink = true;
+
+      char choice = 'y';
+            while(continueAddDrink == true) {
+                system("CLS");
+                print_drink_ui();
+                cout << "Add another drink (y/n)? ";
+                cin >> choice;
+                if (choice == 'y') {
+                    Drink drinks;
+                    cin >> drinks;
+                    validate_drinks(drinks);
+                    getch();
+                    system("CLS");
+                    cout << endl;
+                } else if (choice == 'n') {
+                    choice = 'n';
+                    break;
+                }
+            }
+}
+
+///DRINK - 3: Delete drink
+void ManagerUI::delete_drink()
+{
+    DrinkService drink_service;
+
+    int drink_to_delete;
+
+    vector<Drink> drinks = drink_service.retrieve_all_drinks();
+        for(unsigned int i = 0; i < drinks.size(); i++) {
+            cout << "Drink[" << i+1 << "]: " << drinks[i].get_brand() << "\t";
+            cout << "Size: " << drinks[i].get_size() << "L";
+            cout << "price: " << drinks[i].get_price() << "kr." << endl;
+        }
+    cout << "enter drink to delete: " << endl;
+    cin >> drink_to_delete;
+    vector<Drink> new_drink_list = drink_service.new_list(drink_to_delete);
+    drink_service.deliverNewVectorToFile(new_drink_list);
+
+    cout << "Drink[" << drink_to_delete << "]: " << drinks[drink_to_delete-1].get_brand() << ", has been deleted" << endl;
+        getch();
 }
 
 /// DRINK - UI TEXT ONLY
@@ -155,7 +188,6 @@ void ManagerUI::validate_drinks(Drink& drinks)
 void ManagerUI::topping_ui()
 {
     MainUI mainui;
-    bool continueAddTopping = true;
     bool continueSales = true;
     char input;
     do {
@@ -170,12 +202,9 @@ void ManagerUI::topping_ui()
         cout << "1: Read topping list" << endl;
         cout << "2: Add topping to menu" << endl;
         cout << "3: delete topping from menu" << endl;
-        cout << "4: change topping price" << endl;
         cout << "q: Quit" << endl;
         cout << "============================================"  << endl;
         cin >> input;
-
-
 
         if(input == '0') {
             mainui.startmainUI();
@@ -183,12 +212,9 @@ void ManagerUI::topping_ui()
             read_toppings();
             getch();
         } else if(input == '2') {
-
-          add_toppings();
-
+              add_toppings();
         } else if (input == '3') {
-
-            add_toppings();
+            delete_topping();
         } else if (input == '3') {
             delete_topping();
             getch();
@@ -223,12 +249,12 @@ void ManagerUI::add_toppings() {
     while(continueAddTopping == true) {
         system("CLS");
         print_topping_ui();
-        cout << "Add a topping (y/n)? " << endl;    /// baeta vi add ANOTHER topping eftir fyrsta val.
+        cout << "Add a topping (y/n)? " << endl;    /// b�ta vi� add ANOTHER topping eftir fyrsta val.
         cin >> choice;
         if (choice == 'y') {
             Topping toppings;
             cin >> toppings;
-            validate_toppings(toppings);/// fra stadfestingu i validate
+            validate_toppings(toppings);   /// f�ra sta�festingu � validate
             getch();
             system("CLS");
             cout << endl;
@@ -255,9 +281,9 @@ void ManagerUI::delete_topping()
     vector<Topping> NewToppingList = topping_service.NewList(toppingToDelete);
     topping_service.deliverNewVectorToFile(NewToppingList);
 
-    cout << "Topping[" << toppingToDelete-1 << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
+    cout << "Topping[" << toppingToDelete << "]: " << toppings[toppingToDelete-1].get_name() << ", has been deleted" << endl;
 
-
+    getch();
 }
 
 /// TOPPING - TEXT ONLY
@@ -283,9 +309,132 @@ void ManagerUI::validate_toppings(Topping& toppings)
         {
             cout << "Price needs to be positive numbers";
         }
+
         else
         {
             topping_service.add_topping(toppings);
             cout << "Topping has been saved";
         }
+}
+
+/// SIZE PRICE - MAIN
+void ManagerUI::size_price_ui()
+{
+     MainUI mainui;
+    bool continueSales = true;
+    char input;
+    do {
+        system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Manager UI \t" << endl;
+        cout << "============================================" << endl;
+        cout << "\t \t Price & Size \t" << endl;
+        cout << "============================================" << endl;
+        cout << "Enter a choice" << endl;
+        cout << "0: Back to Main Menu" << endl;
+        cout << "1: Read sizes list" << endl;
+        cout << "2: Add size to menu" << endl;
+        cout << "3: delete size from menu" << endl;
+        cout << "q: Quit" << endl;
+        cout << "============================================"  << endl;
+        cin >> input;
+
+        if(input == '0') {
+            mainui.startmainUI();
+        } else if (input == '1') {
+            read_size();
+            getch();
+        } else if(input == '2') {
+              add_size();
+        } else if (input == '3') {
+            remove_size();
+            getch();
+        }
+        else if (input == 'q') {
+            exit(0);
+        }
+
+    } while(continueSales == true);
+}
+
+void ManagerUI::print_size_ui()
+{
+    cout << "============================================" << endl;
+    cout << "\t \t Manager UI \t" << endl;
+    cout << "============================================" << endl;
+    cout << "\t \t Size & Price \t" << endl;
+    cout << "============================================" << endl;
+}
+///Size & Price - 1 Read sizes
+void ManagerUI::read_size()
+{
+    PizzaSizeService size_service;
+
+    vector<PizzaSize> pizza_size= size_service.retrieve_pizza_sizes();
+    for(unsigned int i = 0; i < pizza_size.size(); i++) {
+        cout  << "[" << i+1 << "]: " << left  << setw(22) << pizza_size[i].get_size();
+        cout << right << setw(5) << "price: " << pizza_size[i].get_base_price() << "kr." << endl;
+    }
+    cout << endl;
+}
+
+///Size & Price - 2 add sizes
+void ManagerUI::add_size()
+{
+       char choice = 'y';
+    bool continue_add_size = true;
+    PizzaSizeService size_service;
+
+    while(continue_add_size == true) {
+        system("CLS");
+        print_size_ui();
+        cout << "Add a size (y/n)? " << endl;    /// b�ta vi� add ANOTHER topping eftir fyrsta val.
+        cin >> choice;
+        if (choice == 'y') {
+            PizzaSize pizza_size;
+            cin >> pizza_size;
+            validate_size(pizza_size);
+            getch();
+            system("CLS");
+            cout << endl;
+        } else if (choice == 'n') {
+            choice = 'n';
+            break;
+        }
+    }
+}
+
+///Size & Price - 3 Remove size
+void ManagerUI::remove_size()
+{
+      PizzaSizeService size_service;
+
+    int size_to_delete;
+
+    vector<PizzaSize> pizza_size = size_service.retrieve_pizza_sizes();
+        for(unsigned int i = 0; i < pizza_size.size(); i++) {
+            cout << "Size: [" << i+1 << "]: "<< pizza_size[i].get_size();
+            cout << " price: " << pizza_size[i].get_base_price() << "kr." << endl;
+        }
+    cout << "enter size to delete: " << endl;
+    cin >> size_to_delete;
+    vector<PizzaSize> new_size_list = size_service.new_list(size_to_delete);
+    size_service.deliverNewVectorToFile(new_size_list);
+
+    cout << "Size[" << size_to_delete << "]: " << pizza_size[size_to_delete-1].get_size() << ", has been deleted" << endl;
+        getch();
+}
+void ManagerUI::validate_size(PizzaSize& pizza_size)
+{
+    PizzaSizeService size_service;
+
+    if(!size_service.validate_pizza_size(pizza_size))
+    {
+        cout << "Size is supposed to be in letters";
+    }
+    else
+    {
+        size_service.PizzaSizeToFile(pizza_size);
+        cout << "Pizza size saved";
+    }
 }

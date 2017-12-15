@@ -64,11 +64,12 @@ bool toppingService::topping_price(Topping topping)
 {
     try
     {
-        double topping_price = topping.get_price();
-        if(topping_price < 0 || !isalnum(topping_price))
+        int topping_price_num = topping.get_price();
+        if(topping_price_num < 0)
         {
             throw InvalidToppingPrice();
         }
+
     }
 
         catch(InvalidToppingPrice e)
@@ -78,4 +79,5 @@ bool toppingService::topping_price(Topping topping)
 
     return true;
 }
+
 
