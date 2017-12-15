@@ -19,6 +19,7 @@
 					<Add directory="include/Repository" />
 					<Add directory="include/Service" />
 					<Add directory="include/Exceptions" />
+					<Add directory="include/Exception" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -34,6 +35,7 @@
 					<Add directory="include/Repository" />
 					<Add directory="include/Service" />
 					<Add directory="include/Exceptions" />
+					<Add directory="include/Exception" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -49,6 +51,7 @@
 		<Unit filename="include/Exceptions/InvalidDrinkSize.h" />
 		<Unit filename="include/Exceptions/InvalidMenuException.h" />
 		<Unit filename="include/Exceptions/InvalidPizzaSizeEcxeption.h" />
+		<Unit filename="include/Exceptions/InvalidSizePriceException.h" />
 		<Unit filename="include/Exceptions/InvalidToppingName.h" />
 		<Unit filename="include/Exceptions/InvalidToppingPrice.h" />
 		<Unit filename="include/Model/Drink.h" />
@@ -78,6 +81,7 @@
 		<Unit filename="src/Exceptions/InvalidDrinkSize.cpp" />
 		<Unit filename="src/Exceptions/InvalidMenuException.cpp" />
 		<Unit filename="src/Exceptions/InvalidPizzaSizeEcxeption.cpp" />
+		<Unit filename="src/Exceptions/InvalidSizePriceException.cpp" />
 		<Unit filename="src/Exceptions/InvalidToppingName.cpp" />
 		<Unit filename="src/Exceptions/InvalidToppingPrice.cpp" />
 		<Unit filename="src/Model/Drink.cpp" />

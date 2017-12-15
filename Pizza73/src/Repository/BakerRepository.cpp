@@ -1,24 +1,5 @@
 #include "BakerRepository.h"
-/*
-string BakerRepository::parseOrder(string line)
-{
-    string property;                ///Tómur strengur til að bæta í og birta
-    vector<string> properties;
 
-    for (unsigned int i = 0; i < line.length(); i++) {
-        if (line[i] != ';') {
-            property += line[i];
-        }
-        else if (line[i] == ';') {
-            properties.push_back(property);
-            property = "";
-        }
-    }
-
-    string bakers_order = properties[0] + " " + properties[1];
-    return bakers_order;
-}
-*/
 vector<string> BakerRepository::retrieve_bakers_orders()
 {
     vector<string> bakers_orders;       ///Tómur vector af orders
@@ -30,7 +11,6 @@ vector<string> BakerRepository::retrieve_bakers_orders()
     if(fin.is_open()) {
         string line;
         while (getline(fin, line)) {
-            //string order = parseOrder(line);
             bakers_orders.push_back(line);
         }
         fin.close();

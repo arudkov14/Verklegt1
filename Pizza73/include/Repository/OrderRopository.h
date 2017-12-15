@@ -12,6 +12,8 @@ class OrderRopository
         OrderRopository();
         void add_order(Order& order);
         Order parseString(string line);
+        void deliverNewVectorToFile(vector<Order>& newlist);
+        vector<string> retrieve_all_orders();
 
     private:
 

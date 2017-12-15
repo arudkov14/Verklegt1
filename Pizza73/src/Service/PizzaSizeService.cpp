@@ -38,7 +38,7 @@ vector<PizzaSize> PizzaSizeService::retrieve_pizza_sizes() {
     return pizzasize;
 }
 
-bool PizzaSizeService::validate_pizza_size(PizzaSize size_pizza)
+bool PizzaSizeService::validate_pizza_size(PizzaSize size_pizza) /// Validate size of pizza
 {
     string size_of_pizza = size_pizza.get_size();
     try
@@ -56,5 +56,24 @@ bool PizzaSizeService::validate_pizza_size(PizzaSize size_pizza)
     {
         return false;
     }
+    return true;
+}
+
+bool PizzaSizeService::validate_price_of_size(PizzaSize size_pizza)
+{
+    try
+    {
+        int price_of_size = size_pizza.get_price();
+        if(price_of_size < 0)
+        {
+            throw InvalidSizePriceException();
+        }
+    }
+        catch(InvalidSizePriceException e)
+        {
+            return false;
+        }
+
+
     return true;
 }

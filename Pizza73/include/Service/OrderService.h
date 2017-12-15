@@ -8,7 +8,10 @@ class OrderService
     public:
         OrderService();
         void add_order(Order& order);
-        vector<Order> retrieve_all_orders();
+        void deliverNewVectorToFile(vector<Order>& newlist);
+        vector<string> retrieve_all_orders();
+        vector<Order> new_list(int deltop);
+
 
     private:
         OrderRopository order_repo;

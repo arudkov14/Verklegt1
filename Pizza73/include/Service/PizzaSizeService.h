@@ -2,6 +2,7 @@
 #define PIZZASIZESERVICE_H
 #include "PizzaSizeRepository.h"
 #include "InvalidPizzaSizeEcxeption.h"
+#include "InvalidSizePriceException.h"
 
 class PizzaSizeService
 {
@@ -10,6 +11,7 @@ class PizzaSizeService
         void PizzaSizeToFile(PizzaSize& pizzasize);
         void deliverNewVectorToFile(vector<PizzaSize>& newlist);
         bool validate_pizza_size(PizzaSize pizza_size);
+        bool validate_price_of_size(PizzaSize pizza_size);
         vector<PizzaSize> retrieve_pizza_sizes();
         vector<PizzaSize> new_list(int deltop);
 

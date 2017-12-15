@@ -24,7 +24,7 @@ void SalesUI::startsalesUI()
         cout << "Enter a choice" << endl;
         cout << "0: Back to Main Menu" << endl;
         cout << "1: Create Order" << endl;
-       // cout << "2: Read pizza" << endl;
+        cout << "2: Read pizza" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
         cin >> input;
@@ -64,24 +64,25 @@ void SalesUI::startorderUI() {
     PizzaSize pizzasize;
     vector<Pizza> pizzas;
 
-    string name;
-    string comment;
-    string payment_status;
-    string order_status;
-    string delivery_status;
+    string name = "";
+    string comment = "";
+    string payment_status = "";
+    string order_status = "Order received";
+    string delivery_status = "";
     int total_price;
     Order thisorder;
 
     char input;
     do {
         system("CLS");
+        continueOrder = true;
         cout << "============================================" << endl;
         cout << "\t \t Orders \t" << endl;
         cout << "============================================" << endl;
         cout << "Enter a choice" << endl;
-        cout << "0: back to main" << endl;
+        cout << "0: Back to main" << endl;
         cout << "1: Order Pizza" << endl;
-        cout << "2: add beverage" << endl;
+  //    cout << "2: add beverage" << endl;
         cout << "3: Finish order" << endl;
         cout << "q: Exit program" << endl;
         cout << "============================================"  << endl;
@@ -93,19 +94,19 @@ void SalesUI::startorderUI() {
         else if (input == '1') {
             pizza = get_pizza();        /// þetta kallar á "UI" sem fyllir í pizza breyturnar. Fullt af auka föllum.
             pizzas.push_back(pizza);
-            order_service.add_order(thisorder);
         }
         else if (input == '2') {
-            cout << "hvar er ég 2" << endl;
-            getch();
-        }
-        else if (input == '3') {
+
+        }else if (input == '3') {
             total_price = get_total_pizza_price(pizzas);
             name = get_name();
-            payment_status = get_paymenstat();
-            order_status = get_orderstat();
             comment = get_comment();
-            thisorder = Order(name, total_price, comment, order_status, pizzas);
+            cout << "Total amount for you order: " << total_price << "kr" << endl;
+            getch();
+            payment_status = get_paymenstat();
+            thisorder = Order(name, total_price,payment_status, comment, order_status, pizzas );
+            order_service.add_order(thisorder);
+            continueOrder = false;
         }
          else if (input == 'q') {
             exit(0);
@@ -125,7 +126,6 @@ Pizza SalesUI::get_pizza() {
     Pizza pizza;
     int size_price = 0;
     int topping_price = 0;
-    int total_price = 0;
     PizzaSize pizzasize;
     vector<Topping> pizzatoppings;
 
@@ -147,11 +147,8 @@ Pizza SalesUI::get_pizza() {
             continuePizzaOrder = true;
             pizzatoppings = get_toppings();
             pizzasize = get_pizzasize();
-            pizza = Pizza(pizzatoppings, total_price, pizzasize);
-
             topping_price = get_topping_price(pizzatoppings); /// má mögulega taka út
-            size_price = get_size_price(pizzasize);
-            total_price = topping_price + size_price;
+            pizza = Pizza(pizzatoppings, topping_price, pizzasize);
             break;
         }
         else if (input == '2') {
@@ -171,11 +168,13 @@ Pizza SalesUI::get_pizza() {
 }
 /// FINISH ORDER - GET TOTAL PRICE
 int SalesUI::get_total_pizza_price(vector<Pizza> pizzas) {
-    int TotalPrice;
+    int TotalPrice = 0;
 
     for(unsigned int i = 0; i < pizzas.size(); i++) {
+        PizzaSize thispizzasize = pizzas[i].get_size();
         TotalPrice += pizzas[i].get_price();
-    }
+        TotalPrice += thispizzasize.get_price();
+        }
     return TotalPrice;
 
 }
@@ -186,7 +185,11 @@ int SalesUI::get_total_pizza_price(vector<Pizza> pizzas) {
 /// FINISH ORDER - GET NAME
 string SalesUI::get_name() {
     string nameORnumber;
-    cout << "Enter name or phonenumber" << endl;
+    system("CLS");
+    cout << "============================================" << endl;
+    cout << "\t \t Finish Order \t" << endl;
+    cout << "============================================" << endl;
+    cout << "Enter phonenumber" << endl;
     cin >> nameORnumber;
 
     return nameORnumber;
@@ -202,6 +205,9 @@ string SalesUI::get_comment() {
 
     while(input != '1' || input != '2') {
         system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Finish Order \t" << endl;
+        cout << "============================================" << endl;
         cout << "Do you want to add a comment to your order?" << endl;
         cout << "[1] yes" << endl;
         cout << "[2] no" << endl;
@@ -211,9 +217,11 @@ string SalesUI::get_comment() {
         if(input == '1') {
             cout << "comment: ";
             getline(cin, comment);
+            break;
         }
         else if(input == '2') {
             comment = "Standard order";
+            break;
         }
         else if(input != '1' || input != '2') {
             cout << "Wrong input, please try again." << endl;
@@ -279,6 +287,9 @@ string SalesUI::get_paymenstat() {
 
     while(input != '1' && input != '2') {
         system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Finish order \t" << endl;
+        cout << "============================================" << endl;
         cout << "Payment Options" << endl;
         cout << "[1] Pay now" << endl;
         cout << "[2] Pay on pickup" << endl;
@@ -311,6 +322,9 @@ vector<Topping> SalesUI::get_toppings() {
     int toppingcount = pizzatoppings.size();
     while (continuePizzaOrder == true) {
         system("CLS");
+        cout << "============================================" << endl;
+        cout << "\t \t Fill out order \t" << endl;
+        cout << "============================================" << endl;
         cout << "Choose toppings: " << endl;
         for(unsigned int i = 0; i < pizzatoppings.size(); i++) {
             cout << "[" << i+1 << "] " << pizzatoppings[i].get_name() << " - " << pizzatoppings[i].get_price() << endl;
@@ -346,7 +360,9 @@ PizzaSize SalesUI::get_pizzasize() {
     vector<PizzaSize> pizzasizes = size_service.retrieve_pizza_sizes();
     PizzaSize usersize;
     int sizeCount = pizzasizes.size();
-
+    cout << "============================================" << endl;
+    cout << "\t \t Fill out order \t" << endl;
+    cout << "============================================" << endl;
     cout << "Choose size: " << endl;
     for(    int i = 0; i < sizeCount; i++) {
         cout << "size options: " << "[" << i+1 << "] " << pizzasizes[i].get_size() << endl;
@@ -355,6 +371,7 @@ PizzaSize SalesUI::get_pizzasize() {
     if(selection > 0 && selection <= sizeCount-1) {
         usersize = pizzasizes[selection-1];
     }
+
     return usersize;
 }
 

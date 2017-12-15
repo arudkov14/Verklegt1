@@ -432,6 +432,10 @@ void ManagerUI::validate_size(PizzaSize& pizza_size)
     {
         cout << "Size is supposed to be in letters";
     }
+    else if(!size_service.validate_price_of_size(pizza_size))
+    {
+        cout << "Price is supposed to be positive number";
+    }
     else
     {
         size_service.PizzaSizeToFile(pizza_size);

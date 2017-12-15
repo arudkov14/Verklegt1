@@ -12,6 +12,10 @@ Topping::Topping(string name, int price) {
     this->price = price;
 
 }
+Topping::Topping(string name)
+{
+    this->name = name;
+}
 
 
 string Topping::get_name() {

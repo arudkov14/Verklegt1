@@ -10,6 +10,7 @@ class Topping
     public:
         Topping();
         Topping(string name, int price);
+        Topping(string name);
 
         string get_name();
         int get_price();

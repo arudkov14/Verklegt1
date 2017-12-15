@@ -11,11 +11,11 @@ void PizzaSizeRepository::deliverNewVectorToFile(vector<PizzaSize>& newlist) {
     fout.open("tempSize.txt");
 
     for(unsigned int i = 0; i < newlist.size(); i++) {
-        fout << newlist[i] << endl;
+        fout << newlist[i];
         }
 
     fout.close();
-    remove("PizzaSiza.txt");
+    remove("PizzaSize.txt");
     rename("tempSize.txt","PizzaSize.txt");
 }
 
